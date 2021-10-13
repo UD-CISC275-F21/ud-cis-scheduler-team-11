@@ -3,6 +3,7 @@ export function Names(): JSX.Element {
     return(
         <div style={styles.names}>
             <p>Tyler Rust</p>
+            <p>James Wan</p>
         </div>
     );
 }
