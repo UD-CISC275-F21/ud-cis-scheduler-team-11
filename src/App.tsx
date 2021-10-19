@@ -5,10 +5,11 @@ import { Welcome } from "./components/Welcome";
 
 function App(): JSX.Element {
     return (
-        <>
-            <Welcome></Welcome>
-            <Names></Names>
-        </>
+    <Container>
+      <Row>
+        <Welcome></Welcome>
+      </Row> 
+    </Container>
     );
 }
 
