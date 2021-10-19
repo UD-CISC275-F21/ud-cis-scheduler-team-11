@@ -1,4 +1,4 @@
-import {Table} from 'react-bootstrap'
+import React from "react"
 
 export function Tables(): JSX.Element{
     return <Table bordered>
