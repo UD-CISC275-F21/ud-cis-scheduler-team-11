@@ -10,13 +10,13 @@ export function Tables(): JSX.Element{
                 <td>Semester2</td>
             </tr>
             <tr>
-                <td>College Year</td>
+                <td>CollegeYear</td>
             </tr>
             <tr>
                 <td>Major</td>
             </tr>
             <tr>
-                <td>Graduation Year</td>
+                <td>GraduationYear</td>
             </tr>
         </tbody>
     </Table>
