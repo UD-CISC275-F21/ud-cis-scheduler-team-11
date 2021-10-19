@@ -1,9 +1,33 @@
 [
     {
-      "EGGG101: Introduction to Engineering(FYE)": 2,
-      "CISC108: Introduction to Computer Science 1": 3,
-      "MATH241: Analytic Geometry & Calculus A": 4,
-      "ENGL110: Seminar in Composition": 3,
-      "Breadth Requirement": 3
+      "id": "1",
+      "code": "EGGG101",
+      "name": "Introduction to Engineering",
+      "credits": "3",
+      "type": "FYE"
+    },
+    {
+      "id": "2",
+      "code": "CISC108",
+      "name": "Intro to Computer Science 1",
+      "credits": "3"
+    },
+    {
+      "id": "3",
+      "code": "MATH241",
+      "name": "Analytic Geometry & Calculus A",
+      "credits": "4"
+    },
+    {
+      "id": "4",
+      "code": "ENGL110",
+      "name": "Seminar in Composition",
+      "credits": "3"
+    },
+    {
+      "id": "5",
+      "code": "Breadth Requirement (CAH)",
+      "name": "Humanities breadth requirement",
+      "credits": "3"
     }
   ]
