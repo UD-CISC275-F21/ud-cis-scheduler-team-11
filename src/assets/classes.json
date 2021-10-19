@@ -1,33 +1,32 @@
 [
     {
-      "id": "1",
+      "id": 1,
       "code": "EGGG101",
       "name": "Introduction to Engineering",
-      "credits": "3",
-      "type": "FYE"
+      "credits": 3
     },
     {
-      "id": "2",
+      "id": 2,
       "code": "CISC108",
       "name": "Intro to Computer Science 1",
-      "credits": "3"
+      "credits": 3
     },
     {
-      "id": "3",
+      "id": 3,
       "code": "MATH241",
       "name": "Analytic Geometry & Calculus A",
-      "credits": "4"
+      "credits": 4
     },
     {
-      "id": "4",
+      "id": 4,
       "code": "ENGL110",
       "name": "Seminar in Composition",
-      "credits": "3"
+      "credits": 3
     },
     {
-      "id": "5",
+      "id": 5,
       "code": "Breadth Requirement (CAH)",
       "name": "Humanities breadth requirement",
-      "credits": "3"
+      "credits": 3
     }
   ]
