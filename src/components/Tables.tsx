@@ -1,5 +1,3 @@
-export{}
-/*
 import React from "react";
 
 export function Tables(): JSX.Element{
@@ -23,4 +21,3 @@ export function Tables(): JSX.Element{
         </tbody>
     </Table>
 }
-*/
