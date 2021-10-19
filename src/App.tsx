@@ -2,10 +2,13 @@ import React from "react";
 import "./App.css";
 import { Names } from "./components/Names";
 import { Welcome } from "./components/Welcome";
-import Column from './components/Column'
+import Column from './components/Column';
+import {DragDropContext} from 'react-beautiful-dnd'
 function App(): JSX.Element {
     const list = ['Item 1', 'Item 2', 'Item 3']
+    const onDragEnd = () => null
     return (
+        <DragDropContext onDragEnd={onDragEnd}>
         <div
         style={{
           display: 'grid',
@@ -17,6 +20,7 @@ function App(): JSX.Element {
       >
         <Column list={list} />
       </div>
+      </DragDropContext>
     )
 }
 
