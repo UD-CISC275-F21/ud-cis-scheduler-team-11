@@ -24,5 +24,6 @@ const styles = {
         flexDirection: "column",
         alignItems: "center",
         fontSize: 30,
+        border: "10px solid black",
     },
 } as const;
