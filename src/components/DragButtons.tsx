@@ -2,21 +2,43 @@ import React from "react";
 import {useState} from "react";
 import {DragDropContext, Droppable, Draggable, DropResult} from "react-beautiful-dnd";
 
+
 export function LoadClasses(): JSX.Element{
-    const coreClasses=[
-        {
-            id: "test1",
-            name: "Intro to Comp Sci",
-        },
-        {
-            id: "test2",
-            name: "Intro to Comp Sci2",
-        },
-        {
-            id: "test3",
-            name: "Intro to Comp Sci3",
-        },
-    ];
+    const coreClasses=[{
+        id: "test1",
+        name: "Intro to Comp Sci",
+    }];
+    if(PUT SOMETHING HERE){
+        const coreClasses=[ 
+            {
+                id: "test1",
+                name: "Intro to Comp Sci",
+            },
+            {
+                id: "test2",
+                name: "Intro to Comp Sci2",
+            },
+            {
+                id: "test3",
+                name: "Intro to Comp Sci3",
+            },
+        ];
+    }else{
+        const coreClasses=[
+            {
+                id: "test1",
+                name: "Intro to Comp Sci",
+            },
+            {
+                id: "test2",
+                name: "Intro to Comp Sci2",
+            },
+            {
+                id: "test3",
+                name: "Intro to Comp Sci3",
+            },
+        ];
+    }
     const [core, updateCore] = useState(coreClasses);
 
 
