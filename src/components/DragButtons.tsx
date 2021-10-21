@@ -4,10 +4,21 @@ import {DragDropContext, Droppable, Draggable, DropResult} from "react-beautiful
 
 
 export function LoadClasses(): JSX.Element{
-    const coreClasses=[{
-        id: "test1",
-        name: "Intro to Comp Sci",
-    }];
+    const coreClasses=[
+        {
+            id: "test1",
+            name: "Intro to Comp Sci",
+        },
+        {
+            id: "test2",
+            name: "Intro to Comp Sci2",
+        },
+        {
+            id: "test3",
+            name: "Intro to Comp Sci3",
+        },
+    ];
+    /*
     if(PUT SOMETHING HERE){
         const coreClasses=[ 
             {
@@ -39,6 +50,7 @@ export function LoadClasses(): JSX.Element{
             },
         ];
     }
+    */
     const [core, updateCore] = useState(coreClasses);
 
 
