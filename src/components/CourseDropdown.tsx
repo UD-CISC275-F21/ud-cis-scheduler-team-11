@@ -28,35 +28,3 @@ const styles = {
     },
 } as const;
 
-class App extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        inputVal: "Clue Mediator"
-      };
-      this.onInputChange = this.onInputChange.bind(this);
-      this.clearInput = this.clearInput.bind(this);
-    }
-  
-    clearInput() {
-      this.setState({ inputVal: "" });
-    }
-  
-    // handle input change event
-    onInputChange(e) {
-      this.setState({ inputVal: e.target.value });
-    }
-  
-    render() {
-      return (
-        <>
-          <input
-            placeholder="Enter your value here..."
-            value={this.state.inputVal}
-            onChange={this.onInputChange}
-          />
-          <input type="button" value="clear" onClick={this.clearInput} />
-        </>
-      );
-    }
-  }
