@@ -31,3 +31,71 @@ const styles = {
         marginLeft: "100px",
     },
 } as const;
+
+import * as React from "react";
+import { UseFormRegister, useForm } from "react-hook-form";
+import "./styles.css";
+
+type FormValuesA = {
+  firstName: string;
+};
+
+type FormValuesB = {
+  age: string;
+};
+
+type FormValues = FormValuesA | FormValuesB;
+
+interface Props<T extends FormValues> {
+  initialData: T;
+  children: (register: UseFormRegister<T>) => React.ReactElement;
+}
+
+const FormContainer = <T extends FormValues>(props: Props<T>) => {
+  const { register, handleSubmit, reset } = useForm<T>({
+    /* Here TS complains about types */
+    /* Argument of type 'T' is not assignable 
+          to parameter of type 
+            'UnpackNestedValue<DeepPartial<T>> | undefined' etc. */
+    defaultValues: props.initialData
+  });
+  const onSubmit = (data: FormValues) => console.log(data);
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {props.children(register)}
+        <input type="submit" />
+      </form>
+
+      {/* Here TS complains about types */}
+      {/* Argument of type 'T' is not assignable 
+          to parameter of type 
+            'UnpackNestedValue<DeepPartial<T>> | undefined' etc. */}
+      <button onClick={() => reset(props.initialData)}>Reset</button>
+    </div>
+  );
+};
+
+const FormA = () => {
+  return (
+    <>
+      <FormContainer<FormValuesA> initialData={{ firstName: "Hans" }}>
+        {(register) => {
+          return (
+            <>
+              <input {...register("firstName")} />
+
+              {/* As expected, Typescript reports an error */}
+              <input {...register("age")} />
+            </>
+          );
+        }}
+      </FormContainer>
+    </>
+  );
+};
+
+export default function App() {
+  return <FormA />;
+}
