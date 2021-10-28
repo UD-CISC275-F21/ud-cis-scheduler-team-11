@@ -4,14 +4,7 @@ import { ClasstypeTable } from "./TableView";
 import { Table } from "../interfaces/Table";
 import { useState } from "react";
 
-/*
-I think for this it should return a card and several subject components (which will need to be made for ease of adding classes).
-It should have the buttons to add courses.
-3 columns 5 rows default?
--NEEDS SUBJECTVIEWER COMPONENT FOR RETURN
--NEEDS "ADD CLASS" BUTTON
-*/
-export function SemesterTable() : JSX.Element {
+export function SemesterButton() : JSX.Element {
     const [currentID, setID] = useState<number>(0);
     const semestersPerYear = 2; 
     const [semesters, setSem] = useState<Table[]>([{id:currentID, semester: 1, year: 1}]);
@@ -57,7 +50,7 @@ export function SemesterTable() : JSX.Element {
                 <table>
                     { semesters.map((sem: Table) => {
                         return <tr key={sem.id}>
-                            <td><SubjectTable currentSem={sem.semester} currYear={sem.year} currID={sem.id} semList={semesters} setSemList={setSem} thisID={currentID} idSet={setID} semPer={semestersPerYear}></SubjectTable></td>
+                            <td><ClasstypeTable currentSem={sem.semester} currYear={sem.year} currID={sem.id} semList={semesters} setSemList={setSem} thisID={currentID} idSet={setID} semPer={semestersPerYear}></ClasstypeTable></td>
                         </tr>;
                     })}
                 </table>
@@ -65,6 +58,6 @@ export function SemesterTable() : JSX.Element {
             <Button onClick={deleteSemester} className="m-3">Delete Last Semester</Button>
             <Button onClick={deleteAllSems} className="m-3">Start Over</Button>
         </>
-        //<SubjectTable currentSem={currentSemester}></SubjectTable>
+        //<ClasstypeTable currentSem={currentSemester}></ClasstypeTable>
     );
 }
