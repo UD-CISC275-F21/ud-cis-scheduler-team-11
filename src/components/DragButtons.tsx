@@ -96,7 +96,7 @@ export function LoadClasses(): JSX.Element{
 const styles = {
     classes: {
         width: "20%",
-        padding: "0px 90px",
+        padding: "0px 80px",
         margin: "50px",
         //margin: "50px auto",
         //background: "tan",
@@ -108,6 +108,6 @@ const styles = {
         border: "10px solid black",
     },
     h3: {
-        marginLeft: "100px",
+        marginLeft: "30px",
     },
 } as const;
