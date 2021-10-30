@@ -32,8 +32,6 @@ export function SemesterButton() : JSX.Element {
         sems.pop();
         if (!sems[0]) {
             setID(-1);
-            //setYear(0);
-            //setSemester(0);
         }
         setSem(sems);
     }
