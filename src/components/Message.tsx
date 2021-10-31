@@ -12,8 +12,8 @@ export function Message(): JSX.Element{
                     <ToastHeader>
                         <strong className="me-auto">Welcome!</strong>
                     </ToastHeader>
-                    <Toast.Body>
-                        HII
+                    <Toast.Body> 
+                        Please select a major to get started.
                     </Toast.Body>
                 </Toast>
             </ToastContainer>
