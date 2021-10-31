@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Names } from "./components/Names";
+//import { Names } from "./components/Names";
 import { Welcome } from "./components/Welcome";
 import { Dropdown } from "./components/CourseDropdown";
 import { LoadClasses } from "./components/DragButtons";
