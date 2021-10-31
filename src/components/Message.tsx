@@ -2,13 +2,14 @@ import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
 import ToastHeader from "react-bootstrap/ToastHeader";
 import React, { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
 
 export function Message(): JSX.Element{
     const [show, setShow] = useState(false);
     return(
-        <div className="message">
-            <ToastContainer position="top-end" className="p-3">
-                <Toast show={!show} onClose={()=>setShow(!show)} bg="light">
+        <div style={styles.popup}>
+            <ToastContainer position="top-end" className="m-3">
+                <Toast show={!show} onClose={()=>setShow(!show)}>
                     <ToastHeader>
                         <strong className="me-auto">Welcome!</strong>
                     </ToastHeader>
@@ -20,5 +21,12 @@ export function Message(): JSX.Element{
         </div>
     );
 }
+const styles = {
+    popup: {
+        //background: "black",
+        color: "blue",
+    },
+} as const;
+
 
 
