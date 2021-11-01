@@ -7,7 +7,7 @@ export function Dropdown(): JSX.Element {
     const defaultOption = "Click Here.";
     return(
         <div style={styles.dropdown}>
-            Major Selector
+            <h3>Major Selector</h3>
             <DropdownBox options={options} value={defaultOption} placeholder="Select an option" />
         </div>
     );
@@ -16,14 +16,14 @@ export function Dropdown(): JSX.Element {
 const styles = {
     dropdown: {
         width: "40%",
-        padding: "0px 90px",
-        margin: "50px auto",
+        //padding: "0px 0px",
+        margin: "10px auto",
         background: "tan",
-        borderRadius: "10px",
+        borderRadius: "111px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        fontSize: 30,
+        fontSize: 20,
         border: "10px solid black",
     },
 } as const;
