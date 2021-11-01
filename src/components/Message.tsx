@@ -11,10 +11,10 @@ export function Message(): JSX.Element{
             <ToastContainer position="top-end" className="m-3">
                 <Toast show={!show} onClose={()=>setShow(!show)}>
                     <ToastHeader>
-                        <strong className="me-auto">Welcome!</strong>
+                        <strong className="me-auto">Welcome to the UD CIS Scheduler!</strong>
                     </ToastHeader>
                     <Toast.Body> 
-                        Please select a major to get started.
+                        Please select a major to get started. Required courses will populate for you to build a schedule.
                     </Toast.Body>
                 </Toast>
             </ToastContainer>
