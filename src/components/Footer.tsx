@@ -13,7 +13,7 @@ const styles = {
     footer: {
         marginTop: "1rem",
         padding: "1rem",
-        backgroundColor: "Light Cyan",
+        backgroundColor: "Cyan",
         position: "fixed",
         bottom: "0",
         left: "0",
