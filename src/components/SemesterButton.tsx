@@ -69,6 +69,8 @@ const styles = {
         padding: "50px 20px 0px 50px",
         margin: "50px auto",
         background: "gray",
+        marginBottom: "100px",
+        
         //alignItems: "center",
         //justifyContent: "right",
         fontSize: 17,
