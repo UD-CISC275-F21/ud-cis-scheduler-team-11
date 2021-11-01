@@ -8,6 +8,7 @@ import { LoadClasses } from "./components/DragButtons";
 import { SemesterButton } from "./components/SemesterButton";
 import "./components/Message.css";
 import { Message } from "./components/Message";
+import { Footer } from "./components/Footer";
 
 function App(): JSX.Element {
     return (
@@ -19,6 +20,7 @@ function App(): JSX.Element {
                 <LoadClasses></LoadClasses>
                 <SemesterButton></SemesterButton>
             </div>
+            <Footer />
         </div>
     );
 }
