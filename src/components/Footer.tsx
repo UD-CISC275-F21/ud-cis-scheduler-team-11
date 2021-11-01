@@ -14,7 +14,7 @@ const styles = {
         marginTop: "1rem",
         padding: "1rem",
         backgroundColor: "Cyan",
-        position: "fixed",
+        //position: "fixed",
         bottom: "0",
         left: "0",
         width: "100%",
