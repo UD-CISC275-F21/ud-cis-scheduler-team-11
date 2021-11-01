@@ -4,6 +4,9 @@ import App from "./App";
 
 test("renders UD CIS Scheduler text", () => {
     render(<App />);
-    const linkElement = screen.getByText(/UD CIS Scheduler/i);
-    expect(linkElement).toBeInTheDocument();
+    const welcomeMessage = screen.getByText(/Welcome to the UD CIS Scheduler/);
+    //const udCisScheduler = screen.getByText(/UD CIS/);
+    expect(welcomeMessage).toBeInTheDocument();
+    //expect(udCisScheduler).toBeInTheDocument();
+
 });
