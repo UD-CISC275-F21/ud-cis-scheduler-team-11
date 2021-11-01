@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { ClasstypeTable } from "./TableView";
 import { Table } from "../interfaces/Table";
 import { useState } from "react";
@@ -20,7 +20,6 @@ export function SemesterButton() : JSX.Element {
 
         setID(tempid);
         const temp: Table = {id: tempid, semester: tempsem, year: tempyear};
-        //temp.semester = currentSemester;
         const sems: Table[] = semesters;
         sems.push(temp);
         setSem(sems);
@@ -32,8 +31,6 @@ export function SemesterButton() : JSX.Element {
         sems.pop();
         if (!sems[0]) {
             setID(-1);
-            //setYear(0);
-            //setSemester(0);
         }
         setSem(sems);
     }
@@ -44,20 +41,36 @@ export function SemesterButton() : JSX.Element {
     }
 
     return (
-        <>
-            <Row><Button onClick={addSemester} className="m-3">Add Semester</Button></Row>
+        <div style={styles.semesters}>
             <Row>
-                <table>
-                    { semesters.map((sem: Table) => {
-                        return <tr key={sem.id}>
-                            <td><ClasstypeTable currentSem={sem.semester} currYear={sem.year} currID={sem.id} semList={semesters} setSemList={setSem} thisID={currentID} idSet={setID} semPer={semestersPerYear}></ClasstypeTable></td>
-                        </tr>;
-                    })}
-                </table>
+                <Row>
+                    <table>
+                        { semesters.map((sem: Table) => {
+                            return <tr key={sem.id}>
+                                <td><ClasstypeTable currentSem={sem.semester} currYear={sem.year} currID={sem.id} semList={semesters} setSemList={setSem} thisID={currentID} idSet={setID} semPer={semestersPerYear}></ClasstypeTable></td>
+                            </tr>;
+                        })}
+                    </table>
+                </Row>
+                <Col>
+                    <Button onClick={addSemester} className="m-3">Add Semester</Button>
+                    <Button onClick={deleteSemester} className="m-3">Delete Last Semester</Button>
+                    <Button onClick={deleteAllSems} className="m-3">Start Over</Button>
+                </Col>
             </Row>
-            <Button onClick={deleteSemester} className="m-3">Delete Last Semester</Button>
-            <Button onClick={deleteAllSems} className="m-3">Start Over</Button>
-        </>
+        </div>
         //<ClasstypeTable currentSem={currentSemester}></ClasstypeTable>
     );
 }
+
+const styles = {
+    semesters: {
+        width: "50%",
+        padding: "50px 20px 0px 50px",
+        margin: "50px auto",
+        background: "gray",
+        //alignItems: "center",
+        //justifyContent: "right",
+        fontSize: 17,
+    },
+} as const;
