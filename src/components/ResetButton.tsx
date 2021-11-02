@@ -1,1 +1,0 @@
-e.target.value = null;
