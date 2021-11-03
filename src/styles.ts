@@ -13,12 +13,28 @@ export const ColumnTitle = styled.div`
 padding: 6px 16px 12px;
 font-weight: bold;
 `;
-interface DragPreviewContainerProps {
+type DragPreviewContainerProps = {
     isHidden?: boolean
+    isPreview?: boolean
 }
 export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
-    opacity: ${props => (props.isHidden ? 0.3 : 1)};
+    transform: ${props => (props.isPreview ? "rotate(5deg)" : undefined)};
+    opacity: ${props => (props.isHidden ? 0 : 1)};
 `
+type DragPreviewWrapperProps = {
+    position: {
+        x: number
+        y: number
+    }
+}
+export const DragPreviewWrapper = styled.div.attrs < DragPreviewWrapperProps> (
+        ({ position: { x, y } }) => ({
+            style: {
+                transform: `translate(${x}px, ${y}px)`
+            }
+        })
+    ) <DragPreviewWrapperProps>``
+
 export const ColumnContainer = styled(DragPreviewContainer)`
     background-color: #ebecf0;
     width: 300px;
@@ -95,4 +111,3 @@ export const CustomDragLayerContainer = styled.div`
 `;//rendered first
 
 
-    
