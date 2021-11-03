@@ -10,7 +10,7 @@ import { Card } from "./Card";
 //import { StyledComponent } from "styled-components";
 
 
-export const CustomDragLayer = () => {
+export const CustomDragLayer = (): JSX.Element | null => {
     const { draggedItem } = useAppState();
     const { currentOffset } = useDragLayer((monitor) => ({
         currentOffset: monitor.getSourceClientOffset()
