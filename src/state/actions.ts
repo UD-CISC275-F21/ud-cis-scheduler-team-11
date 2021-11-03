@@ -8,6 +8,13 @@ export type Action =
         type: "ADD_TASK"
         payload: { text: string; listId: string }
     }
+    | {
+        type: "MOVE_LIST"
+        payload: {
+        draggedId: string
+        hoverId: string
+    }
+}
     
 /*what I had before I decided to use a discriminated union which
 allows the Typescript to look at the property and understand the other fields
@@ -24,6 +31,8 @@ allows the Typescript to look at the property and understand the other fields
     type Action = AddListAction | AddTaskAction
 
 */
+
+
 export const addTask = (
     text: string,
     listId: string,
@@ -41,3 +50,14 @@ export const addList = (
     type: "ADD_LIST",
     payload: text
 });
+export const moveList = (
+    draggedId: string,
+    hoverId: string,
+): Action => ({
+    type: "MOVE_LIST",
+    payload: {
+        draggedId,
+        hoverId,
+    }
+})
+    
