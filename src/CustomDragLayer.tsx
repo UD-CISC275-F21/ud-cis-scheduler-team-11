@@ -1,3 +1,4 @@
+import React from "react";
 import { useDragLayer } from "react-dnd";
 import { Column } from "./Column";
 import { useAppState } from "./state/AppStateContext";
@@ -9,10 +10,10 @@ import { Card } from "./Card";
 
 
 export const CustomDragLayer = () => {
-    const { draggedItem } = useAppState()
+    const { draggedItem } = useAppState();
     const { currentOffset } = useDragLayer((monitor) => ({
         currentOffset: monitor.getSourceClientOffset()
-    }))
+    }));
     return draggedItem && currentOffset ? (
         <CustomDragLayerContainer>
             <DragPreviewWrapper position={currentOffset}>
@@ -33,5 +34,5 @@ export const CustomDragLayer = () => {
             </DragPreviewWrapper>
 
         </CustomDragLayerContainer>
-    ) : null
-}
+    ) : null;
+};

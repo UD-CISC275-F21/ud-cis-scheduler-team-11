@@ -82,7 +82,7 @@ export const setDraggedItem = (
 ): Action => ({
     type: "SET_DRAGGED_ITEM",
     payload: draggedItem
-})
+});
 
 export const moveTask = (
     draggedItemId: string,
@@ -97,6 +97,6 @@ export const moveTask = (
         sourceColumnId,
         targetColumnId
     }
-})
+});
 
 

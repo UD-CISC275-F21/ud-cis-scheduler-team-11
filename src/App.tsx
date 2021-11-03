@@ -35,7 +35,7 @@ function App(): JSX.Element {
 
 export const App = () => {
     const { lists, dispatch } = useAppState();
-    
+
     return (
         <AppContainer>
             <CustomDragLayer />
@@ -47,5 +47,5 @@ export const App = () => {
                 onAdd={text => dispatch(addList(text))}
             />
         </AppContainer>
-    )
-}
+    );
+};
