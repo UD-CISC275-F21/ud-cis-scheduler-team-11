@@ -1,3 +1,5 @@
+import { DragItem } from "../DragItem";
+
 //an action now can resort to one of the forms we passed in, the list or task
 export type Action =
     | {
@@ -14,7 +16,11 @@ export type Action =
         draggedId: string
         hoverId: string
     }
-}
+    }   
+    | {
+        type: "SET_DRAGGED_ITEM"
+        payload: DragItem | null
+    } 
     
 /*what I had before I decided to use a discriminated union which
 allows the Typescript to look at the property and understand the other fields
@@ -61,4 +67,12 @@ export const moveList = (
         hoverId,
     }
 });
+
+export const setDraggedItem = (
+    draggedItem: DragItem | null,
+): Action => ({
+    type: "SET_DRAGGED_ITEM",
+    payload: draggedItem
+})
+    
     
