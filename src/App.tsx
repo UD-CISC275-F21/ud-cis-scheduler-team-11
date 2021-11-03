@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Welcome } from "./components/Welcome";
 import { Dropdown } from "./components/CourseDropdown";
 import { LoadClasses } from "./components/DragButtons";
-import { SemesterButton } from "./components/SemesterButton";
+//import { SemesterButton } from "./components/SemesterButton";
 import "./components/Message.css";
 import { Message } from "./components/Message";
 import { Footer } from "./components/Footer";
@@ -25,7 +25,16 @@ function App(): JSX.Element {
             <Dropdown></Dropdown>
             <div className='rowC'>
                 <LoadClasses></LoadClasses>
-                <SemesterButton></SemesterButton>
+                <AppContainer>
+                    <CustomDragLayer />
+                    {lists.map((list) => (
+                        <Column id={list.id} text={list.text} key={list.id} />
+                    ))}
+                    <AddNewItem
+                        toggleButtonText="+ Add another list"
+                        onAdd={text => dispatch(addList(text))}
+                    />
+                </AppContainer>
             </div>
             <Footer />
         </div>
@@ -33,19 +42,28 @@ function App(): JSX.Element {
 }
 */
 
-export const App = () => {
+export const App = ():JSX.Element  => {
     const { lists, dispatch } = useAppState();
 
     return (
-        <AppContainer>
-            <CustomDragLayer />
-            {lists.map((list) => (
-                <Column id={list.id} text={list.text} key={list.id} />
-            ))}
-            <AddNewItem
-                toggleButtonText="+ Add another list"
-                onAdd={text => dispatch(addList(text))}
-            />
-        </AppContainer>
+        <div className = "App">
+            <Message />
+            <Welcome></Welcome>
+            <Dropdown></Dropdown>
+            <div className='rowC'>
+                <LoadClasses></LoadClasses>
+                <AppContainer>
+                    <CustomDragLayer />
+                    {lists.map(list => 
+                        <Column id={list.id} text={list.text} key={list.id} />
+                    )}
+                    <AddNewItem
+                        toggleButtonText="+ Add another list"
+                        onAdd={text => dispatch(addList(text))}
+                    />
+                </AppContainer>
+            </div>
+            <Footer />
+        </div>
     );
 };

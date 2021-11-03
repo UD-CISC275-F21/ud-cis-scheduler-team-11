@@ -1,6 +1,6 @@
-import { useDrag } from "react-dnd";
+import { ConnectDragSource, useDrag } from "react-dnd";
 import { useAppState } from "../state/AppStateContext";
-import { DragItem } from "../DragItem";
+import { CardDragItem, DragItem } from "../DragItem";
 import { setDraggedItem } from "../state/actions";
 import { getEmptyImage } from "react-dnd-html5-backend";
 import { useEffect } from "react";

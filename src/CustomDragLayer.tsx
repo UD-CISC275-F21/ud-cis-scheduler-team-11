@@ -7,6 +7,7 @@ import {
     DragPreviewWrapper
 } from "./styles";
 import { Card } from "./Card";
+//import { StyledComponent } from "styled-components";
 
 
 export const CustomDragLayer = () => {

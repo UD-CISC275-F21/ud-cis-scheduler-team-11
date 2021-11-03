@@ -5,7 +5,7 @@ import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
-import { moveTask, setDraggedItem } from "./state/actions";
+import { moveTask } from "./state/actions";
 
 type CardProps = {
     text: string
@@ -19,7 +19,7 @@ export const Card = ({
     id,
     columnId,
     isPreview
-}: CardProps) => {
+}: CardProps): JSX.Element => {
     const { draggedItem, dispatch } = useAppState();
     const ref = useRef<HTMLDivElement>(null);
     const { drag } = useItemDrag({

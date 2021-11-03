@@ -7,7 +7,7 @@ type NewItemFormProps = {
     onAdd(text: string): void
 }
 
-export const NewItemForm = ({ onAdd }: NewItemFormProps) => {
+export const NewItemForm = ({ onAdd }: NewItemFormProps): JSX.Element => {
     const [text, setText] = useState("");
     const inputRef = useFocus();
     //add enter key for create

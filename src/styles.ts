@@ -18,8 +18,8 @@ type DragPreviewContainerProps = {
     isPreview?: boolean
 }
 export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
-    transform: ${props => (props.isPreview ? "rotate(5deg)" : undefined)};
-    opacity: ${props => (props.isHidden ? 0 : 1)};
+    transform: ${props => props.isPreview ? "rotate(5deg)" : undefined};
+    opacity: ${props => props.isHidden ? 0 : 1};
 `;
 
 type DragPreviewWrapperProps = {
@@ -65,7 +65,7 @@ export const AddItemButton = styled.button<AddItemButtonProps>`
     background-color: #ffffff3d;
     border-radius: 3px;
     border: none;
-    color: ${props => (props.dark ? "#000" : "#fff")};
+    color: ${props => props.dark ? "#000" : "#fff"};
     cursor: pointer;
     max-width: 300px;
     padding: 10px 12px;

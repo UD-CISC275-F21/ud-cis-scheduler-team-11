@@ -9,7 +9,7 @@ type AddNewItemProps = {
     dark?: boolean
     }
 
-export const AddNewItem = (props: AddNewItemProps) => {
+export const AddNewItem = (props: AddNewItemProps): JSX.Element => {
     const [showForm, setShowForm] = useState(false);
     const { onAdd, toggleButtonText, dark } = props;
     

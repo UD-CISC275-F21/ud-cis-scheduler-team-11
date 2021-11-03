@@ -5,7 +5,7 @@ type Item = {
 export const findItemIndexById = <TItem extends Item>(
     items: TItem[],
     id: string
-) => {
+):number => {
     return items.findIndex((item: TItem) => item.id === id);
 };
 export const moveItem = <TItem>(array: TItem[], from: number, to: number) => {
