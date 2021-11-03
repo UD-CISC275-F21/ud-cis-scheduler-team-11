@@ -50,6 +50,7 @@ export const addList = (
     type: "ADD_LIST",
     payload: text
 });
+
 export const moveList = (
     draggedId: string,
     hoverId: string,
@@ -59,5 +60,5 @@ export const moveList = (
         draggedId,
         hoverId,
     }
-})
+});
     
