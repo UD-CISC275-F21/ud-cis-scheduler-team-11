@@ -9,16 +9,6 @@ export const AppContainer = styled.div`
     padding: 20px;
     width: 100%;
 `;
-
-export const ColumnContainer = styled(DragPreviewContainer)`
-    background-color: #ebecf0;
-    width: 300px;
-    min-height: 40px;
-    margin-right: 20px;
-    border-radius: 3px;
-    padding: 8px 8px;
-    flex-grow: 0;
-`;
 export const ColumnTitle = styled.div`
 padding: 6px 16px 12px;
 font-weight: bold;
@@ -29,6 +19,17 @@ interface DragPreviewContainerProps {
 export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
     opacity: ${props => (props.isHidden ? 0.3 : 1)};
 `
+export const ColumnContainer = styled(DragPreviewContainer)`
+    background-color: #ebecf0;
+    width: 300px;
+    min-height: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+    padding: 8px 8px;
+    flex-grow: 0;
+`;
+
+
 export const CardContainer = styled(DragPreviewContainer)`
     background-color: #fff;
     cursor: pointer;
@@ -83,5 +84,15 @@ export const NewItemInput = styled.input`
     padding: 0.5rem 1rem;
     width: 100%;
 `;
+export const CustomDragLayerContainer = styled.div`
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+`;//rendered first
+
 
     
