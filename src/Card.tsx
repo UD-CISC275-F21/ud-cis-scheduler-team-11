@@ -1,3 +1,4 @@
+import React from "react";
 import { CardContainer } from "./styles";
 
 type CardProps = {
@@ -6,5 +7,5 @@ type CardProps = {
 }
     
 export const Card = ({ text }: CardProps) => {
-    return <CardContainer>{text}</CardContainer>
-}
+    return <CardContainer>{text}</CardContainer>;
+};

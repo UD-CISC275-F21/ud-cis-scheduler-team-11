@@ -1,10 +1,10 @@
 import React from "react";
 import { ColumnContainer, ColumnTitle } from "./styles";
 import {FC} from "react";
-import { AddNewItem } from "./AddNewItem"
-import { useAppState } from "./state/AppStateContext"
+import { AddNewItem } from "./AddNewItem";
+import { useAppState } from "./state/AppStateContext";
 import { Card } from "./Card";
-import { addTask } from "./state/actions"
+import { addTask } from "./state/actions";
 
 type ColumnProps = {
     text: string;
@@ -12,8 +12,8 @@ type ColumnProps = {
 }
 
 export const Column = ({ text, id }: ColumnProps) => {
-    const { getTasksByListId } = useAppState()
-    const tasks = getTasksByListId(id)
+    const { getTasksByListId } = useAppState();
+    const tasks = getTasksByListId(id);
     return (
         <ColumnContainer>
             <ColumnTitle>{text}</ColumnTitle>
@@ -26,5 +26,5 @@ export const Column = ({ text, id }: ColumnProps) => {
                 dark
             />
         </ColumnContainer>
-    )
-}
+    );
+};

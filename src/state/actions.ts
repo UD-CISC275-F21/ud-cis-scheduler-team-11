@@ -9,21 +9,21 @@ export type Action =
         payload: { text: string; listId: string }
     }
     
-    /*what I had before I decided to use a discriminated union which
-    allows the Typescript to look at the property and understand the other fields
-        interface AddListAction {
-            type: "ADD_LIST"
-            payload: string
-        }
+/*what I had before I decided to use a discriminated union which
+allows the Typescript to look at the property and understand the other fields
+    interface AddListAction {
+        type: "ADD_LIST"
+        payload: string
+    }
 
-        interface AddTaskAction {
-            type: "ADD_LIST"
-            payload: { text: string; listId: string }
-        }
+    interface AddTaskAction {
+        type: "ADD_LIST"
+        payload: { text: string; listId: string }
+    }
 
-        type Action = AddListAction | AddTaskAction
+    type Action = AddListAction | AddTaskAction
 
-    */
+*/
 export const addTask = (
     text: string,
     listId: string,
@@ -33,11 +33,11 @@ export const addTask = (
         text,
         listId
     }
-})
+});
 
 export const addList = (
     text: string,
 ): Action => ({
     type: "ADD_LIST",
     payload: text
-})
+});
