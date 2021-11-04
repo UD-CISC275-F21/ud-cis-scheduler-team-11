@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import { ColumnContainer, ColumnTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
 import { Card } from "./Card";
@@ -6,6 +6,7 @@ import { AddNewItem } from "./AddNewItem";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
+import { Row } from "react-bootstrap";
 import {
     addTask,
     moveTask,
@@ -16,10 +17,11 @@ import {
 type ColumnProps = {
     text: string
     id: string
+    button: JSX.Element
     isPreview?: boolean
 }
 
-export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
+export const Column = ({ text, id, button, isPreview }: ColumnProps): JSX.Element => {
     const { draggedItem, getCoursesByListId, dispatch } = useAppState();
     const courses = getCoursesByListId(id);
     const ref = useRef<HTMLDivElement>(null);
@@ -51,7 +53,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
         }
     });
 
-    const { drag } = useItemDrag({ type: "COLUMN", id, text });
+    const { drag } = useItemDrag({ type: "COLUMN", id, button, text });
 
     drag(drop(ref));
 
@@ -61,7 +63,9 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
             ref={ref}
             isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
         >
-            <ColumnTitle>{text}</ColumnTitle>
+            <Row>
+                <ColumnTitle>{[text, button]}</ColumnTitle>
+            </Row>
             {courses.map(task => 
                 <Card
                     id={task.id}

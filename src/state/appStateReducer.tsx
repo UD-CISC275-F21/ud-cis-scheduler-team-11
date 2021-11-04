@@ -35,7 +35,7 @@ export const appStateReducer = (
         draft.lists.push({
             id: nanoid(),
             text: action.payload,
-            button: <Button>X</Button>,
+            button: <Button></Button>,
             courses: [],
         });
         break;

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, Dispatch, FC } from "react";
 import { Action } from "./actions";
 import { useImmerReducer } from "use-immer";
-import { Row, Col, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import {
     appStateReducer,
     AppState,
@@ -9,9 +9,12 @@ import {
     Task
 } from "./appStateReducer";
 import { DragItem } from "../DragItem";
-import { listeners } from "process";
 
 const AppStateContext = createContext<AppStateContextProps>({} as AppStateContextProps);
+
+function deleteSemester(index: number) {
+    appData.lists.splice(index,index);
+}
 
 const appData: AppState = {
     draggedItem: null,
@@ -19,19 +22,19 @@ const appData: AppState = {
         {
             id: "0",
             text: "Course List",
-            button: <Button></Button>,
+            button: <Button onClick={() => deleteSemester(0)}>X</Button>,
             courses: [{ id: "c0", text: "Cisc 106" },{ id:"c1", text: "Cisc108"}]
         },
         {
             id: "1",
             text: "Year 1: Semester 1",
-            button: <Button></Button>,
+            button: <Button onClick={() => deleteSemester(1)}>X</Button>,
             courses: [{ id: "c2", text: "Learn Typescript" }]
         },
         {
             id: "2",
             text: "Year 1: Semester 2",
-            button: <Button></Button>,
+            button: <Button onClick={() => deleteSemester(2)}>X</Button>,
             courses: [{ id: "c3", text: "Begin to use static typing" }]
         }
     ]

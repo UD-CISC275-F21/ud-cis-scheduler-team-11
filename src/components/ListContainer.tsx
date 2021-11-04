@@ -9,7 +9,7 @@ import { Column } from "../Column";
 export function ListContainer(): JSX.Element {
     const { lists, dispatch } = useAppState();
     const test = lists.map(list => 
-        <Column id={list.id} text={list.text} key={list.id} />
+        <Column id={list.id} text={list.text} button={list.button} key={list.id} />
     );
     return(
         <AppContainer>
