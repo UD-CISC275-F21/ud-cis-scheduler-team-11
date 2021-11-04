@@ -36,7 +36,7 @@ const appData: AppState = {
             text: "Year 1: Semester 2",
             button: <Button onClick={() => deleteSemester(2)}>X</Button>,
             courses: [{ id: "c3", text: "Begin to use static typing" }]
-        }
+        } 
     ]
 };
 
