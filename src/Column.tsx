@@ -20,8 +20,8 @@ type ColumnProps = {
 }
 
 export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
-    const { draggedItem, getTasksByListId, dispatch } = useAppState();
-    const tasks = getTasksByListId(id);
+    const { draggedItem, getCoursesByListId, dispatch } = useAppState();
+    const courses = getCoursesByListId(id);
     const ref = useRef<HTMLDivElement>(null);
     const [, drop] = useDrop({
         accept: ["COLUMN", "CARD"],
@@ -39,7 +39,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
                 if (draggedItem.columnId === id) {
                     return;
                 }
-                if (tasks.length) {
+                if (courses.length) {
                     return;
                 }
 
@@ -62,7 +62,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
             isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
         >
             <ColumnTitle>{text}</ColumnTitle>
-            {tasks.map(task => 
+            {courses.map(task => 
                 <Card
                     id={task.id}
                     columnId={id}
