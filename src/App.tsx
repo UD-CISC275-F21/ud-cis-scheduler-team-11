@@ -50,10 +50,7 @@ export const App = ():JSX.Element  => {
             <Message />
             <Welcome></Welcome>
             <Dropdown></Dropdown>
-            <div className='rowC'>
-                <LoadClasses></LoadClasses>
-                <ListContainer />
-            </div>
+            <ListContainer />
             <Footer />
         </div>
     );
