@@ -9,12 +9,13 @@ import { LoadClasses } from "./components/DragButtons";
 import "./components/Message.css";
 import { Message } from "./components/Message";
 import { Footer } from "./components/Footer";
-import { Column } from "./Column";
-import { AppContainer } from "./styles";
-import { AddNewItem } from "./AddNewItem";
-import { useAppState } from "./state/AppStateContext";
-import { addList } from "./state/actions";
-import { CustomDragLayer } from "./CustomDragLayer";
+//import { Column } from "./Column";
+//import { AppContainer } from "./styles";
+//import { AddNewItem } from "./AddNewItem";
+//import { useAppState } from "./state/AppStateContext";
+//import { addList } from "./state/actions";
+//import { CustomDragLayer } from "./CustomDragLayer";
+import { ListContainer } from "./components/ListContainer";
 
 /*
 function App(): JSX.Element {
@@ -43,8 +44,7 @@ function App(): JSX.Element {
 */
 
 export const App = ():JSX.Element  => {
-    const { lists, dispatch } = useAppState();
-
+//export function App(): JSX.Element {
     return (
         <div className = "App">
             <Message />
@@ -52,16 +52,7 @@ export const App = ():JSX.Element  => {
             <Dropdown></Dropdown>
             <div className='rowC'>
                 <LoadClasses></LoadClasses>
-                <AppContainer>
-                    <CustomDragLayer />
-                    {lists.map(list => 
-                        <Column id={list.id} text={list.text} key={list.id} />
-                    )}
-                    <AddNewItem
-                        toggleButtonText="+ Add another list"
-                        onAdd={text => dispatch(addList(text))}
-                    />
-                </AppContainer>
+                <ListContainer />
             </div>
             <Footer />
         </div>
