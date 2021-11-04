@@ -1,7 +1,9 @@
+import React from "react";
 import { nanoid } from "nanoid";
 import { findItemIndexById, moveItem } from "../utils/arrayUtils";
 import { DragItem } from "../DragItem";
 import { Action } from "./actions";
+import { Button } from "react-bootstrap";
 
 export type Task = {
     id: string
@@ -11,7 +13,8 @@ export type Task = {
 export type List = {
     id: string
     text: string
-    tasks: Task[]
+    button: JSX.Element
+    courses: Task[]
 }
 
 export type AppState = {
@@ -32,15 +35,15 @@ export const appStateReducer = (
         draft.lists.push({
             id: nanoid(),
             text: action.payload,
-            tasks: []
+            button: <Button></Button>,
+            courses: [],
         });
         break;
     }
     case "ADD_TASK": {
         const { text, listId } = action.payload;
         const targetListIndex = findItemIndexById(draft.lists, listId);
-
-        draft.lists[targetListIndex].tasks.push({
+        draft.lists[targetListIndex].courses.push({
             id: nanoid(),
             text
         });
@@ -71,23 +74,23 @@ export const appStateReducer = (
         );
 
         const dragIndex = findItemIndexById(
-            draft.lists[sourceListIndex].tasks,
+            draft.lists[sourceListIndex].courses,
             draggedItemId
         );
 
         const hoverIndex = hoveredItemId
             ? findItemIndexById(
-                draft.lists[targetListIndex].tasks,
+                draft.lists[targetListIndex].courses,
                 hoveredItemId
             )
             : 0;
-        const item = draft.lists[sourceListIndex].tasks[dragIndex];
+        const item = draft.lists[sourceListIndex].courses[dragIndex];
 
         // Remove the task from the source list
-        draft.lists[sourceListIndex].tasks.splice(dragIndex, 1);
+        draft.lists[sourceListIndex].courses.splice(dragIndex, 1);
 
         // Add the task to the target list
-        draft.lists[targetListIndex].tasks.splice(hoverIndex, 0, item);
+        draft.lists[targetListIndex].courses.splice(hoverIndex, 0, item);
         break;
     }
     default: {
