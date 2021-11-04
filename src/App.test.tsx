@@ -5,9 +5,6 @@ import { DndProvider } from "react-dnd";
 import { AppStateProvider } from "./state/AppStateContext";
 import { HTML5Backend as Backend } from "react-dnd-html5-backend";
 
-
-
-
 test("renders UD CIS Scheduler text", () => {
     render(<DndProvider backend={Backend}>
                 <AppStateProvider>
