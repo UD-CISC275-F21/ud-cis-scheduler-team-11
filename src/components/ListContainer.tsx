@@ -10,7 +10,7 @@ export function ListContainer(): JSX.Element {
     const { lists, dispatch } = useAppState();
     const test = lists.map(list => 
         <Column id={list.id} text={list.text} key={list.id} />
-    )
+    );
     return(
         <AppContainer>
             <CustomDragLayer />
