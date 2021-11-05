@@ -4,6 +4,7 @@ import { findItemIndexById, moveItem } from "../utils/arrayUtils";
 import { DragItem } from "../DragItem";
 import { Action } from "./actions";
 import { Button } from "react-bootstrap";
+import { deleteSemester } from "./AppStateContext";
 
 export type Task = {
     id: string
@@ -32,10 +33,11 @@ export const appStateReducer = (
         break;
     }
     case "ADD_LIST": {
+        const id=nanoid();
         draft.lists.push({
-            id: nanoid(),
+            id: id,
             text: action.payload,
-            button: <Button></Button>,
+            button: <Button onClick={() => deleteSemester(id)}>X</Button>,
             courses: [],
         });
         break;
