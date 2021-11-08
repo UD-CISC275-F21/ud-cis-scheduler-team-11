@@ -4,7 +4,7 @@ import { findItemIndexById, moveItem } from "../utils/arrayUtils";
 import { DragItem } from "../DragItem";
 import { Action } from "./actions";
 import { Button } from "react-bootstrap";
-import { deleteSemester } from "./AppStateContext";
+
 
 export type Task = {
     id: string
@@ -37,7 +37,7 @@ export const appStateReducer = (
         draft.lists.push({
             id: id,
             text: action.payload,
-            button: <Button onClick={() => deleteSemester(id)}>X</Button>,
+            button: <Button onClick={() => draft.lists = draft.lists.filter((list) => list.id)}>X</Button>,
             courses: [],
         });
         break;
