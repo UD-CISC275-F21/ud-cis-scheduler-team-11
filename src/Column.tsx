@@ -19,7 +19,7 @@ type ColumnProps = {
     id: string
     button: JSX.Element
     isPreview?: boolean
-}
+} 
 
 export const Column = ({ text, id, button, isPreview }: ColumnProps): JSX.Element => {
     const { draggedItem, getCoursesByListId, dispatch } = useAppState();
