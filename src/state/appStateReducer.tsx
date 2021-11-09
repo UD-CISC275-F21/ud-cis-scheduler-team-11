@@ -52,7 +52,6 @@ export const appStateReducer = (
         break;
     }
     case "DELETE_ALL_LISTS": {
-        alert("wtf");
         break;
     }
     case "MOVE_LIST": {
