@@ -13,11 +13,9 @@ import { DragItem } from "../DragItem";
 const AppStateContext = createContext<AppStateContextProps>({} as AppStateContextProps);
 
 export function deleteSemester(id: string) {
-    //appData.lists = appData.lists.filter((list) => list.id !== id);
-    const left  = appData.lists.filter((list) => list.id);
-    console.log(left);
-    appData.lists=left;
-    alert(left);
+    const left = appData.lists
+        .filter(list => list.id !== id);
+    appData.lists= left;
 }
 
 export const appData: AppState = {
