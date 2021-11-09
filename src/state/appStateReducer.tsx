@@ -37,7 +37,7 @@ export const appStateReducer = (
         draft.lists.push({
             id: id,
             text: action.payload,
-            button: <Button onClick={() => draft.lists = draft.lists.filter((list) => list.id)}>X</Button>,
+            button: <Button onClick={() => dispatch}>X</Button>,
             courses: [],
         });
         break;
@@ -51,7 +51,11 @@ export const appStateReducer = (
         });
         break;
     }
+    case "DELETE_LIST": {
+        break;
+    }
     case "DELETE_ALL_LISTS": {
+        draft.lists=draft.lists.slice(0,1);
         break;
     }
     case "MOVE_LIST": {
