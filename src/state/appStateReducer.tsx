@@ -1,10 +1,8 @@
-import React from "react";
+//import React from "react";
 import { nanoid } from "nanoid";
 import { findItemIndexById, moveItem } from "../utils/arrayUtils";
 import { DragItem } from "../DragItem";
 import { Action } from "./actions";
-import { Button } from "react-bootstrap";
-
 
 export type Task = {
     id: string
@@ -14,7 +12,6 @@ export type Task = {
 export type List = {
     id: string
     text: string
-    button: JSX.Element
     courses: Task[]
 }
 
@@ -37,7 +34,6 @@ export const appStateReducer = (
         draft.lists.push({
             id: id,
             text: action.payload,
-            button: <Button onClick={() => dispatch}>X</Button>,
             courses: [],
         });
         break;
@@ -52,6 +48,8 @@ export const appStateReducer = (
         break;
     }
     case "DELETE_LIST": {
+        const id = action.payload;
+        draft.lists=draft.lists.filter(list => list.id !== id);
         break;
     }
     case "DELETE_ALL_LISTS": {

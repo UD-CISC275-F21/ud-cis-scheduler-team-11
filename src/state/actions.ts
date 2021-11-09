@@ -35,6 +35,7 @@ export type Action =
     }
     | {
         type: "DELETE_LIST"
+        payload: string
     }
 
 /*what I had before I decided to use a discriminated union which
@@ -70,6 +71,13 @@ export const addList = (
 ): Action => ({
     type: "ADD_LIST",
     payload: text
+});
+
+export const deleteList = (
+    id: string,
+): Action => ({
+    type: "DELETE_LIST",
+    payload: id
 });
 
 export const deleteLists = (): Action => ({

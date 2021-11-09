@@ -14,7 +14,7 @@ export function ListContainer(): JSX.Element {
         <AppContainer>
             <CustomDragLayer />
             {lists.map(list => 
-                <Column key={list.id} id={list.id} text={list.text} button={list.button} />
+                <Column key={list.id} id={list.id} text={list.text} />
             )};
             <Row>
                 <AddNewItem
