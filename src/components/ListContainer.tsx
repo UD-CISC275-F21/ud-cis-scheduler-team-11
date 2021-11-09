@@ -10,13 +10,16 @@ import { DeleteSemester } from "../DeleteSems";
 
 export function ListContainer(): JSX.Element {
     const { lists, dispatch } = useAppState();
-    const test = lists.map(list => 
-        <Column id={list.id} text={list.text} button={list.button} key={list.id} />
-    );
-    return(
+    return( 
         <AppContainer>
             <CustomDragLayer />
-            {test}
+            {lists.map(list => 
+                <li key={list.id}>
+                    {
+                        <Column id={list.id} text={list.text} button={list.button} />
+                    }
+                </li>
+            )}
             <Row>
                 <AddNewItem
                     toggleButtonText="+ Add another list"

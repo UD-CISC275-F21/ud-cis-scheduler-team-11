@@ -10,10 +10,9 @@ type DeleteSemesterProps = {
  }
 
 export const DeleteSemester = (props: DeleteSemesterProps): JSX.Element => {
-    //appData.lists=[];
     const { toggleButtonText, dark } = props;
     return (
-        <AddItemButton dark={dark} onClick={() => appData.lists.splice(1)}>
+        <AddItemButton dark={dark} onClick={() => appData.lists=appData.lists.slice(0,1)}>
             {toggleButtonText}
         </AddItemButton>
     );
