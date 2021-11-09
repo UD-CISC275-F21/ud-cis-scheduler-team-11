@@ -6,7 +6,7 @@ import { AddNewItem } from "./AddNewItem";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
-import { Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import {
     addTask,
     moveTask,
@@ -63,9 +63,10 @@ export const Column = ({ text, id, button, isPreview }: ColumnProps): JSX.Elemen
             ref={ref}
             isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
         >
-            <Row>
-                <ColumnTitle>{[text, button]}</ColumnTitle>
-            </Row>
+            <Col>
+                <ColumnTitle>{text}</ColumnTitle>
+                {button}
+            </Col>
             {courses.map(task => 
                 <Card
                     id={task.id}

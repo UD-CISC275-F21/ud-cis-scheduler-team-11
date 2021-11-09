@@ -5,8 +5,8 @@ import { CustomDragLayer } from "../CustomDragLayer";
 import { useAppState } from "../state/AppStateContext";
 import { addList, deleteLists } from "../state/actions";
 import { Column } from "../Column";
-import { Row } from "react-bootstrap";
-import { DeleteSemester } from "../DeleteSems"; 
+import { Button, Row } from "react-bootstrap";
+//import { DeleteSemester } from "../DeleteSems"; 
 
 export function ListContainer(): JSX.Element {
     const { lists, dispatch } = useAppState();
@@ -14,22 +14,23 @@ export function ListContainer(): JSX.Element {
         <AppContainer>
             <CustomDragLayer />
             {lists.map(list => 
-                <li key={list.id}>
-                    {
-                        <Column id={list.id} text={list.text} button={list.button} />
-                    }
-                </li>
-            )}
+                <Column key={list.id} id={list.id} text={list.text} button={list.button} />
+            )};
             <Row>
                 <AddNewItem
                     toggleButtonText="+ Add another list"
                     onAdd={text => dispatch(addList(text))}
                 />
-                <DeleteSemester
-                    toggleButtonText="Delete all semesters"
-                    onAdd={() => dispatch(deleteLists())}
-                />
+                <Button onClick={() => dispatch(deleteLists())}>
+                    Delete all semesters
+                </Button>
             </Row>
         </AppContainer>
     );
 }
+/*
+<DeleteSemester
+                    toggleButtonText="Delete all semesters"
+                    onClick={() => dispatch(deleteLists())}
+                />
+                */

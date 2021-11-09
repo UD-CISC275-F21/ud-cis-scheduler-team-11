@@ -33,6 +33,9 @@ export type Action =
     | {
         type: "DELETE_ALL_LISTS"
     }
+    | {
+        type: "DELETE_LIST"
+    }
 
 /*what I had before I decided to use a discriminated union which
 allows the Typescript to look at the property and understand the other fields
