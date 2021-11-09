@@ -6,7 +6,9 @@ import { AddNewItem } from "./AddNewItem";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
-import { Row } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
+import { deleteList } from "./state/actions";
+
 import {
     addTask,
     moveTask,
@@ -17,11 +19,10 @@ import {
 type ColumnProps = {
     text: string
     id: string
-    button: JSX.Element
     isPreview?: boolean
-}
+} 
 
-export const Column = ({ text, id, button, isPreview }: ColumnProps): JSX.Element => {
+export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
     const { draggedItem, getCoursesByListId, dispatch } = useAppState();
     const courses = getCoursesByListId(id);
     const ref = useRef<HTMLDivElement>(null);
@@ -53,7 +54,7 @@ export const Column = ({ text, id, button, isPreview }: ColumnProps): JSX.Elemen
         }
     });
 
-    const { drag } = useItemDrag({ type: "COLUMN", id, button, text });
+    const { drag } = useItemDrag({ type: "COLUMN", id, text });
 
     drag(drop(ref));
 
@@ -63,9 +64,10 @@ export const Column = ({ text, id, button, isPreview }: ColumnProps): JSX.Elemen
             ref={ref}
             isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
         >
-            <Row>
-                <ColumnTitle>{[text, button]}</ColumnTitle>
-            </Row>
+            <Col>
+                <ColumnTitle>{text}</ColumnTitle>
+                <Button onClick={() => dispatch(deleteList(id))}>Delete</Button>
+            </Col>
             {courses.map(task => 
                 <Card
                     id={task.id}

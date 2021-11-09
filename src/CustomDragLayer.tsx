@@ -22,7 +22,6 @@ export const CustomDragLayer = (): JSX.Element | null => {
                     <Column
                         id={draggedItem.id}
                         text={draggedItem.text}
-                        button={draggedItem.button}
                         isPreview
                     />
                     :
