@@ -51,6 +51,10 @@ export const appStateReducer = (
         });
         break;
     }
+    case "DELETE_ALL_LISTS": {
+        alert("wtf");
+        break;
+    }
     case "MOVE_LIST": {
         const { draggedId, hoverId } = action.payload;
         const dragIndex = findItemIndexById(draft.lists, draggedId);
