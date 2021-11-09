@@ -5,6 +5,7 @@ import { DragItem } from "../DragItem";
 import { Action } from "./actions";
 import { Button } from "react-bootstrap";
 
+
 export type Task = {
     id: string
     text: string
@@ -32,10 +33,11 @@ export const appStateReducer = (
         break;
     }
     case "ADD_LIST": {
+        const id=nanoid();
         draft.lists.push({
-            id: nanoid(),
+            id: id,
             text: action.payload,
-            button: <Button></Button>,
+            button: <Button onClick={() => draft.lists = draft.lists.filter((list) => list.id)}>X</Button>,
             courses: [],
         });
         break;
