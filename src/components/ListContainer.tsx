@@ -24,7 +24,7 @@ export function ListContainer(): JSX.Element {
                 />
                 <DeleteSemester
                     toggleButtonText="Delete all semesters"
-                    onAdd={text => dispatch(deleteLists())}
+                    onAdd={() => dispatch(deleteLists())}
                 />
             </Row>
         </AppContainer>

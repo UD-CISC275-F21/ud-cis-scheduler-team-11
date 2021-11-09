@@ -1,7 +1,6 @@
 import React from "react";
 import { AddItemButton } from "./styles";
 import { appData } from "./state/AppStateContext";
-import { deleteLists } from "./state/actions";
 
 
 type DeleteSemesterProps = {
@@ -12,7 +11,7 @@ type DeleteSemesterProps = {
 
 export const DeleteSemester = (props: DeleteSemesterProps): JSX.Element => {
     //appData.lists=[];
-    const { onAdd, toggleButtonText, dark } = props;
+    const { toggleButtonText, dark } = props;
     return (
         <AddItemButton dark={dark} onClick={() => appData.lists.splice(1)}>
             {toggleButtonText}
