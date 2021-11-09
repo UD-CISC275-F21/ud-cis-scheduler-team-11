@@ -14,7 +14,7 @@ export const DeleteSemester = (props: DeleteSemesterProps): JSX.Element => {
     //appData.lists=[];
     const { onAdd, toggleButtonText, dark } = props;
     return (
-        <AddItemButton dark={dark} onClick={() => appData.lists=[]}>
+        <AddItemButton dark={dark} onClick={() => appData.lists.splice(1)}>
             {toggleButtonText}
         </AddItemButton>
     );
