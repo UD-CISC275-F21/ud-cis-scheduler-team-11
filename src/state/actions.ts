@@ -30,6 +30,9 @@ export type Action =
         type: "SET_DRAGGED_ITEM"
         payload: DragItem | null
     }
+    | {
+        type: "DELETE_ALL_LISTS"
+    }
 
 /*what I had before I decided to use a discriminated union which
 allows the Typescript to look at the property and understand the other fields
@@ -64,6 +67,10 @@ export const addList = (
 ): Action => ({
     type: "ADD_LIST",
     payload: text
+});
+
+export const deleteLists = (): Action => ({
+    type: "DELETE_ALL_LISTS",
 });
 
 export const moveList = (
