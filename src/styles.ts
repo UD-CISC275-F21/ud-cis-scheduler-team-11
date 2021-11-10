@@ -18,7 +18,7 @@ type DragPreviewContainerProps = {
     isPreview?: boolean
 }
 export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
-    transform: ${props => props.isPreview ? "rotate(5deg)" : undefined};
+    transform: ${props => props.isPreview ? "rotate(0deg)" : undefined};
     opacity: ${props => props.isHidden ? 0 : 1};
 `;
 

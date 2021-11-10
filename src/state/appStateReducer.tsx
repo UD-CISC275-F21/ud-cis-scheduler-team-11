@@ -40,9 +40,9 @@ export const appStateReducer = (
     }
     case "EDIT_LIST": {
         const id=action.payload.id;
-        const text=action.payload.text;
+        const text= action.payload.text;
         const index = draft.lists.findIndex(list => list.id === id);
-        draft.lists[index].text="Need user input somehow idk";
+        draft.lists[index].text=text;
         break;
     }
     case "ADD_TASK": {
