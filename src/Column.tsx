@@ -3,11 +3,12 @@ import { ColumnContainer, ColumnTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
 import { Card } from "./Card";
 import { AddNewItem } from "./AddNewItem";
+import { EditSemesterTitle } from "./EditSemesterTitle";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
-import { Col, Button } from "react-bootstrap";
-import { deleteList } from "./state/actions";
+import { Row, Col, Button } from "react-bootstrap";
+import { deleteList, editList } from "./state/actions";
 
 import {
     addTask,
@@ -64,10 +65,19 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
             ref={ref}
             isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
         >
-            <Col>
+            <Row>
                 <ColumnTitle>{text}</ColumnTitle>
-                <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>
-            </Col>
+                <Col>
+                    <EditSemesterTitle
+                        toggleButtonText="Edit Title"
+                        onAdd={(text) => dispatch(editList(text, id))}
+                        dark
+                    />
+                </Col>
+                <Col>
+                    <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>
+                </Col>
+            </Row>
             {courses.map(task => 
                 <Card
                     id={task.id}
@@ -88,9 +98,9 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
 const styles = {
     button: {
         fontColor: "red",
-        width: "40%",
+        width: "70%",
         //padding: "0px 0px",
-        margin: "2px auto 10px",
+        margin: "2px auto 10px", 
         background: "red",
         borderRadius: "40px",
         display: "flex",

@@ -38,6 +38,12 @@ export const appStateReducer = (
         });
         break;
     }
+    case "EDIT_LIST": {
+        const {text, id } = action.payload;
+        const index = draft.lists.findIndex(list => list.id === id);
+        draft.lists[index].text=text;
+        break;
+    }
     case "ADD_TASK": {
         const { text, listId } = action.payload;
         const targetListIndex = findItemIndexById(draft.lists, listId);
