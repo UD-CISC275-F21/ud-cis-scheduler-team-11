@@ -2,58 +2,72 @@
     {
       "id": "c1",
       "text": "EGGG101: Introduction to Engineering",
+      "credits": "3",
     },
     {
       "id": "c2",
       "text": "CISC108: Intro to Computer Science 1",
+      "credits": "3"
     },
     {
       "id": "c3",
       "text": "MATH241: Analytic Geometry & Calculus A",
+      "credits": "4",
     },
     {
       "id": "c4",
       "text": "ENGL110: Seminar in Composition",
+      "credits": "3",
     },
     {
       "id": "c5",
       "text": "Breadth Requirement (CAH): Humanities breadth requirement",
+      "credits": "3",
     },
     {
       "id": "c6",
       "text": "CISC181: Introduction to Computer Science II",
+      "credits": "3",
     },
     {
       "id": "c7",
       "text": "CISC210: Introduction to Systems Programming",
+      "credits": "3",
     },
     {
       "id": "c8",
       "text": "MATH242: Analytic Geometry & Calculus B",
+      "credits": "4",
     },
     {
       "id": "c9",
       "text": "Breadth Requirement (HCC): History and Cultural Change Requirement",
+      "credits": "3",
     },
     {
       "id": "c10",
       "text": "Breadth Requirement (SBS): Social and Behavioral Sciences Requirement",
+      "credits": "3",
     },
     {
       "id": "c11",
       "text": "CISC220: Data Structures",
+      "credits": "3",
     },
     {
       "id": "c12",
       "text": "CISC260: Machine Org. & Assembly Language",
+      "credits": "3",
     },
     {
       "id": "c13",
       "text": "MATH210: Discrete Mathematics I",
+      "credits": "3",
     },
     {
       "id": "c14",
       "text": "Science Requirement 1: Science with Lab Requirement",
+      "credits": "4",
     },
     {
       "id": "c15",
