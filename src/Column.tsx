@@ -66,7 +66,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
         >
             <Col>
                 <ColumnTitle>{text}</ColumnTitle>
-                <Button onClick={() => dispatch(deleteList(id))}>Delete</Button>
+                <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>
             </Col>
             {courses.map(task => 
                 <Card
@@ -84,3 +84,19 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
         </ColumnContainer>
     );
 };
+
+const styles = {
+    button: {
+        fontColor: "red",
+        width: "40%",
+        //padding: "0px 0px",
+        margin: "2px auto 10px",
+        background: "red",
+        borderRadius: "40px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        fontSize: 18,
+    },
+} as const;
+

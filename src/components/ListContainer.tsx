@@ -21,16 +21,20 @@ export function ListContainer(): JSX.Element {
                     toggleButtonText="+ Add another list"
                     onAdd={text => dispatch(addList(text))}
                 />
-                <Button onClick={() => dispatch(deleteLists())}>
+                <Button style={styles.deleteButton} onClick={() => dispatch(deleteLists())}>
                     Delete all semesters
                 </Button>
             </Row>
         </AppContainer>
     );
 }
-/*
-<DeleteSemester
-                    toggleButtonText="Delete all semesters"
-                    onClick={() => dispatch(deleteLists())}
-                />
-                */
+const styles = {
+    deleteButton: {
+        backgroundColor: "red",
+        margin: "10px -50px 110px 0px",
+        bottom: "10",
+        left: "0",
+        width: "100%",
+    },
+} as const;
+
