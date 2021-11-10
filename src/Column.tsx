@@ -95,7 +95,7 @@ const styles = {
         fontColor: "red",
         width: "70%",
         //padding: "0px 0px",
-        margin: "2px auto 10px",
+        margin: "2px auto 10px", 
         background: "red",
         borderRadius: "40px",
         display: "flex",
