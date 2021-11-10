@@ -72,25 +72,31 @@
     {
       "id": "c15",
       "text": "MATH243: Analytic Geometry & Calculus C",
+      "credits": "4",
     },
     {
       "id": "c16",
       "text": "CISC355: Computers Ethics & Society",
+      "credits": "3",
     },
     {
       "id": "c17",
       "text": "CISC275: Introduction to Software Engineering",
+      "credits": "3",
     },
     {
       "id": "c18",
       "text": "MATH205 or MATH350: Statistical Methods or Probability Theory and Simulation Methods",
+      "credits": "3",
     },
     {
       "id": "c19",
       "text": "Science Requirement 2: Science with Lab Requirement",
+      "credits": "4",
     },
     {
       "id": "c20",
       "text": "Breadth Requirement (Multicultural): Breadth + Multicultural Requirement",
+      "credits": "3",
     }
 ]
