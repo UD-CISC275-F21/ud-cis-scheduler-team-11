@@ -39,8 +39,7 @@ export const appStateReducer = (
         break;
     }
     case "EDIT_LIST": {
-        const id=action.payload.id;
-        const text= action.payload.text;
+        const {text, id } = action.payload;
         const index = draft.lists.findIndex(list => list.id === id);
         draft.lists[index].text=text;
         break;

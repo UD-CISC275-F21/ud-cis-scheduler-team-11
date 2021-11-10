@@ -3,6 +3,7 @@ import { ColumnContainer, ColumnTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
 import { Card } from "./Card";
 import { AddNewItem } from "./AddNewItem";
+import { EditSemesterTitle } from "./EditSemesterTitle";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
@@ -67,7 +68,11 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
             <Row>
                 <ColumnTitle>{text}</ColumnTitle>
                 <Col>
-                    <Button onClick={() => dispatch(editList(text, id))}>Edit Title</Button>
+                    <EditSemesterTitle
+                        toggleButtonText="Edit Title"
+                        onAdd={(text) => dispatch(editList(text, id))}
+                        dark
+                    />
                 </Col>
                 <Col>
                     <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>

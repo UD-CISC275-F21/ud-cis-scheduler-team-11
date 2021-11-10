@@ -76,6 +76,21 @@ export const AddItemButton = styled.button<AddItemButtonProps>`
     background-color: #ffffff52;
     }
 `;
+export const EditItemButton = styled.button<AddItemButtonProps>`
+    background-color: #3498DB;
+    border-radius: 3px;
+    border: none;
+    color: ${props => props.dark ? "#000" : "#fff"};
+    cursor: pointer;
+    max-width: 300px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: background 85ms ease-in;
+    width: 100%;
+    &:hover {
+    background-color: #00000000;
+    }
+`;
 export const NewItemFormContainer = styled.div`
     max-width: 300px;
     display: flex;
