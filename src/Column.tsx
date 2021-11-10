@@ -6,8 +6,8 @@ import { AddNewItem } from "./AddNewItem";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
-import { Col, Button } from "react-bootstrap";
-import { deleteList } from "./state/actions";
+import { Row, Col, Button } from "react-bootstrap";
+import { deleteList, editList } from "./state/actions";
 
 import {
     addTask,
@@ -64,10 +64,15 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
             ref={ref}
             isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
         >
-            <Col>
+            <Row>
                 <ColumnTitle>{text}</ColumnTitle>
-                <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>
-            </Col>
+                <Col>
+                    <Button onClick={() => dispatch(editList(text, id))}>Edit Title</Button>
+                </Col>
+                <Col>
+                    <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>
+                </Col>
+            </Row>
             {courses.map(task => 
                 <Card
                     id={task.id}
@@ -88,7 +93,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
 const styles = {
     button: {
         fontColor: "red",
-        width: "40%",
+        width: "70%",
         //padding: "0px 0px",
         margin: "2px auto 10px",
         background: "red",
