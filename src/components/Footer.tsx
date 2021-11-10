@@ -16,7 +16,7 @@ const styles = {
         backgroundColor: "lightgreen",
         position: "fixed",
         margin: "auto",
-        bottom: "10",
+        bottom: "0",
         left: "0",
         width: "100%",
     },
