@@ -23,7 +23,7 @@ export const appData: AppState = {
         {
             id: "0",
             text: "Course List",
-            courses: [{ id: "c0", text: "Cisc 106" },{ id:"c1", text: "Cisc108"}]
+            courses: [{ id: "c0", text: "CISC106" },{ id:"c1", text: "CISC108"}]
         },
         {
             id: "1",
