@@ -86,16 +86,21 @@
     },
     {
       "id": "c18",
-      "text": "MATH205 or MATH350: Statistical Methods or Probability Theory and Simulation Methods",
-      "credits": "3",
+      "text": "MATH205: Statistical Methods",
+      "credits": "4",
     },
     {
       "id": "c19",
+      "text": "MATH350: Probability Theory and Simulation Methods",
+      "credits": "3",
+    },
+    {
+      "id": "c20",
       "text": "Science Requirement 2: Science with Lab Requirement",
       "credits": "4",
     },
     {
-      "id": "c20",
+      "id": "c21",
       "text": "Breadth Requirement (Multicultural): Breadth + Multicultural Requirement",
       "credits": "3",
     }
