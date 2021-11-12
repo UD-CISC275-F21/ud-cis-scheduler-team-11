@@ -1,6 +1,6 @@
 var names:string[]; 
 names = [
-("1" "EGGG101", "Introduction to Engineering","3"),
+("1" "EGGG101", "Introduction to Engineering","2"),
 ("2","CISC108","Intro to Computer Science 1","3"),
 ("3", "MATH241", "Analytic Geometry & Calculus A","4"),
 ("4", "ENGL110", "Seminar in Composition", "3"),
@@ -17,6 +17,7 @@ names = [
 ("15", "MATH243", "Analytic Geometry & Calculus C", "4"),
 ("16", "CISC355", "Computers Ethics & Society", "3"),
 ("17", "CISC275", "Introduction to Software Engineering", "3"),
-("18", "MATH205 or MATH350", "Statistical Methods or Probability Theory and Simulation Methods", "3"),
-("19", "Science Requirement 2", "Science with Lab Requirement", "4"),
-("20", "Breadth Requirement (Multicultural)", "Breadth + Multicultural Requirement", "3")]
+("18", "MATH205", "Statistical Methods", "4"),
+("19", "MATH350", "Probability Theory and Simulation Methods", "3"),
+("20", "Science Requirement 2", "Science with Lab Requirement", "4"),
+("21", "Breadth Requirement (Multicultural)", "Breadth + Multicultural Requirement", "3")]
