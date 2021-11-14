@@ -37,4 +37,3 @@ const styles = {
         width: "100%",
     },
 } as const;
-

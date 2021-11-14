@@ -109,4 +109,3 @@ const styles = {
         fontSize: 18,
     },
 } as const;
-

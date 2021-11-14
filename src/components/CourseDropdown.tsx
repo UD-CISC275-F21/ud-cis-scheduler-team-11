@@ -27,4 +27,3 @@ const styles = {
         border: "10px solid black",
     },
 } as const;
-
