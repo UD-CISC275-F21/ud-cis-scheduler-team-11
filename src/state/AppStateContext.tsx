@@ -28,7 +28,7 @@ export const appData: AppState = {
         {
             id: "1",
             text: "Year 1: Semester 1",
-            courses: [{id: "c22", text: "Learn Typescript"}]
+            courses: [{id: "c22", text: "Learn TypeScript"}]
         },
         {
             id: "2",
