@@ -1,12 +1,12 @@
 export type CardDragItem = {
     id: string
-    columnId: string
+    semesterId: string
     text: string
     type: "CARD"
 }
-export type ColumnDragItem = {
+export type SemesterDragItem = {
     id: string
     text: string
-    type: "COLUMN"
+    type: "SEMESTER"
 }
-export type DragItem = CardDragItem | ColumnDragItem
+export type DragItem = CardDragItem | SemesterDragItem

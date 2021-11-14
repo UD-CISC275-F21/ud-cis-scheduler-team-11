@@ -9,7 +9,7 @@ export const AppContainer = styled.div`
     padding: 20px;
     width: 100%;
 `;
-export const ColumnTitle = styled.div`
+export const SemesterTitle = styled.div`
 padding: 6px 16px 12px;
 font-weight: bold;
 `;
@@ -36,7 +36,7 @@ export const DragPreviewWrapper = styled.div.attrs<DragPreviewWrapperProps>(
     })
 ) <DragPreviewWrapperProps>``;
 
-export const ColumnContainer = styled(DragPreviewContainer)`
+export const SemesterContainer = styled(DragPreviewContainer)`
     background-color: #ebecf0;
     width: 300px;
     min-height: 40px;

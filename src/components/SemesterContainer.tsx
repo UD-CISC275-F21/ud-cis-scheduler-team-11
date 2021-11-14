@@ -4,7 +4,7 @@ import { AddNewItem } from "../AddNewItem";
 import { CustomDragLayer } from "../CustomDragLayer";
 import { useAppState } from "../state/AppStateContext";
 import { addList, deleteLists } from "../state/actions";
-import { Column } from "../SemesterList";
+import { Semester } from "../SemesterList";
 import { Button, Row } from "react-bootstrap";
 //import { DeleteSemester } from "../DeleteSems"; 
 
@@ -14,7 +14,7 @@ export function SemesterContainer(): JSX.Element {
         <AppContainer>
             <CustomDragLayer />
             {lists.map(list => 
-                <Column key={list.id} id={list.id} text={list.text} />
+                <Semester key={list.id} id={list.id} text={list.text} />
             )};
             <Row>
                 <AddNewItem

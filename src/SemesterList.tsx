@@ -1,5 +1,5 @@
 import React, { useRef} from "react";
-import { ColumnContainer, ColumnTitle } from "./styles";
+import { SemesterContainer, SemesterTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
 import { Card } from "./CourseCard";
 import { AddNewItem } from "./AddNewItem";
@@ -17,30 +17,30 @@ import {
     setDraggedItem
 } from "./state/actions";
 
-type ColumnProps = {
+type SemesterProps = {
     text: string
     id: string
     isPreview?: boolean
 } 
 
-export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
+export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element => {
     const { draggedItem, getCoursesByListId, dispatch } = useAppState();
     const courses = getCoursesByListId(id);
     const ref = useRef<HTMLDivElement>(null);
     const [, drop] = useDrop({
-        accept: ["COLUMN", "CARD"],
+        accept: ["SEMESTER", "CARD"],
         hover() {
             if (!draggedItem) {
                 return;
             }
-            if (draggedItem.type === "COLUMN") {
+            if (draggedItem.type === "SEMESTER") {
                 if (draggedItem.id === id) {
                     return;
                 }
 
                 dispatch(moveList(draggedItem.id, id));
             } else {
-                if (draggedItem.columnId === id) {
+                if (draggedItem.semesterId === id) {
                     return;
                 }
                 if (courses.length) {
@@ -48,25 +48,25 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
                 }
 
                 dispatch(
-                    moveTask(draggedItem.id, null, draggedItem.columnId, id)
+                    moveTask(draggedItem.id, null, draggedItem.semesterId, id)
                 );
-                dispatch(setDraggedItem({ ...draggedItem, columnId: id }));
+                dispatch(setDraggedItem({ ...draggedItem, semesterId: id }));
             }
         }
     });
 
-    const { drag } = useItemDrag({ type: "COLUMN", id, text });
+    const { drag } = useItemDrag({ type: "SEMESTER", id, text });
 
     drag(drop(ref));
 
     return (
-        <ColumnContainer
+        <SemesterContainer
             isPreview={isPreview}
             ref={ref}
-            isHidden={isHidden(draggedItem, "COLUMN", id, isPreview)}
+            isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
         >
             <Row>
-                <ColumnTitle>{text}</ColumnTitle>
+                <SemesterTitle>{text}</SemesterTitle>
                 <Col>
                     <EditSemesterTitle
                         toggleButtonText="Edit Title"
@@ -81,7 +81,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
             {courses.map(task => 
                 <Card
                     id={task.id}
-                    columnId={id}
+                    semesterId={id}
                     text={task.text}
                     key={task.id}
                 />
@@ -91,7 +91,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps): JSX.Element => {
                 onAdd={(text) => dispatch(addTask(text, id))}
                 dark
             />
-        </ColumnContainer>
+        </SemesterContainer>
     );
 };
 

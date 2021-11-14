@@ -10,14 +10,14 @@ import { moveTask } from "./state/actions";
 type CardProps = {
     text: string
     id: string
-    columnId: string
+    semesterId: string
     isPreview?: boolean
 }
 
 export const Card = ({
     text,
     id,
-    columnId,
+    semesterId,
     isPreview
 }: CardProps): JSX.Element => {
     const { draggedItem, dispatch } = useAppState();
@@ -26,7 +26,7 @@ export const Card = ({
         type: "CARD",
         id,
         text,
-        columnId
+        semesterId
     });
     const [, drop] = useDrop({
         accept: "CARD",
@@ -42,7 +42,7 @@ export const Card = ({
             }
 
             dispatch(
-                moveTask(draggedItem.id, id, draggedItem.columnId, columnId)
+                moveTask(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
         }
     });
