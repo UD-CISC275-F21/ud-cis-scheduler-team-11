@@ -1,7 +1,7 @@
 import React, { useRef} from "react";
 import { ColumnContainer, ColumnTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
-import { Card } from "./Card";
+import { Card } from "./CourseCard";
 import { AddNewItem } from "./AddNewItem";
 import { EditSemesterTitle } from "./EditSemesterTitle";
 import { useItemDrag } from "./utils/useItemDrag";

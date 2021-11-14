@@ -1,12 +1,12 @@
 import React from "react";
 import { useDragLayer } from "react-dnd";
-import { Column } from "./Column";
+import { Column } from "./SemesterList";
 import { useAppState } from "./state/AppStateContext";
 import {
     CustomDragLayerContainer,
     DragPreviewWrapper
 } from "./styles";
-import { Card } from "./Card";
+import { Card } from "./CourseCard";
 //import { StyledComponent } from "styled-components";
 
 

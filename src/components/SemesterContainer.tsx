@@ -4,11 +4,11 @@ import { AddNewItem } from "../AddNewItem";
 import { CustomDragLayer } from "../CustomDragLayer";
 import { useAppState } from "../state/AppStateContext";
 import { addList, deleteLists } from "../state/actions";
-import { Column } from "../Column";
+import { Column } from "../SemesterList";
 import { Button, Row } from "react-bootstrap";
 //import { DeleteSemester } from "../DeleteSems"; 
 
-export function ListContainer(): JSX.Element {
+export function SemesterContainer(): JSX.Element {
     const { lists, dispatch } = useAppState();
     return( 
         <AppContainer>

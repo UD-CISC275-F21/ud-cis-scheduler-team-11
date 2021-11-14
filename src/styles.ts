@@ -76,7 +76,7 @@ export const AddItemButton = styled.button<AddItemButtonProps>`
     background-color: #ffffff52;
     }
 `;
-export const EditItemButton = styled.button<AddItemButtonProps>`
+export const EditSemesterButton = styled.button<AddItemButtonProps>`
     background-color: #3498DB;
     border-radius: 3px;
     border: none;

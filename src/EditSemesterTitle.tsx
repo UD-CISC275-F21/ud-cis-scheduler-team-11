@@ -1,7 +1,6 @@
 import React, { useState} from "react";
-import { EditItemButton } from "./styles";
-import { NewTitleForm } from "./NewTitleForm";
-
+import { EditSemesterButton } from "./styles";
+import { NewTitleForm } from "./NewSemesterTitleForm";
 
 type EditSemesterTitleProps = {
     onAdd(text: string): void
@@ -11,7 +10,7 @@ type EditSemesterTitleProps = {
 
 export const EditSemesterTitle = (props: EditSemesterTitleProps): JSX.Element => {
     const [showForm, setShowForm] = useState(false);
-    const { onAdd, toggleButtonText, dark } = props;
+    const { onAdd, toggleButtonText} = props;
     
     if (showForm) {
         return (
@@ -23,11 +22,10 @@ export const EditSemesterTitle = (props: EditSemesterTitleProps): JSX.Element =>
             />
         );
     }
-        
     
     return (
-        <EditItemButton dark={dark} onClick={() => setShowForm(true)}>
+        <EditSemesterButton dark={false} onClick={() => setShowForm(true)}>
             {toggleButtonText}
-        </EditItemButton>
+        </EditSemesterButton>
     );
 };
