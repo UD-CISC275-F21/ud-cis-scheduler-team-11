@@ -6,7 +6,7 @@ import {
     CustomDragLayerContainer,
     DragPreviewWrapper
 } from "./styles";
-import { Card } from "./CourseCard";
+import { CourseCard } from "./CourseCard";
 //import { StyledComponent } from "styled-components";
 
 
@@ -25,7 +25,7 @@ export const CustomDragLayer = (): JSX.Element | null => {
                         isPreview
                     />
                     :
-                    <Card
+                    <CourseCard
                         semesterId={draggedItem.semesterId}
                         isPreview
                         id={draggedItem.id}

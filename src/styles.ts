@@ -47,7 +47,7 @@ export const SemesterContainer = styled(DragPreviewContainer)`
 `;
 
 
-export const CardContainer = styled(DragPreviewContainer)`
+export const CourseCardContainer = styled(DragPreviewContainer)`
     background-color: #fff;
     cursor: pointer;
     margin-bottom: 0.5rem;

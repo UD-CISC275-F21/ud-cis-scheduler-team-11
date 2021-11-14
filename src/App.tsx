@@ -1,19 +1,19 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/WelcomePopup.css";
+import { WelcomePopup } from "./components/WelcomePopup";
 import { Welcome } from "./components/Welcome";
-import { Dropdown } from "./components/MajorDropdown";
-import "./components/Message.css";
-import { Message } from "./components/Message";
-import { Footer } from "./components/Footer";
+import { MajorDropdown } from "./components/MajorDropdown";
 import { SemesterContainer } from "./components/SemesterContainer";
+import { Footer } from "./components/Footer";
 
 export const App = ():JSX.Element  => {
     return (
         <div className = "App">
-            <Message />
+            <WelcomePopup />
             <Welcome />
-            <Dropdown />
+            <MajorDropdown />
             <SemesterContainer />
             <Footer />
         </div>

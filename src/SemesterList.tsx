@@ -1,7 +1,7 @@
 import React, { useRef} from "react";
 import { SemesterContainer, SemesterTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
-import { Card } from "./CourseCard";
+import { CourseCard } from "./CourseCard";
 import { AddNewItem } from "./AddNewItem";
 import { EditSemesterTitle } from "./EditSemesterTitle";
 import { useItemDrag } from "./utils/useItemDrag";
@@ -28,7 +28,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
     const courses = getCoursesByListId(id);
     const ref = useRef<HTMLDivElement>(null);
     const [, drop] = useDrop({
-        accept: ["SEMESTER", "CARD"],
+        accept: ["SEMESTER", "COURSECARD"],
         hover() {
             if (!draggedItem) {
                 return;
@@ -79,7 +79,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 </Col>
             </Row>
             {courses.map(task => 
-                <Card
+                <CourseCard
                     id={task.id}
                     semesterId={id}
                     text={task.text}
@@ -87,7 +87,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 />
             )}
             <AddNewItem
-                toggleButtonText="+ Add another card"
+                toggleButtonText="+ Add another class"
                 onAdd={(text) => dispatch(addTask(text, id))}
                 dark
             />
