@@ -1,6 +1,6 @@
 import React from "react";
 import { AppContainer } from "../styles";
-import { AddNewItem } from "../AddNewItem";
+import { AddNewCourse } from "../AddNewCourse";
 import { CustomDragLayer } from "../CustomDragLayer";
 import { useAppState } from "../state/AppStateContext";
 import { addList, deleteLists } from "../state/actions";
@@ -17,7 +17,7 @@ export function SemesterContainer(): JSX.Element {
                 <Semester key={list.id} id={list.id} text={list.text} />
             )};
             <Row>
-                <AddNewItem
+                <AddNewCourse
                     toggleButtonText="+ Add another list"
                     onAdd={text => dispatch(addList(text))}
                 />

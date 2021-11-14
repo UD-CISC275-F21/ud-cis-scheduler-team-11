@@ -61,7 +61,7 @@ type AddItemButtonProps = {
     dark?: boolean
 }
 
-export const AddItemButton = styled.button<AddItemButtonProps>`
+export const AddCourseButton = styled.button<AddItemButtonProps>`
     background-color: #ffffff3d;
     border-radius: 3px;
     border: none;
@@ -91,7 +91,7 @@ export const EditSemesterButton = styled.button<AddItemButtonProps>`
     background-color: #00000000;
     }
 `;
-export const NewItemFormContainer = styled.div`
+export const NewCourseFormContainer = styled.div`
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ export const NewItemFormContainer = styled.div`
     align-items: flex-start;
 `;
 
-export const NewItemButton = styled.button`
+export const NewCourseButton = styled.button`
     background-color: #5aac44;
     border-radius: 3px;
     border: none;
@@ -108,7 +108,7 @@ export const NewItemButton = styled.button`
     padding: 6px 12px;
     text-align: center;
 `;
-export const NewItemInput = styled.input`
+export const NewCourseInput = styled.input`
     border-radius: 3px;
     border: none;
     box-shadow: #091e4240 0px 1px 0px 0px;

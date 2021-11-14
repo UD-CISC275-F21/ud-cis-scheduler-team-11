@@ -2,7 +2,7 @@ import React, { useRef} from "react";
 import { SemesterContainer, SemesterTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
 import { CourseCard } from "./CourseCard";
-import { AddNewItem } from "./AddNewItem";
+import { AddNewCourse } from "./AddNewCourse";
 import { EditSemesterTitle } from "./EditSemesterTitle";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
@@ -86,7 +86,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                     key={task.id}
                 />
             )}
-            <AddNewItem
+            <AddNewCourse
                 toggleButtonText="+ Add another class"
                 onAdd={(text) => dispatch(addTask(text, id))}
                 dark
