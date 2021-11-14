@@ -4,7 +4,7 @@ import ToastHeader from "react-bootstrap/ToastHeader";
 import React, { useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 
-export function Message(): JSX.Element{
+export function WelcomePopup(): JSX.Element{
     const [show, setShow] = useState(false);
     return(
         <div style={styles.popup}>
@@ -27,6 +27,3 @@ const styles = {
         color: "blue",
     },
 } as const;
-
-
-

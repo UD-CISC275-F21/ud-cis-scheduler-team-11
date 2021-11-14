@@ -1,7 +1,9 @@
+export {};
+/*
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { ClasstypeTable } from "./TableView";
-import { Table } from "../interfaces/Table";
+//import { Table } from "../interfaces/SemesterTable";
 import { useState } from "react";
 
 export function SemesterButton() : JSX.Element {
@@ -76,3 +78,5 @@ const styles = {
         fontSize: 17,
     },
 } as const;
+
+*/

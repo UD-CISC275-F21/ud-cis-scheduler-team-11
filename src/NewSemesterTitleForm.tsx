@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { NewItemFormContainer, NewItemButton, NewItemInput } from "./styles";
+import { NewCourseFormContainer, NewCourseButton, NewCourseInput } from "./styles";
 import { useFocus } from "./utils/useFocus";
 
 
-type NewItemFormProps = {
+type NewCourseFormProps = {
     onAdd(text: string): void
 }
 
-export const NewItemForm = ({ onAdd }: NewItemFormProps): JSX.Element => {
+export const NewTitleForm = ({ onAdd }: NewCourseFormProps): JSX.Element => {
     const [text, setText] = useState("");
     const inputRef = useFocus();
     //add enter key for create
@@ -20,16 +20,16 @@ export const NewItemForm = ({ onAdd }: NewItemFormProps): JSX.Element => {
     };
         
     return (
-        <NewItemFormContainer>
-            <NewItemInput
+        <NewCourseFormContainer>
+            <NewCourseInput
                 ref={inputRef}
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 onKeyPress={handleAddText}
             />
-            <NewItemButton onClick={() => onAdd(text)}>
-                Create
-            </NewItemButton>
-        </NewItemFormContainer>
+            <NewCourseButton onClick={() => onAdd(text)}>
+                Enter
+            </NewCourseButton>
+        </NewCourseFormContainer>
     );
 };

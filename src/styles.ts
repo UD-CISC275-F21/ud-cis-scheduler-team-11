@@ -9,7 +9,7 @@ export const AppContainer = styled.div`
     padding: 20px;
     width: 100%;
 `;
-export const ColumnTitle = styled.div`
+export const SemesterTitle = styled.div`
 padding: 6px 16px 12px;
 font-weight: bold;
 `;
@@ -36,7 +36,7 @@ export const DragPreviewWrapper = styled.div.attrs<DragPreviewWrapperProps>(
     })
 ) <DragPreviewWrapperProps>``;
 
-export const ColumnContainer = styled(DragPreviewContainer)`
+export const SemesterContainer = styled(DragPreviewContainer)`
     background-color: #ebecf0;
     width: 300px;
     min-height: 40px;
@@ -47,7 +47,7 @@ export const ColumnContainer = styled(DragPreviewContainer)`
 `;
 
 
-export const CardContainer = styled(DragPreviewContainer)`
+export const CourseCardContainer = styled(DragPreviewContainer)`
     background-color: #fff;
     cursor: pointer;
     margin-bottom: 0.5rem;
@@ -61,7 +61,7 @@ type AddItemButtonProps = {
     dark?: boolean
 }
 
-export const AddItemButton = styled.button<AddItemButtonProps>`
+export const AddCourseButton = styled.button<AddItemButtonProps>`
     background-color: #ffffff3d;
     border-radius: 3px;
     border: none;
@@ -76,7 +76,7 @@ export const AddItemButton = styled.button<AddItemButtonProps>`
     background-color: #ffffff52;
     }
 `;
-export const EditItemButton = styled.button<AddItemButtonProps>`
+export const EditSemesterButton = styled.button<AddItemButtonProps>`
     background-color: #3498DB;
     border-radius: 3px;
     border: none;
@@ -91,7 +91,7 @@ export const EditItemButton = styled.button<AddItemButtonProps>`
     background-color: #00000000;
     }
 `;
-export const NewItemFormContainer = styled.div`
+export const NewCourseFormContainer = styled.div`
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ export const NewItemFormContainer = styled.div`
     align-items: flex-start;
 `;
 
-export const NewItemButton = styled.button`
+export const NewCourseButton = styled.button`
     background-color: #5aac44;
     border-radius: 3px;
     border: none;
@@ -108,7 +108,7 @@ export const NewItemButton = styled.button`
     padding: 6px 12px;
     text-align: center;
 `;
-export const NewItemInput = styled.input`
+export const NewCourseInput = styled.input`
     border-radius: 3px;
     border: none;
     box-shadow: #091e4240 0px 1px 0px 0px;
@@ -125,5 +125,3 @@ export const CustomDragLayerContainer = styled.div`
     width: 100%;
     z-index: 100;
 `;//rendered first
-
-

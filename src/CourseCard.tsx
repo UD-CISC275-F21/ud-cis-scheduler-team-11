@@ -1,40 +1,40 @@
 import React from "react";
 import { useRef } from "react";
-import { CardContainer } from "./styles";
+import { CourseCardContainer } from "./styles";
 import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
 import { moveTask } from "./state/actions";
 
-type CardProps = {
+type CourseCardProps = {
     text: string
     id: string
-    columnId: string
+    semesterId: string
     isPreview?: boolean
 }
 
-export const Card = ({
+export const CourseCard = ({
     text,
     id,
-    columnId,
+    semesterId,
     isPreview
-}: CardProps): JSX.Element => {
+}: CourseCardProps): JSX.Element => {
     const { draggedItem, dispatch } = useAppState();
     const ref = useRef<HTMLDivElement>(null);
     const { drag } = useItemDrag({
-        type: "CARD",
+        type: "COURSECARD",
         id,
         text,
-        columnId
+        semesterId
     });
     const [, drop] = useDrop({
-        accept: "CARD",
+        accept: "COURSECARD",
         hover() {
             if (!draggedItem) {
                 return;
             }
-            if (draggedItem.type !== "CARD") {
+            if (draggedItem.type !== "COURSECARD") {
                 return;
             }
             if (draggedItem.id === id) {
@@ -42,7 +42,7 @@ export const Card = ({
             }
 
             dispatch(
-                moveTask(draggedItem.id, id, draggedItem.columnId, columnId)
+                moveTask(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
         }
     });
@@ -50,12 +50,12 @@ export const Card = ({
     drag(drop(ref));
 
     return (
-        <CardContainer
-            isHidden={isHidden(draggedItem, "CARD", id, isPreview)}
+        <CourseCardContainer
+            isHidden={isHidden(draggedItem, "COURSECARD", id, isPreview)}
             isPreview={isPreview}
             ref={ref}
         >
             {text}
-        </CardContainer>
+        </CourseCardContainer>
     );
 };

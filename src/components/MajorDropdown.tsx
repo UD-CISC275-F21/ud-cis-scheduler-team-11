@@ -2,7 +2,7 @@ import React from "react";
 import DropdownBox from "react-dropdown";
 
 
-export function Dropdown(): JSX.Element {
+export function MajorDropdown(): JSX.Element {
     const options =["BS CS", "BS w/AI Concentration", "BS w/Bioinformatics Concentration","BS w/Cybersecurity Concentration", "BS w/Data Science Concentration", "BS w/High Performance Computing Concentration", "BS w/Systems and Networks Concentration", "BS w/Theory and Computation Concentration"];
     const defaultOption = "Click Here";
     return(
@@ -27,4 +27,3 @@ const styles = {
         border: "10px solid black",
     },
 } as const;
-

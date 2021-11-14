@@ -1,23 +1,23 @@
 import React from "react";
 import { AppContainer } from "../styles";
-import { AddNewItem } from "../AddNewItem";
+import { AddNewCourse } from "../AddNewCourse";
 import { CustomDragLayer } from "../CustomDragLayer";
 import { useAppState } from "../state/AppStateContext";
 import { addList, deleteLists } from "../state/actions";
-import { Column } from "../Column";
+import { Semester } from "../SemesterList";
 import { Button, Row } from "react-bootstrap";
 //import { DeleteSemester } from "../DeleteSems"; 
 
-export function ListContainer(): JSX.Element {
+export function SemesterContainer(): JSX.Element {
     const { lists, dispatch } = useAppState();
     return( 
         <AppContainer>
             <CustomDragLayer />
             {lists.map(list => 
-                <Column key={list.id} id={list.id} text={list.text} />
+                <Semester key={list.id} id={list.id} text={list.text} />
             )};
             <Row>
-                <AddNewItem
+                <AddNewCourse
                     toggleButtonText="+ Add another list"
                     onAdd={text => dispatch(addList(text))}
                 />
@@ -37,4 +37,3 @@ const styles = {
         width: "100%",
     },
 } as const;
-

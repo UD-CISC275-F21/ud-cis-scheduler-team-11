@@ -1,3 +1,5 @@
+export{};
+/*
 import React from "react";
 export function Names(): JSX.Element {
     return(
@@ -22,3 +24,4 @@ const styles = {
         fontSize: 30,
     },
 } as const;
+*/
