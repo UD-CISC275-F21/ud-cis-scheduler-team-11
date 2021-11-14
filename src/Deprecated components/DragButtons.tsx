@@ -1,3 +1,5 @@
+export{};
+/*
 import React from "react";
 import {useState} from "react";
 import {DragDropContext, Droppable, Draggable, DropResult} from "react-beautiful-dnd";
@@ -50,7 +52,7 @@ export function LoadClasses(): JSX.Element{
             },
         ];
     }
-    */
+    
     const [core, updateCore] = useState(coreClasses);
 
 
@@ -111,3 +113,4 @@ const styles = {
         marginLeft: "30px",
     },
 } as const;
+*/

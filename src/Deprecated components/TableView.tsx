@@ -1,3 +1,5 @@
+export{};
+/*
 import React from "react";
 import {Classtype} from "../interfaces/classtype";
 import { Card, Row, Button, Col } from "react-bootstrap";
@@ -66,3 +68,4 @@ export function ClasstypeTable({currID, currentSem, currYear, semList, setSemLis
     );
     //Table setup credit to Dr. Bart
 }
+*/
