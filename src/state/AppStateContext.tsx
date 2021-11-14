@@ -28,12 +28,12 @@ export const appData: AppState = {
         {
             id: "1",
             text: "Year 1: Semester 1",
-            courses: [{ id: "c22", text: "Learn Typescript" }]
+            courses: [{id: "c22", text: "Learn Typescript"}]
         },
         {
             id: "2",
             text: "Year 1: Semester 2",
-            courses: [{ id: "c23", text: "Begin to use static typing" }]
+            courses: [{id: "c23", text: "Learn static typing"}]
         } 
     ]
 };
