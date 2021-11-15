@@ -15,7 +15,7 @@ export function SemesterContainer(): JSX.Element {
             <CustomDragLayer />
             {lists.map(list => 
                 <Semester key={list.id} id={list.id} text={list.text} />
-            )};
+            )}
             <Row>
                 <AddNewCourse
                     toggleButtonText="+ Add another term"
@@ -26,7 +26,7 @@ export function SemesterContainer(): JSX.Element {
                 </Button>
             </Row>
         </AppContainer>
-    )
+    );
 }
 const styles = {
     deleteButton: {
