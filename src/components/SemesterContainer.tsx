@@ -26,7 +26,7 @@ export function SemesterContainer(): JSX.Element {
                 </Button>
             </Row>
         </AppContainer>
-    );
+    )
 }
 const styles = {
     deleteButton: {
