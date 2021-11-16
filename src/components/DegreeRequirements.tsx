@@ -19,11 +19,11 @@ const styles = {
         //padding: "0px 0px",
         margin: "10px auto",
         background: "tan",
-        borderRadius: "111px",
+        borderRadius: "100px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         fontSize: 20,
-        border: "10px solid black",
+        border: "10px solid orange",
     },
 } as const;
