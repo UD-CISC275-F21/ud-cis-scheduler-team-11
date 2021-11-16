@@ -5,7 +5,7 @@ import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
-import { moveTask } from "./state/actions";
+import { moveCourse } from "./state/actions";
 
 type CourseCardProps = {
     text: string
@@ -42,7 +42,7 @@ export const CourseCard = ({
             }
 
             dispatch(
-                moveTask(draggedItem.id, id, draggedItem.semesterId, semesterId)
+                moveCourse(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
         }
     });

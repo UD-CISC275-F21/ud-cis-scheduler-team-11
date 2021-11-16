@@ -8,12 +8,12 @@ import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
 import { Row, Col, Button } from "react-bootstrap";
-import { deleteList, editList } from "./state/actions";
+import { deleteSemester, editSemester } from "./state/actions";
 
 import {
-    addTask,
-    moveTask,
-    moveList,
+    addCourse,
+    moveCourse,
+    moveSemester,
     setDraggedItem
 } from "./state/actions";
 
@@ -24,8 +24,8 @@ type SemesterProps = {
 } 
 
 export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element => {
-    const { draggedItem, getCoursesByListId, dispatch } = useAppState();
-    const courses = getCoursesByListId(id);
+    const { draggedItem, getCoursesBySemesterId, dispatch } = useAppState();
+    const courses = getCoursesBySemesterId(id);
     const ref = useRef<HTMLDivElement>(null);
     const [, drop] = useDrop({
         accept: ["SEMESTER", "COURSECARD"],
@@ -38,7 +38,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                     return;
                 }
 
-                dispatch(moveList(draggedItem.id, id));
+                dispatch(moveSemester(draggedItem.id, id));
             } else {
                 if (draggedItem.semesterId === id) {
                     return;
@@ -48,7 +48,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 }
 
                 dispatch(
-                    moveTask(draggedItem.id, null, draggedItem.semesterId, id)
+                    moveCourse(draggedItem.id, null, draggedItem.semesterId, id)
                 );
                 dispatch(setDraggedItem({ ...draggedItem, semesterId: id }));
             }
@@ -70,25 +70,25 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 <Col>
                     <EditSemesterTitle
                         toggleButtonText="Edit Title"
-                        onAdd={(text) => dispatch(editList(text, id))}
+                        onAdd={(text) => dispatch(editSemester(text, id))}
                         dark
                     />
                 </Col>
                 <Col>
-                    <Button style={styles.button} onClick={() => dispatch(deleteList(id))}>Delete</Button>
+                    <Button style={styles.button} onClick={() => dispatch(deleteSemester(id))}>Delete</Button>
                 </Col>
             </Row>
-            {courses.map(task => 
+            {courses.map(course => 
                 <CourseCard
-                    id={task.id}
+                    id={course.id}
                     semesterId={id}
-                    text={task.text}
-                    key={task.id}
+                    text={course.text}
+                    key={course.id}
                 />
             )}
             <AddNewCourse
                 toggleButtonText="+ Add another class"
-                onAdd={(text) => dispatch(addTask(text, id))}
+                onAdd={(text) => dispatch(addCourse(text, id))}
                 dark
             />
         </SemesterContainer>
