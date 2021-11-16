@@ -37,6 +37,12 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 if (draggedItem.id === id) {
                     return;
                 }
+                if (draggedItem.id === "0"){
+                    return;
+                }
+                if (id==="0"){
+                    return;
+                }
 
                 dispatch(moveSemester(draggedItem.id, id));
             } else {

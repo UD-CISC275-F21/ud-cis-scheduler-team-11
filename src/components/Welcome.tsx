@@ -10,9 +10,9 @@ export function Welcome(): JSX.Element {
 
 const styles = {
     welcome: {
-        width: "80%",
-        padding: "0px 0px",
-        margin: "50px auto",
+        width: "40%",
+        padding: "30px 0px 0px 0px",
+        margin: "auto",
         background: "white",
         borderRadius: "20px",
         display: "flex",
