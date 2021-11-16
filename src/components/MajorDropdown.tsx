@@ -6,11 +6,17 @@ import { Button } from "react-bootstrap";
 
 export function MajorDropdown(): JSX.Element {
     const options =["BS CS", "BS w/AI Concentration", "BS w/Bioinformatics Concentration","BS w/Cybersecurity Concentration", "BS w/Data Science Concentration", "BS w/High Performance Computing Concentration", "BS w/Systems and Networks Concentration", "BS w/Theory and Computation Concentration"];
-    const defaultOption = "Click Here To Select A Major";
+    const defaultOption = "Click Here To Select A Major  ";
+    const test = String.fromCharCode(11167);
     return(
         <div>
-            <Button style={styles.dropdown}>
-                <DropdownBox options={options} value={defaultOption}placeholder="Select an option" />
+            <Button style={styles.dropdown}> 
+                <DropdownBox 
+                    options={options} 
+
+                    value={defaultOption + test}
+                    placeholder="Select an option" 
+                />
             </Button>
         </div>
         /*
@@ -29,7 +35,7 @@ export function MajorDropdown(): JSX.Element {
 
 const styles = {
     dropdown: {
-        width: "50%",
+        width: "auto",
         //padding: "0px 0px",
         margin: "10px auto",
         background: "tan",
