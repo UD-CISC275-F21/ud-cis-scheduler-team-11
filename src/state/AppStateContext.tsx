@@ -27,13 +27,23 @@ export const appData: AppState = {
         },
         {
             id: "1",
-            text: "Year 1: Fall Semester",
-            courses: [{id: "c22", text: "Learn TypeScript"}]
+            text: "Degree Requirements",
+            courses: [{id: "c22", text: "CISC108 is a prerequisite for CISC181 and CISC210."},{id: "c23", text: "MATH241 is a prerequisite for MATH242."},{id: "c24", text: "CISC210 is a prerequisite for CISC220 and CISC260."},{id: "c25", text: "MATH241 and MATH242 are prerequisites for MATH210."},{id: "c26", text: "MATH242 is a prerequisite for MATH243."},{id: "c27", text: "CISC181 and CISC220 are prerequisites for CISC275."},{id: "c28", text: "MATH210 is a prerequisite for MATH205."},{id: "c29", text: "MATH243 is a prerequisite for MATH350."}]
         },
         {
             id: "2",
+            text: "Course Prerequisites",
+            courses: [{id: "c30", text: "EGGG101 satisfies the First Year Seminar (FYS)."},{id: "c31", text: "ENGL110 is required for all students and should be taken in the first year."},{id: "c32", text: "The CAH, HCC, and SBS breadth, and Multicultural requirements are required for the College, University Breadth, and University Requirements."},{id: "c33", text: "2 science courses with labs can satisfy one laboratory science sequence."},{id: "c34", text: "A laboratory science sequence is required for the science courses."}]
+        },
+        {
+            id: "3",
+            text: "Year 1: Fall Semester",
+            courses: [{id: "c35", text: "Learn TypeScript"}]
+        },
+        {
+            id: "4",
             text: "Year 1: Spring Semester",
-            courses: [{id: "c23", text: "Learn static typing"}]
+            courses: [{id: "c36", text: "Learn static typing"}]
         } 
     ]
 };
