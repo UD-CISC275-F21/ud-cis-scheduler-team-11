@@ -58,41 +58,74 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
     const { drag } = useItemDrag({ type: "SEMESTER", id, text });
 
     drag(drop(ref));
-
-    return (
-        <SemesterContainer
-            isPreview={isPreview}
-            ref={ref}
-            isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
-        >
-            <Row>
-                <SemesterTitle>{text}</SemesterTitle>
-                <Col>
-                    <EditSemesterTitle
-                        toggleButtonText="Edit Title"
-                        onAdd={(text) => dispatch(editSemester(text, id))}
-                        dark
+    if(id==="0"){
+        return (
+            <SemesterContainer
+                isPreview={isPreview}
+                ref={ref}
+                isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
+            >
+                <Row>
+                    <SemesterTitle>{text}</SemesterTitle>
+                    <Col>
+                        <EditSemesterTitle
+                            toggleButtonText="Edit Title"
+                            onAdd={(text) => dispatch(editSemester(text, id))}
+                            dark
+                        />
+                    </Col>
+                </Row>
+                {courses.map(course => 
+                    <CourseCard
+                        id={course.id}
+                        semesterId={id}
+                        text={course.text}
+                        key={course.id}
                     />
-                </Col>
-                <Col>
-                    <Button style={styles.button} onClick={() => dispatch(deleteSemester(id))}>Delete</Button>
-                </Col>
-            </Row>
-            {courses.map(course => 
-                <CourseCard
-                    id={course.id}
-                    semesterId={id}
-                    text={course.text}
-                    key={course.id}
+                )}
+                <AddNewCourse
+                    toggleButtonText="+ Add another course"
+                    onAdd={(text) => dispatch(addCourse(text, id))}
+                    dark
                 />
-            )}
-            <AddNewCourse
-                toggleButtonText="+ Add another class"
-                onAdd={(text) => dispatch(addCourse(text, id))}
-                dark
-            />
-        </SemesterContainer>
-    );
+            </SemesterContainer>
+        );
+    } else{
+        return(
+            <SemesterContainer
+                isPreview={isPreview}
+                ref={ref}
+                isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
+            >
+                <Row>
+                    <SemesterTitle>{text}</SemesterTitle>
+                    <Col>
+                        <EditSemesterTitle
+                            toggleButtonText="Edit Title"
+                            onAdd={(text) => dispatch(editSemester(text, id))}
+                            dark
+                        />
+                    </Col>
+                    <Col>
+                        <Button style={styles.button} onClick={() => dispatch(deleteSemester(id))}>Delete</Button>
+                    </Col>
+                </Row>
+                {courses.map(course => 
+                    <CourseCard
+                        id={course.id}
+                        semesterId={id}
+                        text={course.text}
+                        key={course.id}
+                    />
+                )}
+                <AddNewCourse
+                    toggleButtonText="+ Add another course"
+                    onAdd={(text) => dispatch(addCourse(text, id))}
+                    dark
+                />
+            </SemesterContainer>
+        );
+    }
 };
 
 const styles = {
