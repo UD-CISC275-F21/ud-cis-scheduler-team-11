@@ -88,7 +88,7 @@ export const editSemester = (
     payload: {
         text,
         id
-    }
+    } 
 });
 
 export const deleteSemester = (
