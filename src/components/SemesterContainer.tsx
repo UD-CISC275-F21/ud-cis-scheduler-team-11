@@ -18,7 +18,7 @@ export function SemesterContainer(): JSX.Element {
             )}
             <Row>
                 <AddNewCourse
-                    toggleButtonText="+ Add another period"
+                    toggleButtonText="+ Add another term"
                     onAdd={text => dispatch(addList(text))}
                 />
                 <Button style={styles.deleteButton} onClick={() => dispatch(deleteLists())}>
