@@ -15,15 +15,15 @@ export function MajorDropdown(): JSX.Element {
 
 const styles = {
     dropdown: {
-        width: "40%",
+        width: "35%",
         //padding: "0px 0px",
         margin: "10px auto",
-        background: "tan",
-        borderRadius: "111px",
+        background: "skyblue",
+        borderRadius: "100px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        fontSize: 20,
+        fontSize: 15,
         border: "10px solid black",
     },
 } as const;
