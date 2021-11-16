@@ -15,7 +15,7 @@ export function MajorDropdown(): JSX.Element {
 
 const styles = {
     dropdown: {
-        width: "40%",
+        width: "35%",
         //padding: "0px 0px",
         margin: "10px auto",
         background: "tan",
