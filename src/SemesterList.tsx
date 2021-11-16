@@ -68,7 +68,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
         return (
             <SemesterContainer
                 isPreview={isPreview}
-                ref={ref}
+                //ref={ref} removing this makes it totally undraggable
                 isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
             >
                 <Row>
@@ -129,6 +129,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                     onAdd={(text) => dispatch(addCourse(text, id))}
                     dark
                 />
+                
             </SemesterContainer>
         );
     }
