@@ -22,7 +22,7 @@ export function SemesterContainer(): JSX.Element {
                     onAdd={text => dispatch(addList(text))}
                 />
                 <Button style={styles.deleteButton} onClick={() => dispatch(deleteLists())}>
-                    - Delete all semesters
+                    Delete all semesters
                 </Button>
             </Row>
         </AppContainer>
