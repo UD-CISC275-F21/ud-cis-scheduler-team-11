@@ -6,6 +6,8 @@ import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
 import { moveCourse } from "./state/actions";
+import { Button } from "react-bootstrap";
+import {deleteCourse } from "./state/actions";
 
 type CourseCardProps = {
     text: string
@@ -56,6 +58,24 @@ export const CourseCard = ({
             ref={ref}
         >
             {text}
+            <Button style={styles.button} onClick={() => dispatch(deleteCourse(text, semesterId, id))}>
+                X
+            </Button>
         </CourseCardContainer>
-    );
+    );//<img src="https://icons.iconarchive.com/icons/designcontest/outline/16/Pencil-icon.png" alt="my image" /> 
+
 };
+const styles = {
+    button: {
+        //fontColor: "#FE941D",
+        width: "15%",
+        height: "5%",
+        padding: "0px 0px",
+        background: "#FF7F7F",
+        borderRadius: "40px",
+        flexDirection: "column",
+        alignItems: "center",
+        float: "right",
+        //fontSize: 10,
+    },
+} as const;
