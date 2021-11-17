@@ -15,7 +15,7 @@ export function SemesterContainer(): JSX.Element {
             <CustomDragLayer />
             {semesters.map(semester => 
                 <Semester key={semester.id} id={semester.id} text={semester.text} />
-            )}
+            )};
             <Row>
                 <AddNewCourse
                     toggleButtonText="+ Add another semester"
