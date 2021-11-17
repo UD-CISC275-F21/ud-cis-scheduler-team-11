@@ -18,7 +18,7 @@ const styles = {
         bottom: "0",
         left: "0",
         width: "100%",
-        height: "7%",
+        height: "100%",
         padding: "0px 0px 0px 0px",
         boxSizing: "inherit",
     },
