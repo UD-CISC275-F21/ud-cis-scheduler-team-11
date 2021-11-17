@@ -53,6 +53,17 @@ export const appStateReducer = (
         });
         break;
     }
+    case "DELETE_COURSE": {
+        const {text, semesterId, id} = action.payload;
+        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        draft.semesters[0].courses.push({
+            id: nanoid(),
+            text
+        });
+        draft.semesters[targetSemesterIndex].courses=draft.semesters[targetSemesterIndex].courses.filter(course => course.id !== id);
+        //alert(draft.semesters[targetSemesterIndex].courses);
+        break;
+    }
     case "DELETE_SEMESTER": {
         const id = action.payload;
         draft.semesters=draft.semesters.filter(semester => semester.id !== id);
