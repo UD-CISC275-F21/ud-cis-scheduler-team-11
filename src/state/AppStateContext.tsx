@@ -22,18 +22,28 @@ export const appData: AppState = {
     semesters: [
         {
             id: "0",
-            text: "Required Course List",
-            courses: [{id: "c1", text: "CISC108: 3 credits"},{id: "c2", text: "EGGG101: 2 credits"},{id: "c3", text: "MATH241: 4 credits"},{id: "c4", text: "ENGL110: 3 credits"},{id: "c5", text: "CAH Breadth: 3 credits"},{id: "c6", text: "CISC181: 3 credits"},{id: "c7", text: "CISC210: 3 credits"},{id: "c8", text: "MATH242: 4 credits"},{id: "c9", text: "HCC Breadth: 3 credits"},{id: "c10", text: "SBS Breadth: 3 credits"},{id: "c11", text: "CISC220: 3 credits"},{id: "c12", text: "CISC260: 3 credits"},{id: "c13", text: "MATH210: 3 credits"},{id: "c14", text: "Science w/ Lab 1: 4 credits"},{id: "c15", text: "MATH243: 4 credits"},{id: "c16", text: "CISC355: 3 credits"},{id: "c17", text: "CISC275: 3 credits"},{id: "c18", text: "MATH205: 4 credits"},{id: "c19", text: "MATH350: 3 credits"},{id: "c20", text: "Science w/ Lab 2: 4 credits"},{id: "c21", text: "Multicultural: 3 credits"}]
+            text: "Degree Requirements",
+            courses: [{id: "c1", text: "EGGG101 satisfies the First Year Seminar (FYS)."},{id: "c2", text: "ENGL110 is required for all students and should be taken in the first year."},{id: "c3", text: "The CAH, HCC, and SBS breadth, and Multicultural requirements are required for the College, University Breadth, and University Requirements."},{id: "c4", text: "2 science courses with lab can satisfy one laboratory science sequence."},{id: "c5", text: "One laboratory science sequence is required for the science course requirements."}]
         },
         {
             id: "1",
-            text: "Year 1: Fall Semester",
-            courses: [{id: "c22", text: "Learn TypeScript"}]
+            text: "Course Prerequisites",
+            courses: [{id: "c6", text: "CISC108 is a prerequisite for CISC181 and CISC210."},{id: "c7", text: "MATH241 is a prerequisite for MATH242."},{id: "c8", text: "CISC210 is a prerequisite for CISC220 and CISC260."},{id: "c9", text: "MATH241 and MATH242 are prerequisites for MATH210."},{id: "c10", text: "MATH242 is a prerequisite for MATH243."},{id: "c11", text: "CISC181 and CISC220 are prerequisites for CISC275."},{id: "c12", text: "MATH210 is a prerequisite for MATH205."},{id: "c13", text: "MATH243 is a prerequisite for MATH350."}]
         },
         {
             id: "2",
+            text: "Required Course List",
+            courses: [{id: "c14", text: "CISC108: 3 credits"},{id: "c15", text: "EGGG101: 2 credits"},{id: "c16", text: "MATH241: 4 credits"},{id: "c17", text: "ENGL110: 3 credits"},{id: "c18", text: "CAH Breadth: 3 credits"},{id: "c19", text: "CISC181: 3 credits"},{id: "c20", text: "CISC210: 3 credits"},{id: "c21", text: "MATH242: 4 credits"},{id: "c22", text: "HCC Breadth: 3 credits"},{id: "c23", text: "SBS Breadth: 3 credits"},{id: "c24", text: "CISC220: 3 credits"},{id: "c25", text: "CISC260: 3 credits"},{id: "c26", text: "MATH210: 3 credits"},{id: "c27", text: "Science w/ Lab 1: 4 credits"},{id: "c28", text: "MATH243: 4 credits"},{id: "c29", text: "CISC355: 3 credits"},{id: "c30", text: "CISC275: 3 credits"},{id: "c31", text: "MATH205: 4 credits"},{id: "c32", text: "MATH350: 3 credits"},{id: "c33", text: "Science w/ Lab 2: 4 credits"},{id: "c34", text: "Multicultural: 3 credits"}]
+        },
+        {
+            id: "3",
+            text: "Year 1: Fall Semester",
+            courses: [{id: "c35", text: "Learn TypeScript"}]
+        },
+        {
+            id: "4",
             text: "Year 1: Spring Semester",
-            courses: [{id: "c23", text: "Learn static typing"}]
+            courses: [{id: "c36", text: "Learn static typing"}]
         } 
     ]
 };
