@@ -33,7 +33,7 @@ export const appData: AppState = {
         {
             id: "2",
             text: "Course Prerequisites",
-            courses: [{id: "c27", text: "CISC108 is a prerequisite for CISC181 & CISC210."},{id: "c28", text: "MATH241 is a prerequisite for MATH242."},{id: "c29", text: "CISC210 is a prerequisite for CISC220 & CISC260."},{id: "c30", text: "MATH241 and MATH242 are prerequisites for MATH210."},{id: "c31", text: "MATH242 is a prerequisite for MATH243."},{id: "c32", text: "CISC181 & CISC220 are prerequisites for CISC275."},{id: "c33", text: "MATH210 is a prerequisite for MATH205."},{id: "c34", text: "MATH243 is a prerequisite for MATH350."}]
+            courses: [{id: "c27", text: "CISC108 is a prerequisite for CISC181 & CISC210."},{id: "c28", text: "MATH241 is a prerequisite for MATH242."},{id: "c29", text: "CISC210 is a prerequisite for CISC220 & CISC260."},{id: "c30", text: "MATH241 & MATH242 are prerequisites for MATH210."},{id: "c31", text: "MATH242 is a prerequisite for MATH243."},{id: "c32", text: "CISC181 & CISC220 are prerequisites for CISC275."},{id: "c33", text: "MATH210 is a prerequisite for MATH205."},{id: "c34", text: "MATH243 is a prerequisite for MATH350."}]
         },
         {
             id: "3",
