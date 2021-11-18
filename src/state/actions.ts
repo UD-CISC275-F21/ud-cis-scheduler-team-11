@@ -1,9 +1,9 @@
 import { DragItem } from "../DragItem";
 
-//an action now can resort to one of the forms we passed in, the list or task
+//an action now can resort to one of the forms we passed in, the semester or task
 export type Action =
     | {
-        type: "MOVE_TASK"
+        type: "MOVE_COURSE"
         payload: {
             draggedItemId: string
             hoveredItemId: string | null
@@ -12,15 +12,15 @@ export type Action =
         }
     }
     | {
-        type: "ADD_LIST"
+        type: "ADD_SEMESTER"
         payload: string
     }
     | {
-        type: "ADD_TASK"
-        payload: { text: string; listId: string }
+        type: "ADD_COURSE"
+        payload: { text: string; semesterId: string }
     }
     | {
-        type: "MOVE_LIST"
+        type: "MOVE_SEMESTER"
         payload: {
             draggedId: string
             hoverId: string
@@ -31,82 +31,104 @@ export type Action =
         payload: DragItem | null
     }
     | {
-        type: "DELETE_ALL_LISTS"
+        type: "DELETE_ALL_SEMESTERS"
     }
     | {
-        type: "DELETE_LIST"
+        type: "DELETE_SEMESTER"
         payload: string
     }
     | {
-        type: "EDIT_LIST"
+        type: "EDIT_SEMESTER"
         payload: {
             text: string
             id: string
         }
     }
+    | {
+        type: "DELETE_COURSE"
+        payload: {
+            text: string
+            semesterId: string
+            id: string
+        }
+    }
+
 
 /*what I had before I decided to use a discriminated union which
 allows the Typescript to look at the property and understand the other fields
-    interface AddListAction {
-        type: "ADD_LIST"
+    interface AddSemesterAction {
+        type: "ADD_SEMESTER"
         payload: string
     }
 
     interface AddTaskAction {
-        type: "ADD_LIST"
-        payload: { text: string; listId: string }
+        type: "ADD_SEMESTER"
+        payload: { text: string; semesterId: string }
     }
 
-    type Action = AddListAction | AddTaskAction
+    type Action = AddSemesterAction | AddTaskAction
 
 */
 
 
-export const addTask = (
+export const addCourse = (
     text: string,
-    listId: string,
+    semesterId: string,
 ): Action => ({
-    type: "ADD_TASK",
+    type: "ADD_COURSE",
     payload: {
         text,
-        listId
+        semesterId,
     }
 });
 
-export const addList = (
+export const deleteCourse = (
     text: string,
+    semesterId: string,
+    id: string
 ): Action => ({
-    type: "ADD_LIST",
-    payload: text
-});
-
-export const editList = (
-    text: string,
-    id: string,
-): Action => ({
-    type: "EDIT_LIST",
+    type: "DELETE_COURSE",
     payload: {
         text,
+        semesterId,
         id
     }
 });
 
-export const deleteList = (
+export const addSemester = (
+    text: string,
+): Action => ({
+    type: "ADD_SEMESTER",
+    payload: text
+});
+
+export const editSemester = (
+    text: string,
     id: string,
 ): Action => ({
-    type: "DELETE_LIST",
+    type: "EDIT_SEMESTER",
+    payload: {
+        text,
+        id
+    } 
+});
+
+export const deleteSemester = (
+    id: string,
+): Action => ({
+    type: "DELETE_SEMESTER",
     payload: id
 });
 
-export const deleteLists = (): Action => ({
-    type: "DELETE_ALL_LISTS",
+export const deleteSemesters = (): Action => ({
+    type: "DELETE_ALL_SEMESTERS",
 });
 
-export const moveList = (
+export const moveSemester = (
     draggedId: string,
     hoverId: string,
 ): Action => ({
-    type: "MOVE_LIST",
+    type: "MOVE_SEMESTER",
     payload: {
         draggedId,
         hoverId,
@@ -120,13 +142,13 @@ export const setDraggedItem = (
     payload: draggedItem
 });
 
-export const moveTask = (
+export const moveCourse = (
     draggedItemId: string,
     hoveredItemId: string | null,
     sourceColumnId: string,
     targetColumnId: string
 ): Action => ({
-    type: "MOVE_TASK",
+    type: "MOVE_COURSE",
     payload: {
         draggedItemId,
         hoveredItemId,
