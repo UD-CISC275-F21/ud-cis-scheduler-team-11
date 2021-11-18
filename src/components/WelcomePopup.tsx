@@ -24,6 +24,6 @@ export function WelcomePopup(): JSX.Element{
 const styles = {
     popup: {
         //background: "black",
-        color: "blue",
+        color: "purple",
     },
 } as const;

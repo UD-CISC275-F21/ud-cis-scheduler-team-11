@@ -12,8 +12,30 @@ test("renders UD CIS Scheduler text", () => {
         </AppStateProvider>
     </DndProvider>);
     const welcomeMessage = screen.getByText(/Welcome to the UD CIS Scheduler/);
-    //const udCisScheduler = screen.getByText(/UD CIS/);
     expect(welcomeMessage).toBeInTheDocument();
-    //expect(udCisScheduler).toBeInTheDocument();
+});
 
+test("renders Major Selector text", () => {
+    render(<DndProvider backend={Backend}>
+        <AppStateProvider>
+            <App />
+        </AppStateProvider>
+    </DndProvider>);
+    const majorSelector = screen.getByText(/Click Here To Select A Major/);
+    expect(majorSelector).toBeInTheDocument();
+});
+
+test("renders dragNDrop Course Lists", () => {
+    render(<DndProvider backend={Backend}>
+        <AppStateProvider>
+            <App />
+        </AppStateProvider>
+    </DndProvider>);
+    const courseList = screen.getByText(/Required Course List/);
+    const fallYear1 = screen.getByText(/Year 1: Fall Semester/);
+    const springYear1 = screen.getByText(/Year 1: Spring Semester/);
+
+    expect(courseList).toBeInTheDocument();
+    expect(fallYear1).toBeInTheDocument();
+    expect(springYear1).toBeInTheDocument();
 });
