@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 
 
 export function MajorDropdown(): JSX.Element {
-    const options =["BS Computer Science", "BS w/ Artificial Intelligence Concentration", "BS w/ Bioinformatics Concentration","BS w/ Cybersecurity Concentration", "BS w/ Data Science Concentration", "BS w/ High Performance Computing Concentration", "BS w/ Systems and Networks Concentration", "BS w/ Theory and Computation Concentration"];
+    const options =["BS Computer Science", "BS - Artificial Intelligence Concentration", "BS - Bioinformatics Concentration","BS - Cybersecurity Concentration", "BS - Data Science Concentration", "BS - High Performance Computing Concentration", "BS - Systems and Networks Concentration", "BS - Theory and Computation Concentration"];
     const defaultOption = "Click Here To Select A Major  ";
     const test = String.fromCharCode(11167);
     return(
