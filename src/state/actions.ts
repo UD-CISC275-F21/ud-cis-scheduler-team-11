@@ -52,6 +52,15 @@ export type Action =
             id: string
         }
     }
+    | {
+        type: "EDIT_COURSE"
+        payload: {
+            text: string
+            semesterId: string
+            id: string
+        }
+    }
+
 
 
 /*what I had before I decided to use a discriminated union which
@@ -74,12 +83,26 @@ allows the Typescript to look at the property and understand the other fields
 export const addCourse = (
     text: string,
     semesterId: string,
+    
 ): Action => ({
     type: "ADD_COURSE",
     payload: {
         text,
         semesterId,
     }
+});
+
+export const editCourse = (
+    text: string,
+    semesterId: string,
+    id: string
+): Action => ({
+    type: "EDIT_COURSE",
+    payload: {
+        text,
+        semesterId,
+        id
+    } 
 });
 
 export const deleteCourse = (

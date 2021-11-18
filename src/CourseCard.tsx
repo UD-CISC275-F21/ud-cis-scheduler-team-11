@@ -7,7 +7,8 @@ import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
 import { moveCourse } from "./state/actions";
 import { Button } from "react-bootstrap";
-import {deleteCourse } from "./state/actions";
+import {deleteCourse, editCourse } from "./state/actions";
+import { EditCourse } from "./EditCourse";
 
 type CourseCardProps = {
     text: string
@@ -58,6 +59,12 @@ export const CourseCard = ({
             ref={ref}
         >
             {text}
+            <EditCourse
+                toggleButtonText="Edit Course"
+                onAdd={(text) => dispatch(editCourse(text,semesterId, id))}
+                dark
+            />
+            
             <Button style={styles.button} onClick={() => dispatch(deleteCourse(text, semesterId, id))}>
                 X
             </Button>
