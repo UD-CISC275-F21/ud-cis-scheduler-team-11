@@ -23,8 +23,9 @@ export const appData: AppState = {
         {
             id: "0",
             text: "Required Course List",
-            courses: [{id: "c1", text: "CISC108: 3 credits"},{id: "c2", text: "EGGG101: 2 credits"},{id: "c3", text: "MATH241: 4 credits"},{id: "c4", text: "ENGL110: 3 credits"},{id: "c5", text: "CAH Breadth: 3 credits"},{id: "c6", text: "CISC181: 3 credits"},{id: "c7", text: "CISC210: 3 credits"},{id: "c8", text: "MATH242: 4 credits"},{id: "c9", text: "HCC Breadth: 3 credits"},{id: "c10", text: "SBS Breadth: 3 credits"},{id: "c11", text: "CISC220: 3 credits"},{id: "c12", text: "CISC260: 3 credits"},{id: "c13", text: "MATH210: 3 credits"},{id: "c14", text: "Science & Lab 1: 4 credits"},{id: "c15", text: "MATH243: 4 credits"},{id: "c16", text: "CISC355: 3 credits"},{id: "c17", text: "CISC275: 3 credits"},{id: "c18", text: "MATH205: 4 credits"},{id: "c19", text: "MATH350: 3 credits"},{id: "c20", text: "Science & Lab 2: 4 credits"},{id: "c21", text: "Multicultural: 3 credits"}]
+            courses: [{id: "c11", text: "CISC220: 3 credits"},{id: "c12", text: "CISC260: 3 credits"},{id: "c13", text: "MATH210: 3 credits"},{id: "c14", text: "Science & Lab 1: 4 credits"},{id: "c15", text: "MATH243: 4 credits"},{id: "c16", text: "CISC355: 3 credits"},{id: "c17", text: "CISC275: 3 credits"},{id: "c18", text: "MATH205: 4 credits"},{id: "c19", text: "MATH350: 3 credits"},{id: "c20", text: "Science & Lab 2: 4 credits"},{id: "c21", text: "Multicultural: 3 credits"}]
         },
+        /*
         {
             id: "1",
             text: "Degree Requirements",
@@ -35,15 +36,16 @@ export const appData: AppState = {
             text: "Course Prerequisites",
             courses: [{id: "c27", text: "CISC108 is a prerequisite for CISC181 & CISC210."},{id: "c28", text: "MATH241 is a prerequisite for MATH242."},{id: "c29", text: "CISC210 is a prerequisite for CISC220 & CISC260."},{id: "c30", text: "MATH241 & MATH242 are prerequisites for MATH210."},{id: "c31", text: "MATH242 is a prerequisite for MATH243."},{id: "c32", text: "CISC181 & CISC220 are prerequisites for CISC275."},{id: "c33", text: "MATH210 is a prerequisite for MATH205."},{id: "c34", text: "MATH243 is a prerequisite for MATH350."}]
         },
+        */
         {
             id: "3",
             text: "Year 1: Fall Semester",
-            courses: [{id: "c35", text: "Learn TypeScript"}]
+            courses: [{id: "c1", text: "CISC108: 3 credits"},{id: "c2", text: "EGGG101: 2 credits"},{id: "c3", text: "MATH241: 4 credits"},{id: "c4", text: "ENGL110: 3 credits"},{id: "c5", text: "CAH Breadth: 3 credits"}]
         },
         {
             id: "4",
             text: "Year 1: Spring Semester",
-            courses: [{id: "c36", text: "Learn static typing"}]
+            courses: [{id: "c6", text: "CISC181: 3 credits"},{id: "c7", text: "CISC210: 3 credits"},{id: "c8", text: "MATH242: 4 credits"},{id: "c9", text: "HCC Breadth: 3 credits"},{id: "c10", text: "SBS Breadth: 3 credits"}]
         } 
     ]
 };
