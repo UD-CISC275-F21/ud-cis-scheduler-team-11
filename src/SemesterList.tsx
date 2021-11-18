@@ -8,7 +8,7 @@ import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { isHidden } from "./utils/isHidden";
 import { Row, Col, Button } from "react-bootstrap";
-import { deleteSemester, editSemester } from "./state/actions";
+import { deleteSemester, editSemester, deleteAllCourses } from "./state/actions";
 
 import {
     addCourse,
@@ -71,8 +71,8 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 //ref={ref} removing this makes it totally undraggable
                 isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
             >
+                <SemesterTitle>{text}</SemesterTitle>
                 <Row>
-                    <SemesterTitle>{text}</SemesterTitle>
                     <Col>
                         <EditSemesterTitle
                             toggleButtonText="Edit Title"
@@ -80,6 +80,11 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                             dark
                         />
                     </Col>
+                </Row>
+                <Row>
+                    <Button style={styles.deleteAllCoursesButton} onClick={() => dispatch(deleteAllCourses(id))}>
+                        Delete ALL Courses
+                    </Button>
                 </Row>
                 {courses.map(course => 
                     <CourseCard
@@ -103,8 +108,8 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 ref={ref}
                 isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
             >
+                <SemesterTitle>{text}</SemesterTitle>
                 <Row>
-                    <SemesterTitle>{text}</SemesterTitle>
                     <Col>
                         <EditSemesterTitle
                             toggleButtonText="Edit Title"
@@ -112,9 +117,16 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                             dark
                         />
                     </Col>
+                </Row>
+                <Row>
                     <Col>
-                        <Button style={styles.button} onClick={() => dispatch(deleteSemester(id))}>Delete</Button>
+                        <Button style={styles.deleteSemesterButton} onClick={() => dispatch(deleteSemester(id))}>Delete Semester</Button>
                     </Col>
+                </Row>
+                <Row>
+                    <Button style={styles.deleteAllCoursesButton} onClick={() => dispatch(deleteAllCourses(id))}>
+                        Delete ALL Courses
+                    </Button>
                 </Row>
                 {courses.map(course => 
                     <CourseCard
@@ -136,7 +148,19 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
 };
 
 const styles = {
-    button: {
+    deleteSemesterButton: {
+        fontColor: "red",
+        width: "100%",
+        //padding: "0px 0px",
+        margin: "2px auto 10px 0px", 
+        background: "red",
+        //borderRadius: "40px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        fontSize: 15,
+    },
+    deleteAllCoursesButton: {
         fontColor: "red",
         width: "70%",
         //padding: "0px 0px",
@@ -146,6 +170,6 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        fontSize: 18,
+        fontSize: 12,
     },
 } as const;
