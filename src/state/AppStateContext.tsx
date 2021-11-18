@@ -28,7 +28,7 @@ export const appData: AppState = {
         {
             id: "1",
             text: "Degree Requirements",
-            courses: [{id: "c22", text: "EGGG101 satisfies the First Year Seminar (FYS)."},{id: "c23", text: "ENGL110 is required for all students and should be taken in the first year."},{id: "c24", text: "The CAH, HCC, & SBS breadth, & Multicultural requirements are required for the College, University Breadth, & University Requirements."},{id: "c25", text: "2 science courses with lab ones can satisfy a laboratory science sequence."},{id: "c26", text: "A laboratory science sequence is required for the science course requirements."}]
+            courses: [{id: "c22", text: "EGGG101 satisfies the First Year Seminar."},{id: "c23", text: "ENGL110 is required for all students and should be taken in the first year."},{id: "c24", text: "The CAH, HCC, & SBS breadth, & Multicultural requirements are required for the College, University Breadth, & University requirements."},{id: "c25", text: "2 science courses with lab ones can satisfy a laboratory science sequence."},{id: "c26", text: "A laboratory science sequence is required for the science course requirements."}]
         },
         {
             id: "2",
