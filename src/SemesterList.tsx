@@ -82,10 +82,13 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                     </Col>
                 </Row>
                 <Row>
-                    <Button style={styles.deleteAllCoursesButton} onClick={() => dispatch(deleteAllCourses(id))}>
-                        Delete ALL Courses
-                    </Button>
+                    <Col>
+                        <Button style={styles.deleteAllCoursesButton} onClick={() => dispatch(deleteAllCourses(id))}>
+                            Delete ALL Courses
+                        </Button>
+                    </Col>
                 </Row>
+                <hr style={styles.line} />
                 {courses.map(course => 
                     <CourseCard
                         id={course.id}
@@ -122,12 +125,13 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                     <Col>
                         <Button style={styles.deleteSemesterButton} onClick={() => dispatch(deleteSemester(id))}>Delete Semester</Button>
                     </Col>
+                    <Col>
+                        <Button style={styles.deleteAllCoursesButton} onClick={() => dispatch(deleteAllCourses(id))}>
+                            Delete ALL Courses
+                        </Button>
+                    </Col>
                 </Row>
-                <Row>
-                    <Button style={styles.deleteAllCoursesButton} onClick={() => dispatch(deleteAllCourses(id))}>
-                        Delete ALL Courses
-                    </Button>
-                </Row>
+                <hr style={styles.line} />
                 {courses.map(course => 
                     <CourseCard
                         id={course.id}
@@ -149,7 +153,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
 
 const styles = {
     deleteSemesterButton: {
-        fontColor: "red",
+        //color: "blue",
         width: "100%",
         //padding: "0px 0px",
         margin: "2px auto 10px 0px", 
@@ -161,15 +165,20 @@ const styles = {
         fontSize: 15,
     },
     deleteAllCoursesButton: {
-        fontColor: "red",
-        width: "70%",
+        //color: "blue",
+        width: "100%",
         //padding: "0px 0px",
         margin: "2px auto 10px", 
-        background: "red",
-        borderRadius: "40px",
+        background: "maroon",
+        borderRadius: "20px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        fontSize: 12,
+        fontSize: 15,
+    },
+    line: {
+        height: "10px",
+        color: "black",
+        backgroundColor: "black",
     },
 } as const;
