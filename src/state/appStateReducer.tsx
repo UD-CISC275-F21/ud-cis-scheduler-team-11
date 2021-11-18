@@ -53,6 +53,12 @@ export const appStateReducer = (
         });
         break;
     }
+    case "EDIT_COURSE": {
+        const {text, semesterId, id} = action.payload;
+        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        draft.semesters[targetSemesterIndex].text=text;
+        break;
+    }
     case "DELETE_COURSE": {
         const {text, semesterId, id} = action.payload;
         const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
