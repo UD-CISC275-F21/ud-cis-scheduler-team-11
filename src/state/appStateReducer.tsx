@@ -56,7 +56,8 @@ export const appStateReducer = (
     case "EDIT_COURSE": {
         const {text, semesterId, id} = action.payload;
         const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
-        draft.semesters[targetSemesterIndex].text=text;
+        const index=draft.semesters[targetSemesterIndex].courses.findIndex(course => course.id === id);
+        draft.semesters[targetSemesterIndex].courses[index].text=text;
         break;
     }
     case "DELETE_COURSE": {
