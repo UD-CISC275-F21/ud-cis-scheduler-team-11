@@ -60,6 +60,12 @@ export type Action =
         }
     }
     | {
+        type: "DELETE_ALL_COURSES"
+        payload: {
+            semesterId: string
+        }
+    }
+    | {
         type: "EDIT_COURSE"
         payload: {
             text: string
@@ -120,6 +126,15 @@ export const deleteCourse = (
     payload: {
         semesterId,
         id,
+    }
+});
+
+export const deleteAllCourses = (
+    semesterId: string,
+): Action => ({
+    type: "DELETE_ALL_COURSES",
+    payload: {
+        semesterId,
     }
 });
 

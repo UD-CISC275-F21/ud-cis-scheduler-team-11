@@ -100,7 +100,7 @@ export const EditCourseButton = styled.button<AddItemButtonProps>`
     max-width: 300px;
     text-align: center;
     transition: background 85ms ease-in;
-    width: 100%;
+    width: 50%;
     &:hover {
     background-color: #00000000;
     }

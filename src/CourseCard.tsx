@@ -6,7 +6,7 @@ import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
 import { moveCourse } from "./state/actions";
-import { Button, Row, Col } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
 import { deleteCourse, softDeleteCourse, editCourse } from "./state/actions";
 import { EditCourse } from "./EditCourse";
 
@@ -60,21 +60,17 @@ export const CourseCard = ({
         >
             {text}
             <Row>
-                <Col>
-                    <EditCourse
-                        toggleButtonText="Edit Course"
-                        onAdd={(text) => dispatch(editCourse(text,semesterId, id))}
-                        dark
-                    />
-                </Col>
-                <Col>
-                    <Button style={styles.deleteButton} onClick={() => dispatch(deleteCourse(semesterId, id))}>
+                <EditCourse
+                    toggleButtonText="Edit Course"
+                    onAdd={(text) => dispatch(editCourse(text,semesterId, id))}
+                    dark
+                />
+                <Button style={styles.softDeleteButton} onClick={() => dispatch(softDeleteCourse(text, semesterId, id))}>
+                    Remove
+                </Button>
+                <Button style={styles.deleteButton} onClick={() => dispatch(deleteCourse(semesterId, id))}>
                         X
-                    </Button>
-                    <Button style={styles.softDeleteButton} onClick={() => dispatch(softDeleteCourse(text, semesterId, id))}>
-                        To List
-                    </Button>
-                </Col>
+                </Button>
             </Row>
         </CourseCardContainer>
     );//<img src="https://icons.iconarchive.com/icons/designcontest/outline/16/Pencil-icon.png" alt="my image" /> 
@@ -83,7 +79,7 @@ export const CourseCard = ({
 const styles = {
     softDeleteButton: {
         //fontColor: "#FE941D",
-        width: "80%",
+        width: "40%",
         //height: "5%",
         padding: "0px 0px",
         background: "#FF7F7F",
@@ -95,7 +91,7 @@ const styles = {
     },
     deleteButton: {
         fontColor: "red",
-        width: "15%",
+        width: "10%",
         //height: "5%",
         padding: "0px 0px",
         background: "red",

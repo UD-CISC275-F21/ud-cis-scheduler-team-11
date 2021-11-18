@@ -66,6 +66,13 @@ export const appStateReducer = (
         draft.semesters[targetSemesterIndex].courses=draft.semesters[targetSemesterIndex].courses.filter(course => course.id !== id);
         break;
     }
+    case "DELETE_ALL_COURSES": {
+        const {semesterId} = action.payload;
+        const id = "NaN";
+        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        draft.semesters[targetSemesterIndex].courses=draft.semesters[targetSemesterIndex].courses.filter(course => course.id === id);
+        break;
+    }
     case "SOFT_DELETE_COURSE": {
         const {text, semesterId, id} = action.payload;
         const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
