@@ -45,9 +45,16 @@ export type Action =
         }
     }
     | {
-        type: "DELETE_COURSE"
+        type: "SOFT_DELETE_COURSE"
         payload: {
             text: string
+            semesterId: string
+            id: string
+        }
+    }
+    | {
+        type: "DELETE_COURSE"
+        payload: {
             semesterId: string
             id: string
         }
@@ -106,11 +113,22 @@ export const editCourse = (
 });
 
 export const deleteCourse = (
+    semesterId: string,
+    id: string,
+): Action => ({
+    type: "DELETE_COURSE",
+    payload: {
+        semesterId,
+        id,
+    }
+});
+
+export const softDeleteCourse = (
     text: string,
     semesterId: string,
     id: string
 ): Action => ({
-    type: "DELETE_COURSE",
+    type: "SOFT_DELETE_COURSE",
     payload: {
         text,
         semesterId,

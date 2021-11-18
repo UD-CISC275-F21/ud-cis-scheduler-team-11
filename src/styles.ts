@@ -93,12 +93,11 @@ export const EditSemesterButton = styled.button<AddItemButtonProps>`
 `;
 export const EditCourseButton = styled.button<AddItemButtonProps>`
     background-color: #3498DB;
-    border-radius: 3px;
+
     border: none;
     color: ${props => props.dark ? "#000" : "#fff"};
     cursor: pointer;
     max-width: 300px;
-    padding: 10px 12px;
     text-align: center;
     transition: background 85ms ease-in;
     width: 100%;
