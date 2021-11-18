@@ -60,6 +60,22 @@ export type Action =
             id: string
         }
     }
+    | {
+        type: "EDIT_CREDITS"
+        payload: {
+            credits: string
+            semesterId: string
+            id: string
+        }
+    }
+    | {
+        type: "EDIT_DESCRIPTION"
+        payload: {
+            description: string
+            semesterId: string
+            id: string
+        }
+    }
 
 
 
@@ -100,6 +116,32 @@ export const editCourse = (
     type: "EDIT_COURSE",
     payload: {
         text,
+        semesterId,
+        id
+    } 
+});
+
+export const editCredits = (
+    credits: string,
+    semesterId: string,
+    id: string
+): Action => ({
+    type: "EDIT_CREDITS",
+    payload: {
+        credits,
+        semesterId,
+        id
+    } 
+});
+
+export const editDescription = (
+    description: string,
+    semesterId: string,
+    id: string
+): Action => ({
+    type: "EDIT_DESCRIPTION",
+    payload: {
+        description,
         semesterId,
         id
     } 
