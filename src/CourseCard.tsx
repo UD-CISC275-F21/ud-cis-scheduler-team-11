@@ -6,8 +6,8 @@ import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
 import { moveCourse } from "./state/actions";
-import { Button } from "react-bootstrap";
-import {deleteCourse, editCourse } from "./state/actions";
+import { Button, Row, Col } from "react-bootstrap";
+import { deleteCourse, softDeleteCourse, editCourse } from "./state/actions";
 import { EditCourse } from "./EditCourse";
 
 type CourseCardProps = {
@@ -59,27 +59,47 @@ export const CourseCard = ({
             ref={ref}
         >
             {text}
-            <EditCourse
-                toggleButtonText="Edit Course"
-                onAdd={(text) => dispatch(editCourse(text,semesterId, id))}
-                dark
-            />
-            
-            <Button style={styles.button} onClick={() => dispatch(deleteCourse(text, semesterId, id))}>
-                X
-            </Button>
+            <Row>
+                <Col>
+                    <EditCourse
+                        toggleButtonText="Edit Course"
+                        onAdd={(text) => dispatch(editCourse(text,semesterId, id))}
+                        dark
+                    />
+                </Col>
+                <Col>
+                    <Button style={styles.deleteButton} onClick={() => dispatch(deleteCourse(semesterId, id))}>
+                        X
+                    </Button>
+                    <Button style={styles.softDeleteButton} onClick={() => dispatch(softDeleteCourse(text, semesterId, id))}>
+                        To List
+                    </Button>
+                </Col>
+            </Row>
         </CourseCardContainer>
     );//<img src="https://icons.iconarchive.com/icons/designcontest/outline/16/Pencil-icon.png" alt="my image" /> 
 
 };
 const styles = {
-    button: {
+    softDeleteButton: {
         //fontColor: "#FE941D",
-        width: "15%",
-        height: "5%",
+        width: "80%",
+        //height: "5%",
         padding: "0px 0px",
         background: "#FF7F7F",
-        borderRadius: "40px",
+        //borderRadius: "40px",
+        flexDirection: "column",
+        alignItems: "center",
+        float: "right",
+        //fontSize: 10,
+    },
+    deleteButton: {
+        fontColor: "red",
+        width: "15%",
+        //height: "5%",
+        padding: "0px 0px",
+        background: "red",
+        //borderRadius: "40px",
         flexDirection: "column",
         alignItems: "center",
         float: "right",
