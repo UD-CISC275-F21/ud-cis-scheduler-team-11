@@ -17,13 +17,13 @@ export function RequirementsTable(): JSX.Element {
                         <p>ENGL110 is required for all students and should be taken in the first year.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>The CAH, HCC, & SBS breadth, & Multicultural requirements are required for the College & University requirements.</p>
+                        <p>The CAH, HCC, & SBS Breadth, & Multicultural courses are required for the College & University requirements.</p>
                     </ul>
                     <ul  style={styles.items}>
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>CISC355 cannot count towards the Major requirement.</p>
+                        <p>CISC355 counts towards the College requirements as an Upper Level Breadth course.</p>
                     </ul>
                 </Col>
 
