@@ -25,5 +25,6 @@ const styles = {
     popup: {
         //background: "black",
         color: "purple",
+        fontWeight: 600,
     },
 } as const;
