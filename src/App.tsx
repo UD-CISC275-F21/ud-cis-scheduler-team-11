@@ -8,6 +8,7 @@ import { MajorDropdown } from "./components/MajorDropdown";
 import { SemesterContainer } from "./components/SemesterContainer";
 import { Footer } from "./components/Footer";
 import { Space } from "./components/SpaceBetweenBodyandFooter";
+import { RequirementsTable } from "./components/RequirementsTable";
 
 export const App = ():JSX.Element  => {
     return (
@@ -15,6 +16,7 @@ export const App = ():JSX.Element  => {
             <WelcomePopup />
             <Welcome />
             <MajorDropdown />
+            <RequirementsTable />
             <SemesterContainer />
             <Footer />
             <Space />
