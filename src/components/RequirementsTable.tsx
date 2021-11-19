@@ -20,7 +20,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>The CAH, HCC, & SBS breadth, & Multicultural requirements are required for the College, University Breadth, & University requirements.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>An 8 credit lab sequence from any of the following PHYS, CHEM, GEOL, BISC is required for science courses.</p>
+                        <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, BISC is required for science courses.</p>
                     </ul>
                     <ul  style={styles.items}>
                         <p>ENGL110 is required for all students and should be taken in the first year.</p>
@@ -60,14 +60,14 @@ export function RequirementsTable(): JSX.Element {
 
 const styles = {
     container: {
-        width: "80%",
+        width: "100%",
         alignItems: "center",
         margin: "auto",
 
     },
     border: {
         border: "3px solid",
-        width: "80%",
+        width: "100%",
         margin: "10px",
     },
     title: {
