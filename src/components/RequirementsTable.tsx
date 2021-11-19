@@ -23,7 +23,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>CISC355 counts toward the College requirement.</p>
+                        <p>CISC355 counts toward the College requirement as a CAH breadth requirement.</p>
                     </ul>
                 </Col>
 
