@@ -20,7 +20,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>The CAH, HCC, & SBS breadth, & Multicultural requirements are required for the College, University Breadth, & University requirements.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, BISC is required for science courses.</p>
+                        <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
                     <ul  style={styles.items}>
                         <p>ENGL110 is required for all students and should be taken in the first year.</p>
@@ -47,7 +47,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>CISC181 & CISC220 are prerequisites for CISC275.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>MATH210 or MATH230 is a prerequisite for MATH205.</p>
+                        <p>MATH210 is a prerequisite for MATH205.</p>
                     </ul>
                     <ul  style={styles.items}>
                         <p>MATH243 is a prerequisite for MATH350.</p>
@@ -60,14 +60,14 @@ export function RequirementsTable(): JSX.Element {
 
 const styles = {
     container: {
-        width: "100%",
+        width: "80%",
         alignItems: "center",
         margin: "auto",
 
     },
     border: {
         border: "3px solid",
-        width: "100%",
+        width: "80%",
         margin: "10px",
     },
     title: {
