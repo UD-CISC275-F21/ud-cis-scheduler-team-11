@@ -22,9 +22,6 @@ export function RequirementsTable(): JSX.Element {
                     <ul  style={styles.items}>
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
-                    <ul  style={styles.items}>
-                        <p>ENGL110 is required for all students and should be taken in the first year.</p>
-                    </ul>
                 </Col>
 
                 <Col style={styles.border}>
