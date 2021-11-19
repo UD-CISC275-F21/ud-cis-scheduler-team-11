@@ -23,7 +23,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
                     <ul  style={styles.items}>
-                        <p>Although required, CISC355 can't count towards the Major requirement.</p>
+                        <p>Although required, CISC355 cannot count towards the Major requirement.</p>
                     </ul>
                 </Col>
 
