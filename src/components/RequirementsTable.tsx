@@ -72,7 +72,7 @@ const styles = {
     },
     title: {
         //margin: "-10px",
-        marginRight: "6%",
+        marginRight: "5%",
 
     },
     items: {
