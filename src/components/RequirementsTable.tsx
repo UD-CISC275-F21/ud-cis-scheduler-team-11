@@ -77,7 +77,7 @@ const styles = {
     },
     items: {
         margin: "-10px",
-        marginRight: "12px",
+        marginRight: "14px",
     
     }
 } as const;
