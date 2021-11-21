@@ -23,29 +23,17 @@ export const appData: AppState = {
         {
             id: "0",
             text: "Required Course List",
-            courses: [{id: "c11", text: "CISC220: 3 credits"},{id: "c12", text: "CISC260: 3 credits"},{id: "c13", text: "MATH210: 3 credits"},{id: "c14", text: "Science & Lab 1: 4 credits"},{id: "c15", text: "MATH243: 4 credits"},{id: "c16", text: "CISC355: 3 credits"},{id: "c17", text: "CISC275: 3 credits"},{id: "c18", text: "MATH205: 4 credits"},{id: "c19", text: "MATH350: 3 credits"},{id: "c20", text: "Science & Lab 2: 4 credits"},{id: "c21", text: "Multicultural: 3 credits"}]
+            courses: [{id: "c1", text: "CISC220: 3 credits"},{id: "c2", text: "CISC260: 3 credits"},{id: "c3", text: "MATH210: 3 credits"},{id: "c4", text: "MATH243: 4 credits"},{id: "c5", text: "Science & Lab 1: 4 credits"},{id: "c6", text: "CISC275: 3 credits"},{id: "c7", text: "CISC355: 3 credits"},{id: "c8", text: "MATH205: 4 credits"},{id: "c9", text: "MATH350: 3 credits"},{id: "c10", text: "Science & Lab 2: 4 credits"},{id: "c11", text: "Multicultural: 3 credits"}]
         },
-        /*
         {
             id: "1",
-            text: "Degree Requirements",
-            courses: [{id: "c22", text: "EGGG101 satisfies the First Year Seminar."},{id: "c23", text: "ENGL110 is required for all students and should be taken in the first year."},{id: "c24", text: "The CAH, HCC, & SBS breadth, & Multicultural requirements are required for the College, University Breadth, & University requirements."},{id: "c25", text: "2 science courses with lab ones can satisfy a laboratory science sequence."},{id: "c26", text: "A laboratory science sequence is required for the science course requirements."}]
+            text: "Year 1: Fall Semester",
+            courses: [{id: "c12", text: "CISC108: 3 credits"},{id: "c13", text: "EGGG101: 2 credits"},{id: "c14", text: "MATH241: 4 credits"},{id: "c15", text: "ENGL110: 3 credits"},{id: "c16", text: "CAH: 3 credits"}]
         },
         {
             id: "2",
-            text: "Course Prerequisites",
-            courses: [{id: "c27", text: "CISC108 is a prerequisite for CISC181 & CISC210."},{id: "c28", text: "MATH241 is a prerequisite for MATH242."},{id: "c29", text: "CISC210 is a prerequisite for CISC220 & CISC260."},{id: "c30", text: "MATH241 & MATH242 are prerequisites for MATH210."},{id: "c31", text: "MATH242 is a prerequisite for MATH243."},{id: "c32", text: "CISC181 & CISC220 are prerequisites for CISC275."},{id: "c33", text: "MATH210 is a prerequisite for MATH205."},{id: "c34", text: "MATH243 is a prerequisite for MATH350."}]
-        },
-        */
-        {
-            id: "3",
-            text: "Year 1: Fall Semester",
-            courses: [{id: "c1", text: "CISC108: 3 credits"},{id: "c2", text: "EGGG101: 2 credits"},{id: "c3", text: "MATH241: 4 credits"},{id: "c4", text: "ENGL110: 3 credits"},{id: "c5", text: "CAH: 3 credits"}]
-        },
-        {
-            id: "4",
             text: "Year 1: Spring Semester",
-            courses: [{id: "c6", text: "CISC181: 3 credits"},{id: "c7", text: "CISC210: 3 credits"},{id: "c8", text: "MATH242: 4 credits"},{id: "c9", text: "HCC: 3 credits"},{id: "c10", text: "SBS: 3 credits"}]
+            courses: [{id: "c17", text: "CISC181: 3 credits"},{id: "c18", text: "CISC210: 3 credits"},{id: "c19", text: "MATH242: 4 credits"},{id: "c20", text: "HCC: 3 credits"},{id: "c21", text: "SBS: 3 credits"}]
         } 
     ]
 };
