@@ -23,7 +23,7 @@ export const appData: AppState = {
         {
             id: "0",
             text: "Required Course List",
-            courses: [{id: "c11", text: "CISC220: 3 credits"},{id: "c12", text: "CISC260: 3 credits"},{id: "c13", text: "MATH210: 3 credits"},{id: "c14", text: "Science & Lab 1: 4 credits"},{id: "c15", text: "MATH243: 4 credits"},{id: "c16", text: "CISC355: 3 credits"},{id: "c17", text: "CISC275: 3 credits"},{id: "c18", text: "MATH205: 4 credits"},{id: "c19", text: "MATH350: 3 credits"},{id: "c20", text: "Science & Lab 2: 4 credits"},{id: "c9", text: "History & Cultural Change: 3 credits"}]
+            courses: [{id: "c11", text: "CISC220: 3 credits"},{id: "c12", text: "CISC260: 3 credits"},{id: "c13", text: "MATH210: 3 credits"},{id: "c14", text: "Science & Lab 1: 4 credits"},{id: "c15", text: "MATH243: 4 credits"},{id: "c16", text: "CISC355: 3 credits"},{id: "c17", text: "CISC275: 3 credits"},{id: "c18", text: "MATH205: 4 credits"},{id: "c19", text: "MATH350: 3 credits"},{id: "c20", text: "Science & Lab 2: 4 credits"},{id: "c21", text: "Multicultural: 3 credits"}]
         },
         /*
         {
@@ -40,12 +40,12 @@ export const appData: AppState = {
         {
             id: "3",
             text: "Year 1: Fall Semester",
-            courses: [{id: "c1", text: "CISC108: 3 credits"},{id: "c2", text: "EGGG101: 2 credits"},{id: "c3", text: "MATH241: 4 credits"},{id: "c4", text: "ENGL110: 3 credits"},{id: "c5", text: "Creative Arts & Humanities: 3 credits"}]
+            courses: [{id: "c1", text: "CISC108: 3 credits"},{id: "c2", text: "EGGG101: 2 credits"},{id: "c3", text: "MATH241: 4 credits"},{id: "c4", text: "ENGL110: 3 credits"},{id: "c5", text: "CAH: 3 credits"}]
         },
         {
             id: "4",
             text: "Year 1: Spring Semester",
-            courses: [{id: "c6", text: "CISC181: 3 credits"},{id: "c7", text: "CISC210: 3 credits"},{id: "c8", text: "MATH242: 4 credits"},{id: "c21", text: "Multicultural: 3 credits"},{id: "c10", text: "Social & Behavioral Sciences: 3 credits"}]
+            courses: [{id: "c6", text: "CISC181: 3 credits"},{id: "c7", text: "CISC210: 3 credits"},{id: "c8", text: "MATH242: 4 credits"},{id: "c9", text: "HCC: 3 credits"},{id: "c10", text: "SBS: 3 credits"}]
         } 
     ]
 };
