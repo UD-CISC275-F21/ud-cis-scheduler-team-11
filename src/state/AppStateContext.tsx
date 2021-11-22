@@ -33,7 +33,7 @@ export const appData: AppState = {
         {
             id: "2",
             text: "Year 1: Spring Semester",
-            courses: [{id: "c17", text: "CISC181: 3 credits"},{id: "c18", text: "CISC210: 3 credits"},{id: "c19", text: "MATH242: 4 credits"},{id: "c20", text: "HCC: 3 credits"},{id: "c21", text: "SBS: 3 credits"},{"c22", text: "DLE: 3 credits"}]
+            courses: [{id: "c17", text: "CISC181: 3 credits"},{id: "c18", text: "CISC210: 3 credits"},{id: "c19", text: "MATH242: 4 credits"},{id: "c20", text: "HCC: 3 credits"},{id: "c21", text: "SBS: 3 credits"},{id: "c22", text: "DLE: 3 credits"}]
         } 
     ]
 };
