@@ -83,7 +83,7 @@ allows the Typescript to look at the property and understand the other fields
 export const addCourse = (
     text: string,
     semesterId: string,
-    
+
 ): Action => ({
     type: "ADD_COURSE",
     payload: {
@@ -102,7 +102,7 @@ export const editCourse = (
         text,
         semesterId,
         id
-    } 
+    }
 });
 
 export const deleteCourse = (
@@ -133,7 +133,7 @@ export const editSemester = (
     payload: {
         text,
         id
-    } 
+    }
 });
 
 export const deleteSemester = (
@@ -179,3 +179,26 @@ export const moveCourse = (
         targetColumnId
     }
 });
+
+//adding in for the Modals
+export enum ModalActionTypes {
+    ShowModal,
+    HideModal,
+};
+
+export interface ModalAction {
+    type: ModalActionTypes;
+    payload?: any;
+};
+
+export function showModal(): ModalAction {
+    return {
+        type: ModalActionTypes.ShowModal,
+    };
+};
+
+export function hideModal(): ModalAction {
+    return {
+        type: ModalActionTypes.HideModal,
+    };
+};
