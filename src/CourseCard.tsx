@@ -9,6 +9,7 @@ import { moveCourse } from "./state/actions";
 import { Button, Row } from "react-bootstrap";
 import { deleteCourse, softDeleteCourse, editCourse } from "./state/actions";
 import { EditCourse } from "./EditCourse";
+import userEvent from "@testing-library/user-event";
 
 type CourseCardProps = {
     text: string
@@ -43,7 +44,6 @@ export const CourseCard = ({
             if (draggedItem.id === id) {
                 return;
             }
-
             dispatch(
                 moveCourse(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
