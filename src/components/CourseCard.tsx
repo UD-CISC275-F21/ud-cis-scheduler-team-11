@@ -1,13 +1,13 @@
 import React from "react";
 import { useRef } from "react";
-import { CourseCardContainer } from "./styles";
-import { useItemDrag } from "./utils/useItemDrag";
+import { CourseCardContainer } from "../styles";
+import { useItemDrag } from "../utils/useItemDrag";
 import { useDrop } from "react-dnd";
-import { useAppState } from "./state/AppStateContext";
-import { isHidden } from "./utils/isHidden";
-import { moveCourse } from "./state/actions";
+import { useAppState } from "../state/AppStateContext";
+import { isHidden } from "../utils/isHidden";
+import { moveCourse } from "../state/actions";
 import { Button, Row } from "react-bootstrap";
-import { deleteCourse, softDeleteCourse, editCourse } from "./state/actions";
+import { deleteCourse, softDeleteCourse, editCourse } from "../state/actions";
 import { EditCourse } from "./EditCourse";
 
 type CourseCardProps = {

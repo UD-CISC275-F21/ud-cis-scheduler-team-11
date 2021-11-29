@@ -1,21 +1,21 @@
 import React, { useRef} from "react";
-import { SemesterContainer, SemesterTitle } from "./styles";
-import { useAppState } from "./state/AppStateContext";
+import { SemesterContainer, SemesterTitle } from "../styles";
+import { useAppState } from "../state/AppStateContext";
 import { CourseCard } from "./CourseCard";
 import { AddNewCourse } from "./AddNewCourse";
 import { EditSemesterTitle } from "./EditSemesterTitle";
-import { useItemDrag } from "./utils/useItemDrag";
+import { useItemDrag } from "../utils/useItemDrag";
 import { useDrop } from "react-dnd";
-import { isHidden } from "./utils/isHidden";
+import { isHidden } from "../utils/isHidden";
 import { Row, Col, Button } from "react-bootstrap";
-import { deleteSemester, editSemester, deleteAllCourses } from "./state/actions";
+import { deleteSemester, editSemester, deleteAllCourses } from "../state/actions";
 
 import {
     addCourse,
     moveCourse,
     moveSemester,
     setDraggedItem
-} from "./state/actions";
+} from "../state/actions";
 
 type SemesterProps = {
     text: string

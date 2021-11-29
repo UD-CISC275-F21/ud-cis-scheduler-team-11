@@ -1,4 +1,4 @@
-import { DragItem } from "../DragItem";
+import { DragItem } from "../components/DragItem";
 
 //an action now can resort to one of the forms we passed in, the semester or task
 export type Action =
