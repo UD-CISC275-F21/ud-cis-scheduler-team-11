@@ -19,8 +19,8 @@ const styles = {
         background: "cyan",
         borderRadius: "10px",
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        flexDirection: "Semester",
+        alignCourses: "center",
         fontSize: 30,
     },
 } as const;

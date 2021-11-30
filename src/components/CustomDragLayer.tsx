@@ -7,8 +7,6 @@ import {
     DragPreviewWrapper
 } from "../styles";
 import { CourseCard } from "./CourseCard";
-//import { StyledComponent } from "styled-components";
-
 
 export const CustomDragLayer = (): JSX.Element | null => {
     const { draggedItem } = useAppState();

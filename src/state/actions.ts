@@ -5,10 +5,10 @@ export type Action =
     | {
         type: "MOVE_COURSE"
         payload: {
-            draggedItemId: string
-            hoveredItemId: string | null
-            sourceColumnId: string
-            targetColumnId: string
+            draggedCourseId: string
+            hoveredCourseId: string | null
+            sourceSemesterId: string
+            targetSemesterId: string
         }
     }
     | {
@@ -199,16 +199,16 @@ export const setDraggedItem = (
 });
 
 export const moveCourse = (
-    draggedItemId: string,
-    hoveredItemId: string | null,
-    sourceColumnId: string,
-    targetColumnId: string
+    draggedCourseId: string,
+    hoveredCourseId: string | null,
+    sourceSemesterId: string,
+    targetSemesterId: string
 ): Action => ({
     type: "MOVE_COURSE",
     payload: {
-        draggedItemId,
-        hoveredItemId,
-        sourceColumnId,
-        targetColumnId
+        draggedCourseId,
+        hoveredCourseId,
+        sourceSemesterId,
+        targetSemesterId
     }
 });

@@ -22,9 +22,9 @@ export function MajorDropdown(): JSX.Element {
         /*
         <DropdownButton style={styles.dropdown} id="dropdown-basic-button" title="Dropdown button">
             <DropdownBox options={options} value={defaultOption} placeholder="Select an option"/>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            <Dropdown.Course href="#/action-1">Action</Dropdown.Course>
+            <Dropdown.Course href="#/action-2">Another action</Dropdown.Course>
+            <Dropdown.Course href="#/action-3">Something else</Dropdown.Course>
         </DropdownButton>
     */
 
@@ -41,7 +41,7 @@ const styles = {
         borderRadius: "50px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignCourses: "center",
         fontSize: 20,
         border: "10px solid black",
         color: "black",

@@ -43,7 +43,7 @@ export const CourseCard = ({
             if (draggedItem.id === id) {
                 return;
             }
-
+ 
             dispatch(
                 moveCourse(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
@@ -73,32 +73,25 @@ export const CourseCard = ({
                 </Button>
             </Row>
         </CourseCardContainer>
-    );//<img src="https://icons.iconarchive.com/icons/designcontest/outline/16/Pencil-icon.png" alt="my image" /> 
+    );
 
 };
 const styles = {
     softDeleteButton: {
-        //fontColor: "#FE941D",
         width: "40%",
-        //height: "5%",
         padding: "0px 0px",
         background: "#FF7F7F",
-        //borderRadius: "40px",
         flexDirection: "column",
         alignItems: "center",
         float: "right",
-        //fontSize: 10,
     },
     deleteButton: {
         fontColor: "red",
         width: "10%",
-        //height: "5%",
         padding: "0px 0px",
         background: "red",
-        //borderRadius: "40px",
         flexDirection: "column",
         alignItems: "center",
         float: "right",
-        //fontSize: 10,
     },
 } as const;
