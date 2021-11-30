@@ -1,107 +1,128 @@
 [
-    {
-      "id": "c1",
-      "text": "EGGG101: Introduction to Engineering",
-      "credits": "2",
-    },
-    {
-      "id": "c2",
-      "text": "CISC108: Intro to Computer Science 1",
-      "credits": "3"
-    },
-    {
-      "id": "c3",
-      "text": "MATH241: Analytic Geometry & Calculus A",
-      "credits": "4",
-    },
-    {
-      "id": "c4",
-      "text": "ENGL110: Seminar in Composition",
-      "credits": "3",
-    },
-    {
-      "id": "c5",
-      "text": "Breadth Requirement (CAH): Humanities breadth requirement",
-      "credits": "3",
-    },
-    {
-      "id": "c6",
-      "text": "CISC181: Introduction to Computer Science II",
-      "credits": "3",
-    },
-    {
-      "id": "c7",
-      "text": "CISC210: Introduction to Systems Programming",
-      "credits": "3",
-    },
-    {
-      "id": "c8",
-      "text": "MATH242: Analytic Geometry & Calculus B",
-      "credits": "4",
-    },
-    {
-      "id": "c9",
-      "text": "Breadth Requirement (HCC): History and Cultural Change Requirement",
-      "credits": "3",
-    },
-    {
-      "id": "c10",
-      "text": "Breadth Requirement (SBS): Social and Behavioral Sciences Requirement",
-      "credits": "3",
-    },
-    {
-      "id": "c11",
-      "text": "CISC220: Data Structures",
-      "credits": "3",
-    },
-    {
-      "id": "c12",
-      "text": "CISC260: Machine Org. & Assembly Language",
-      "credits": "3",
-    },
-    {
-      "id": "c13",
-      "text": "MATH210: Discrete Mathematics I",
-      "credits": "3",
-    },
-    {
-      "id": "c14",
-      "text": "Science Requirement 1: Science with Lab Requirement",
-      "credits": "4",
-    },
-    {
-      "id": "c15",
-      "text": "MATH243: Analytic Geometry & Calculus C",
-      "credits": "4",
-    },
-    {
-      "id": "c16",
-      "text": "CISC355: Computers Ethics & Society",
-      "credits": "3",
-    },
-    {
-      "id": "c17",
-      "text": "CISC275: Introduction to Software Engineering",
-      "credits": "3",
-    },
-    {
-      "id": "c18",
-      "text": "MATH205: Statistical Methods",
-      "credits": "4",
-    },
-    {
-      "id": "c19",
-      "text": "MATH350: Probability Theory and Simulation Methods",
-      "credits": "3",
-    },
-    {
-      "id": "c20",
-      "text": "Science Requirement 2: Science with Lab Requirement",
-      "credits": "4",
-    },
-    {
-      "id": "c21",
-      "text": "Breadth Requirement (Multicultural): Breadth + Multicultural Requirement",
-      "credits": "3",
-    }
+  {
+    "id": 1,
+    "code": "EGGG101",
+    "name": "Introduction to Engineering",
+    "credits": 2
+  },
+  {
+    "id": 2,
+    "code": "CISC108",
+    "name": "Introduction to Computer Science I",
+    "credits": 3
+  },
+  {
+    "id": 3,
+    "code": "MATH241",
+    "name": "Analytic Geometry and Calculus A",
+    "credits": 4
+  },
+  {
+    "id": 4,
+    "code": "ENGL110",
+    "name": "Seminar in Composition",
+    "credits": 3
+  },
+  {
+    "id": 5,
+    "code": "Breadth Requirement (CAH)",
+    "name": "Creative Arts and Humanities",
+    "credits": 3
+  },
+  {
+    "id": 6,
+    "code": "CISC181",
+    "name": "Introduction to Computer Science II",
+    "credits": 3
+  },
+  {
+    "id": 7,
+    "code": "CISC210",
+    "name": "Introduction to Systems Programming",
+    "credits": 3
+  },
+  {
+    "id": 8,
+    "code": "MATH242",
+    "name": "Analytic Geometry and Calculus B",
+    "credits": 4
+  },
+  {
+    "id": 9,
+    "code": "Breadth Requirement (HCC)",
+    "name": "History and Cultural Change",
+    "credits": 3
+  },
+  {
+    "id": 10,
+    "code": "Breadth Requirement (SBS)",
+    "name": "Social and Behavioral Sciences",
+    "credits": 3
+  },
+  {
+    "id": 11,
+    "code": "CISC220",
+    "name": "Data Structures",
+    "credits": 3
+  },
+  {
+    "id": 12,
+    "code": "CISC260",
+    "name": "Machine Organization and Assembly Language",
+    "credits": 3
+  },
+  {
+    "id": 13,
+    "code": "MATH210",
+    "name": "Discrete Mathematics I",
+    "credits": 3
+  },
+  {
+    "id": 14,
+    "code": "Science Requirement 1",
+    "name": "Science and Lab 1",
+    "credits": 4
+  },
+  {
+    "id": 15,
+    "code": "MATH243",
+    "name": "Analytic Geometry and Calculus C",
+    "credits": 4
+  },
+  {
+    "id": 16,
+    "code": "CISC355",
+    "name": "Computers Ethics and Society",
+    "credits": 3
+  },
+  {
+    "id": 17,
+    "code": "CISC275",
+    "name": "Introduction to Software Engineering",
+    "credits": 3
+  },
+  {
+    "id": 18,
+    "code": "MATH205",
+    "name": "Statistical Methods",
+    "credits": 4
+  },
+  {
+    "id": 19,
+    "code": "MATH350",
+    "name": "Probability Theory and Simulation Methods",
+    "credits": 3
+  },
+  {
+    "id": 20,
+    "code": "Science Requirement 2",
+    "name": "Science and Lab 2",
+    "credits": 4
+  },
+  {
+    "id": 21,
+    "code": "Breadth Requirement (Multicultural)",
+    "name": "Multicultural",
+    "credits": 3
+  }
 ]
