@@ -158,7 +158,7 @@ const styles = {
         background: "red",
         display: "flex",
         flexDirection: "column",
-        alignCourses: "center",
+        alignItems: "center",
         fontSize: 15,
     },
     deleteAllCoursesButton: {
@@ -168,7 +168,7 @@ const styles = {
         borderRadius: "20px",
         display: "flex",
         flexDirection: "column",
-        alignCourses: "center",
+        alignItems: "center",
         fontSize: 15,
     },
     line: {
