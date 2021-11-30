@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "code": "EGGG101",
+    "name": "Introduction to Engineering",
+    "credits": 2
+  },
+  {
+    "id": 2,
+    "code": "CISC108",
+    "name": "Introduction to Computer Science I",
+    "credits": 3
+  },
+  {
+    "id": 3,
+    "code": "MATH241",
+    "name": "Analytic Geometry and Calculus A",
+    "credits": 4
+  },
+  {
+    "id": 4,
+    "code": "ENGL110",
+    "name": "Seminar in Composition",
+    "credits": 3
+  },
+  {
+    "id": 5,
+    "code": "Breadth Requirement (CAH)",
+    "name": "Creative Arts and Humanities",
+    "credits": 3
+  },
+  {
+    "id": 6,
+    "code": "CISC181",
+    "name": "Introduction to Computer Science II",
+    "credits": 3
+  },
+  {
+    "id": 7,
+    "code": "CISC210",
+    "name": "Introduction to Systems Programming",
+    "credits": 3
+  },
+  {
+    "id": 8,
+    "code": "MATH242",
+    "name": "Analytic Geometry and Calculus B",
+    "credits": 4
+  },
+  {
+    "id": 9,
+    "code": "Breadth Requirement (HCC)",
+    "name": "History and Cultural Change",
+    "credits": 3
+  },
+  {
+    "id": 10,
+    "code": "Breadth Requirement (SBS)",
+    "name": "Social and Behavioral Sciences",
+    "credits": 3
+  },
+  {
+    "id": 11,
+    "code": "CISC220",
+    "name": "Data Structures",
+    "credits": 3
+  },
+  {
+    "id": 12,
+    "code": "CISC260",
+    "name": "Machine Organization and Assembly Language",
+    "credits": 3
+  },
+  {
+    "id": 13,
+    "code": "MATH210",
+    "name": "Discrete Mathematics I",
+    "credits": 3
+  },
+  {
+    "id": 14,
+    "code": "Science Requirement 1",
+    "name": "Science and Lab 1",
+    "credits": 4
+  },
+  {
+    "id": 15,
+    "code": "MATH243",
+    "name": "Analytic Geometry and Calculus C",
+    "credits": 4
+  },
+  {
+    "id": 16,
+    "code": "CISC355",
+    "name": "Computers Ethics and Society",
+    "credits": 3
+  },
+  {
+    "id": 17,
+    "code": "CISC275",
+    "name": "Introduction to Software Engineering",
+    "credits": 3
+  },
+  {
+    "id": 18,
+    "code": "MATH205",
+    "name": "Statistical Methods",
+    "credits": 4
+  },
+  {
+    "id": 19,
+    "code": "MATH350",
+    "name": "Probability Theory and Simulation Methods",
+    "credits": 3
+  },
+  {
+    "id": 20,
+    "code": "Science Requirement 2",
+    "name": "Science and Lab 2",
+    "credits": 4
+  },
+  {
+    "id": 21,
+    "code": "Breadth Requirement (Multicultural)",
+    "name": "Multicultural",
+    "credits": 3
+  }
+]
