@@ -11,7 +11,7 @@ names = [
 ("9", "Breadth Requirement (HCC)", "History and Cultural Change Requirement", "3"),
 ("10", "Breadth Requirement (SBS)", "Social and Behavioral Sciences Requirement", "3"),
 ("11", "CISC220", "Data Structures", "3"),
-("12", "CISC260", "Machine Org. & Assembly Language", "3"),
+("12", "CISC260", "Machine Organization & Assembly Language", "3"),
 ("13", "MATH210", "Discrete Mathematics I", "3"),
 ("14", "Science Requirement 1", "Science with Lab Requirement", "4"),
 ("15", "MATH243", "Analytic Geometry & Calculus C", "4"),
