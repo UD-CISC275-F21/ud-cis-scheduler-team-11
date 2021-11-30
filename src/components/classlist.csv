@@ -13,11 +13,11 @@ names = [
 ("11", "CISC220", "Data Structures", "3"),
 ("12", "CISC260", "Machine Organization and Assembly Language", "3"),
 ("13", "MATH210", "Discrete Mathematics I", "3"),
-("14", "Science Requirement 1", "Science with Lab Requirement", "4"),
+("14", "Science Requirement 1", "Science and Lab 1", "4"),
 ("15", "MATH243", "Analytic Geometry and Calculus C", "4"),
 ("16", "CISC355", "Computers Ethics and Society", "3"),
 ("17", "CISC275", "Introduction to Software Engineering", "3"),
 ("18", "MATH205", "Statistical Methods", "4"),
 ("19", "MATH350", "Probability Theory and Simulation Methods", "3"),
-("20", "Science Requirement 2", "Science and Lab", "4"),
+("20", "Science Requirement 2", "Science and Lab 2", "4"),
 ("21", "Breadth Requirement (Multicultural)", "Multicultural", "3")]
