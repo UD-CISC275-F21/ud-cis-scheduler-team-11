@@ -1,6 +1,6 @@
 //import React from "react";
 import { nanoid } from "nanoid";
-import { findItemIndexById, moveItem } from "../utils/arrayUtils";
+import { findCourseIndexById, moveCourse } from "../utils/arrayUtils";
 import { DragItem } from "../components/DragItem";
 import { Action } from "./actions";
 
@@ -46,7 +46,7 @@ export const appStateReducer = (
     }
     case "ADD_COURSE": {
         const { text, semesterId } = action.payload;
-        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        const targetSemesterIndex = findCourseIndexById(draft.semesters, semesterId);
         draft.semesters[targetSemesterIndex].courses.push({
             id: nanoid(),
             text
@@ -55,27 +55,27 @@ export const appStateReducer = (
     }
     case "EDIT_COURSE": {
         const {text, semesterId, id} = action.payload;
-        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        const targetSemesterIndex = findCourseIndexById(draft.semesters, semesterId);
         const index=draft.semesters[targetSemesterIndex].courses.findIndex(course => course.id === id);
         draft.semesters[targetSemesterIndex].courses[index].text=text;
         break;
     }
     case "DELETE_COURSE": {
         const {semesterId, id} = action.payload;
-        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        const targetSemesterIndex = findCourseIndexById(draft.semesters, semesterId);
         draft.semesters[targetSemesterIndex].courses=draft.semesters[targetSemesterIndex].courses.filter(course => course.id !== id);
         break;
     }
     case "DELETE_ALL_COURSES": {
         const {semesterId} = action.payload;
         const id = "NaN";
-        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        const targetSemesterIndex = findCourseIndexById(draft.semesters, semesterId);
         draft.semesters[targetSemesterIndex].courses=draft.semesters[targetSemesterIndex].courses.filter(course => course.id === id);
         break;
     }
     case "SOFT_DELETE_COURSE": {
         const {text, semesterId, id} = action.payload;
-        const targetSemesterIndex = findItemIndexById(draft.semesters, semesterId);
+        const targetSemesterIndex = findCourseIndexById(draft.semesters, semesterId);
         draft.semesters[0].courses.push({
             id: nanoid(),
             text
@@ -95,46 +95,46 @@ export const appStateReducer = (
     }
     case "MOVE_SEMESTER": {
         const { draggedId, hoverId } = action.payload;
-        const dragIndex = findItemIndexById(draft.semesters, draggedId);
-        const hoverIndex = findItemIndexById(draft.semesters, hoverId);
-        draft.semesters = moveItem(draft.semesters, dragIndex, hoverIndex);
+        const dragIndex = findCourseIndexById(draft.semesters, draggedId);
+        const hoverIndex = findCourseIndexById(draft.semesters, hoverId);
+        draft.semesters = moveCourse(draft.semesters, dragIndex, hoverIndex);
         break;
     }
     case "MOVE_COURSE": {
         const {
-            draggedItemId,
-            hoveredItemId,
-            sourceColumnId,
-            targetColumnId
+            draggedCourseId,
+            hoveredCourseId,
+            sourceSemesterId,
+            targetSemesterId
         } = action.payload;
 
-        const sourceSemesterIndex = findItemIndexById(
+        const sourceSemesterIndex = findCourseIndexById(
             draft.semesters,
-            sourceColumnId
+            sourceSemesterId
         );
-        const targetSemesterIndex = findItemIndexById(
+        const targetSemesterIndex = findCourseIndexById(
             draft.semesters,
-            targetColumnId
+            targetSemesterId
         );
 
-        const dragIndex = findItemIndexById(
+        const dragIndex = findCourseIndexById(
             draft.semesters[sourceSemesterIndex].courses,
-            draggedItemId
+            draggedCourseId
         );
 
-        const hoverIndex = hoveredItemId
-            ? findItemIndexById(
+        const hoverIndex = hoveredCourseId
+            ? findCourseIndexById(
                 draft.semesters[targetSemesterIndex].courses,
-                hoveredItemId
+                hoveredCourseId
             )
             : 0;
-        const item = draft.semesters[sourceSemesterIndex].courses[dragIndex];
+        const Course = draft.semesters[sourceSemesterIndex].courses[dragIndex];
 
         // Remove the task from the source semester
         draft.semesters[sourceSemesterIndex].courses.splice(dragIndex, 1);
 
         // Add the task to the target semester
-        draft.semesters[targetSemesterIndex].courses.splice(hoverIndex, 0, item);
+        draft.semesters[targetSemesterIndex].courses.splice(hoverIndex, 0, Course);
         break;
     }
     default: {

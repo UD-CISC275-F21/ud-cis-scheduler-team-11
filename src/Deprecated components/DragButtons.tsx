@@ -59,11 +59,11 @@ export function LoadClasses(): JSX.Element{
     function handleOnDragEnd(result: DropResult){
         if (!result.destination) return;
     
-        const items = Array.from(core);
-        const [reorderedItem] = items.splice(result.source.index, 1);
-        items.splice(result.destination.index, 0, reorderedItem);
+        const Courses = Array.from(core);
+        const [reorderedCourse] = Courses.splice(result.source.index, 1);
+        Courses.splice(result.destination.index, 0, reorderedCourse);
     
-        updateCore(items);
+        updateCore(Courses);
     }
     
     return (
@@ -104,8 +104,8 @@ const styles = {
         //background: "tan",
         borderRadius: "10px",
         //display: "flex",
-        //flexDirection: "column",
-        //alignItems: "center",
+        //flexDirection: "Semester",
+        //alignCourses: "center",
         fontSize: 20,
         border: "10px solid black",
     },

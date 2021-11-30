@@ -45,7 +45,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 }
 
                 dispatch(moveSemester(draggedItem.id, id));
-            } else {
+            } else if (draggedItem.type === "COURSECARD"){
                 if (draggedItem.semesterId === id) {
                     return;
                 }
@@ -153,27 +153,22 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
 
 const styles = {
     deleteSemesterButton: {
-        //color: "blue",
         width: "100%",
-        //padding: "0px 0px",
         margin: "2px auto 10px 0px", 
         background: "red",
-        //borderRadius: "40px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignCourses: "center",
         fontSize: 15,
     },
     deleteAllCoursesButton: {
-        //color: "blue",
         width: "100%",
-        //padding: "0px 0px",
         margin: "2px auto 10px", 
         background: "maroon",
         borderRadius: "20px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignCourses: "center",
         fontSize: 15,
     },
     line: {
