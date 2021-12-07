@@ -43,7 +43,6 @@ export const CourseCard = ({
             if (draggedItem.id === id) {
                 return;
             }
- 
             dispatch(
                 moveCourse(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
@@ -61,15 +60,15 @@ export const CourseCard = ({
             {text}
             <Row>
                 <EditCourse
-                    toggleButtonText="Edit Course"
+                    toggleButtonText="Edit"
                     onAdd={(text) => dispatch(editCourse(text,semesterId, id))}
                     dark
                 />
                 <Button style={styles.softDeleteButton} onClick={() => dispatch(softDeleteCourse(text, semesterId, id))}>
-                    Remove
+                    Reset
                 </Button>
                 <Button style={styles.deleteButton} onClick={() => dispatch(deleteCourse(semesterId, id))}>
-                        X
+                    Delete
                 </Button>
             </Row>
         </CourseCardContainer>
@@ -78,7 +77,7 @@ export const CourseCard = ({
 };
 const styles = {
     softDeleteButton: {
-        width: "40%",
+        width: "34%",
         padding: "0px 0px",
         background: "#FF7F7F",
         flexDirection: "column",
@@ -87,7 +86,7 @@ const styles = {
     },
     deleteButton: {
         fontColor: "red",
-        width: "10%",
+        width: "33%",
         padding: "0px 0px",
         background: "red",
         flexDirection: "column",
