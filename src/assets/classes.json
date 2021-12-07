@@ -124,5 +124,83 @@
     "code": "Breadth Requirement (Multicultural)",
     "name": "Multicultural",
     "credits": 3
+  },
+  {
+    "id": 22,
+    "code": "Science Requirement",
+    "name": "Science and Lab",
+    "credits": 4
+  },
+  {
+    "id": 23,
+    "code": "CISC442",
+    "name": "Introduction to Computer Vision",
+    "credits": 3
+  },
+  {
+    "id": 24,
+    "code": "CISC481",
+    "name": "Artificial Intelligence",
+    "credits": 3
+  },
+  {
+    "id": 25,
+    "code": "CISC483",
+    "name": "Introduction Data Mining",
+    "credits": 3
+  },
+  {
+    "id": 26,
+    "code": "CISC484",
+    "name": "Introduction to Machine Learning",
+    "credits": 3
+  },
+  {
+    "id": 27,
+    "code": "CISC361",
+    "name": "Operating Systems",
+    "credits": 3
+  },
+  {
+    "id": 28,
+    "code": "CISC372",
+    "name": "Parallel Computing",
+    "credits": 3
+  },
+  {
+    "id": 29,
+    "code": "BISC401",
+    "name": "Molecular Biology of the Cell",
+    "credits": 3
+  },
+  {
+    "id": 30,
+    "code": "CISC436",
+    "name": "Computational Biology and Bioinformatics",
+    "credits": 3
+  },
+  {
+    "id": 31,
+    "code": "MATH349",
+    "name": "Elementary Linear Algebra",
+    "credits": 3
+  }
+  {
+    "id": 32,
+    "code": "CISC303",
+    "name": "Automata Theory",
+    "credits": 3
+  }
+  {
+    "id": 33,
+    "code": "CISC320",
+    "name": "Introduction to Algorithms",
+    "credits": 3
+  }
+  {
+    "id": 33,
+    "code": "CISC304",
+    "name": "Logic for Programming",
+    "credits": 3
   }
 ]
