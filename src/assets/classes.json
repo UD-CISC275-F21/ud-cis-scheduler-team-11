@@ -289,20 +289,20 @@
   },
   {
     "id": 49,
-    "code": "CISC401",
-    "name": "Elements of the Theory of Computation",
+    "code": "CISC453",
+    "name": "Simulation of Computer Networks",
     "credits": 3
   },
   {
     "id": 50,
-    "code": "COMM212",
-    "name": "Public Speaking & Professional Presentation",
+    "code": "CISC459",
+    "name": "Topics in Communications, Distributed Computing and Networks",
     "credits": 3
   },
   {
     "id": 51,
-    "code": "CISC250",
-    "name": "Business Telecommunication Networks",
+    "code": "CISC474",
+    "name": "Advanced Web Technologies",
     "credits": 3
   },
   {
@@ -313,20 +313,14 @@
   },
   {
     "id": 53,
-    "code": "MISY430",
-    "name": "Systems Analysis and Implementation",
+    "code": "CISC479",
+    "name": "Topics in Architecture and Software",
     "credits": 3
   },
   {
     "id": 54,
-    "code": "ACCT207",
-    "name": "Accounting I",
+    "code": "CISC401",
+    "name": "Elements of the Theory of Computation",
     "credits": 3
-  },
-  {
-    "id": 55,
-    "code": "ACCT208",
-    "name": "Accounting II",
-    "credits": 3
-  },
+  }
 ]
