@@ -10,16 +10,16 @@ export function RequirementsTable(): JSX.Element {
                     <ul style={styles.title}>
                         <h5>Degree Requirements</h5>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>EGGG101 satisfies the First Year Seminar.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>ENGL110 is required for all students and should be taken in the first year.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>The University Breadth courses include CAH, HCC, & SBS. These & a Multicultural course are required for the College & University requirements.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
                 </Col>
@@ -28,25 +28,25 @@ export function RequirementsTable(): JSX.Element {
                     <ul style={styles.title}>
                         <h5>Course Prerequisites</h5>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>CISC108 is a prerequisite for CISC181 & CISC210.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>MATH241 is a prerequisite for MATH242.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>MATH241 & MATH242 are corequisites for MATH210.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>MATH242 is a prerequisite for MATH243.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>CISC181 & CISC220 are prerequisites for CISC275.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>MATH210 is a prerequisite for MATH205.</p>
                     </ul>
-                    <ul  style={styles.items}>
+                    <ul  style={styles.Courses}>
                         <p>MATH243 is a prerequisite for MATH350.</p>
                     </ul>
                 </Col>
@@ -58,7 +58,7 @@ export function RequirementsTable(): JSX.Element {
 const styles = {
     container: {
         width: "80%",
-        alignItems: "center",
+        alignCourses: "center",
         margin: "auto",
 
     },
@@ -72,7 +72,7 @@ const styles = {
         marginRight: "7%",
 
     },
-    items: {
+    Courses: {
         margin: "-10px",
         marginRight: "21px",
     

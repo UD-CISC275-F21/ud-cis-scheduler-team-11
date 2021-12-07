@@ -1,21 +1,21 @@
 import React, { useRef} from "react";
-import { SemesterContainer, SemesterTitle } from "./styles";
-import { useAppState } from "./state/AppStateContext";
+import { SemesterContainer, SemesterTitle } from "../styles";
+import { useAppState } from "../state/AppStateContext";
 import { CourseCard } from "./CourseCard";
 import { AddNewCourse } from "./AddNewCourse";
 import { EditSemesterTitle } from "./EditSemesterTitle";
-import { useItemDrag } from "./utils/useItemDrag";
+import { useItemDrag } from "../utils/useItemDrag";
 import { useDrop } from "react-dnd";
-import { isHidden } from "./utils/isHidden";
+import { isHidden } from "../utils/isHidden";
 import { Row, Col, Button } from "react-bootstrap";
-import { deleteSemester, editSemester, deleteAllCourses } from "./state/actions";
+import { deleteSemester, editSemester, deleteAllCourses } from "../state/actions";
 
 import {
     addCourse,
     moveCourse,
     moveSemester,
     setDraggedItem
-} from "./state/actions";
+} from "../state/actions";
 
 type SemesterProps = {
     text: string
@@ -45,7 +45,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 }
 
                 dispatch(moveSemester(draggedItem.id, id));
-            } else {
+            } else if (draggedItem.type === "COURSECARD"){
                 if (draggedItem.semesterId === id) {
                     return;
                 }
@@ -153,21 +153,16 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
 
 const styles = {
     deleteSemesterButton: {
-        //color: "blue",
         width: "100%",
-        //padding: "0px 0px",
         margin: "2px auto 10px 0px", 
         background: "red",
-        //borderRadius: "40px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         fontSize: 15,
     },
     deleteAllCoursesButton: {
-        //color: "blue",
         width: "100%",
-        //padding: "0px 0px",
         margin: "2px auto 10px", 
         background: "maroon",
         borderRadius: "20px",

@@ -1,10 +1,10 @@
 import React from "react";
 import { AppContainer } from "../styles";
-import { AddNewCourse } from "../AddNewCourse";
-import { CustomDragLayer } from "../CustomDragLayer";
+import { AddNewCourse } from "./AddNewCourse";
+import { CustomDragLayer } from "./CustomDragLayer";
 import { useAppState } from "../state/AppStateContext";
 import { addSemester, deleteSemesters } from "../state/actions";
-import { Semester } from "../SemesterList";
+import { Semester } from "./SemesterList";
 import { Button, Row } from "react-bootstrap";
 //import { DeleteSemester } from "../DeleteSems"; 
 

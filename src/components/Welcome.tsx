@@ -17,7 +17,7 @@ const styles = {
         borderRadius: "20px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignCourses: "center",
         fontSize: 30,
     },
 } as const;
