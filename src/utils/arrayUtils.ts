@@ -1,28 +1,28 @@
-type Item = {
+type Course = {
     id: string
 }
 
-export const findItemIndexById = <TItem extends Item>(
-    items: TItem[],
+export const findCourseIndexById = <TCourse extends Course>(
+    Courses: TCourse[],
     id: string
 ):number => {
-    return items.findIndex((item: TItem) => item.id === id);
+    return Courses.findIndex((Course: TCourse) => Course.id === id);
 };
-export const moveItem = <TItem>(array: TItem[], from: number, to: number): TItem[] => {
-    const item = array[from];
-    return insertItemAtIndex(removeItemAtIndex(array, from), item, to);
+export const moveCourse = <TCourse>(array: TCourse[], from: number, to: number): TCourse[] => {
+    const Course = array[from];
+    return insertCourseAtIndex(removeCourseAtIndex(array, from), Course, to);
 };
 
-export function removeItemAtIndex<TItem>(array: TItem[], index: number)
-:TItem[]{
+export function removeCourseAtIndex<TCourse>(array: TCourse[], index: number)
+:TCourse[]{
     return [...array.slice(0, index), ...array.slice(index + 1)];
 }
 
-export function insertItemAtIndex<TItem>(
-    array: TItem[],
-    item: TItem,
+export function insertCourseAtIndex<TCourse>(
+    array: TCourse[],
+    Course: TCourse,
     index: number
-): TItem[] {
-    return [...array.slice(0, index), item, ...array.slice(index)];
+): TCourse[] {
+    return [...array.slice(0, index), Course, ...array.slice(index)];
 }
     

@@ -73,7 +73,7 @@ const styles = {
         background: "gray",
         marginBottom: "100px",
         
-        //alignItems: "center",
+        //alignCourses: "center",
         //justifyContent: "right",
         fontSize: 17,
     },
