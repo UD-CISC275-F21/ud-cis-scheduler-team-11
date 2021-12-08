@@ -63,14 +63,12 @@ export function MajorDropdown(): JSX.Element {
 
 const styles = {
     dropdown: {
-        width: "auto",
-
         margin: "10px auto",
         background: "tan",
         borderRadius: "50px",
         display: "flex",
         flexDirection: "column",
-        alignCourses: "center",
+        alignItems: "center",
         fontSize: 20,
         border: "10px solid black",
         color: "black",
