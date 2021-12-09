@@ -178,19 +178,19 @@
     "code": "MATH349",
     "name": "Elementary Linear Algebra",
     "credits": 3
-  }
+  },
   {
     "id": 31,
     "code": "CISC303",
     "name": "Automata Theory",
     "credits": 3
-  }
+  },
   {
     "id": 32,
     "code": "CISC320",
     "name": "Introduction to Algorithms",
     "credits": 3
-  }
+  },
   {
     "id": 33,
     "code": "CISC304",
