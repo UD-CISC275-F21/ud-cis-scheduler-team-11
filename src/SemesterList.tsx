@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import { SemesterContainer, SemesterTitle } from "./styles";
 import { useAppState } from "./state/AppStateContext";
 import { CourseCard } from "./CourseCard";
@@ -21,7 +21,7 @@ type SemesterProps = {
     text: string
     id: string
     isPreview?: boolean
-}
+} 
 
 export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element => {
     const { draggedItem, getCoursesBySemesterId, dispatch } = useAppState();
@@ -59,45 +59,84 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
 
     drag(drop(ref));
 
-
-    return (
-        <SemesterContainer
-            isPreview={isPreview}
-            ref={ref}
-            isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
-        >
-            <Row>
-                <SemesterTitle>{text}</SemesterTitle>
-                <Col>
-                    <EditSemesterTitle
-                        toggleButtonText="Edit Title"
-                        onAdd={(text) => dispatch(editSemester(text, id))}
-                        dark
+    
+    if(id==="0"){
+        return (
+            <SemesterContainer
+                isPreview={isPreview}
+                ref={ref} 
+                isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
+            >
+                <Row>
+                    <SemesterTitle>{text}</SemesterTitle>
+                    <Col>
+                        <EditSemesterTitle
+                            toggleButtonText="Edit Title"
+                            onAdd={(text) => dispatch(editSemester(text, id))}
+                            dark
+                        />
+                    </Col>
+                </Row>
+                {courses.map(course => 
+                    <CourseCard
+                        id={course.id}
+                        semesterId={id}
+                        text={course.text}
+                        key={course.id}
                     />
-                </Col>
-            </Row>
-            {courses.map(course =>
-                <CourseCard
-                    id={course.id}
-                    semesterId={id}
-                    text={course.text}
-                    key={course.id}
+                )}
+                <AddNewCourse
+                    toggleButtonText="+ Add another course"
+                    onAdd={(text) => dispatch(addCourse(text, id))}
+                    dark
                 />
-            )}
-            <AddNewCourse
-                toggleButtonText="+ Add another course"
-                onAdd={(text) => dispatch(addCourse(text, id))}
-                dark
-            />
-        </SemesterContainer>
-    );
+            </SemesterContainer>
+        );
+    } else{
+        return(
+            <SemesterContainer
+                isPreview={isPreview}
+                ref={ref}
+                isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
+            >
+                <Row>
+                    <SemesterTitle>{text}</SemesterTitle>
+                    <Col>
+                        <EditSemesterTitle
+                            toggleButtonText="Edit Title"
+                            onAdd={(text) => dispatch(editSemester(text, id))}
+                            dark
+                        />
+                    </Col>
+                    <Col>
+                        <Button style={styles.button} onClick={() => dispatch(deleteSemester(id))}>Delete</Button>
+                    </Col>
+                </Row>
+                {courses.map(course => 
+                    <CourseCard
+                        id={course.id}
+                        semesterId={id}
+                        text={course.text}
+                        key={course.id}
+                    />
+                )}
+                <AddNewCourse
+                    toggleButtonText="+ Add another course"
+                    onAdd={(text) => dispatch(addCourse(text, id))}
+                    dark
+                />
+                
+            </SemesterContainer>
+        );
+    }
 };
+
 const styles = {
     button: {
         fontColor: "red",
         width: "70%",
         //padding: "0px 0px",
-        margin: "2px auto 10px",
+        margin: "2px auto 10px", 
         background: "red",
         borderRadius: "40px",
         display: "flex",
