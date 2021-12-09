@@ -5,7 +5,7 @@ import { useItemDrag } from "./utils/useItemDrag";
 import { useDrop } from "react-dnd";
 import { useAppState } from "./state/AppStateContext";
 import { isHidden } from "./utils/isHidden";
-import { moveCourse } from "./state/actions";
+import { moveCourse, setDraggedItem } from "./state/actions";
 import { Button } from "react-bootstrap";
 import {deleteCourse, editCourse } from "./state/actions";
 import { EditCourse } from "./EditCourse";
@@ -47,6 +47,7 @@ export const CourseCard = ({
             dispatch(
                 moveCourse(draggedItem.id, id, draggedItem.semesterId, semesterId)
             );
+            dispatch(setDraggedItem({ ...draggedItem, semesterId }));
         }
     });
 

@@ -57,7 +57,7 @@ type AppStateContextProps = {
 
     
 //making sure we can access data globally
-export const useAppState = (): AppStateContextProps => {
+export const useAppState = () => {
     return useContext(AppStateContext);
 };
 

@@ -30,9 +30,8 @@ export const appStateReducer = (
         break;
     }
     case "ADD_SEMESTER": {
-        const id=nanoid();
         draft.semesters.push({
-            id: id,
+            id: nanoid(),
             text: action.payload,
             courses: [],
         });

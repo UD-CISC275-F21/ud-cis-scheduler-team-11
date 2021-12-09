@@ -8,7 +8,7 @@ import { MajorDropdown } from "./components/MajorDropdown";
 import { SemesterContainer } from "./components/SemesterContainer";
 import { Footer } from "./components/Footer";
 import { Space } from "./components/SpaceBetweenBodyandFooter";
-import ModalButton from "./PopupTutorial/ModalButton";
+
 
 export const App = ():JSX.Element  => {
     
@@ -18,7 +18,6 @@ export const App = ():JSX.Element  => {
             <WelcomePopup />
             <Welcome />
             <MajorDropdown />
-            <ModalButton />
             <SemesterContainer />
             <Footer />
             <Space />
