@@ -68,7 +68,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
         return (
             <SemesterContainer
                 isPreview={isPreview}
-                //ref={ref} removing this makes it totally undraggable
+                ref={ref} 
                 isHidden={isHidden(draggedItem, "SEMESTER", id, isPreview)}
             >
                 <SemesterTitle>{text}</SemesterTitle>
