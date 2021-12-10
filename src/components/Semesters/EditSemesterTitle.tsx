@@ -1,20 +1,20 @@
 import React, { useState} from "react";
-import { EditCourseButton } from "../styles";
-import { NewCourseForm } from "./NewCourseForm";
+import { EditSemesterButton } from "../../styles";
+import { NewTitleForm } from "./NewSemesterTitleForm";
 
-type EditCourseProps = {
+type EditSemesterTitleProps = {
     onAdd(text: string): void
     toggleButtonText: string
     dark?: boolean
     }
 
-export const EditCourse = (props: EditCourseProps): JSX.Element => {
+export const EditSemesterTitle = (props: EditSemesterTitleProps): JSX.Element => {
     const [showForm, setShowForm] = useState(false);
     const { onAdd, toggleButtonText} = props;
     
     if (showForm) {
         return (
-            <NewCourseForm
+            <NewTitleForm
                 onAdd={text => {
                     onAdd(text);
                     setShowForm(false);
@@ -24,8 +24,8 @@ export const EditCourse = (props: EditCourseProps): JSX.Element => {
     }
     
     return (
-        <EditCourseButton dark={false} onClick={() => setShowForm(true)}>
+        <EditSemesterButton dark={false} onClick={() => setShowForm(true)}>
             {toggleButtonText}
-        </EditCourseButton>
+        </EditSemesterButton>
     );
 };

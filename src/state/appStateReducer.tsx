@@ -1,7 +1,7 @@
 //import React from "react";
 import { nanoid } from "nanoid";
 import { findCourseIndexById, moveCourse } from "../utils/arrayUtils";
-import { DragItem } from "../components/DragItem";
+import { DragItem } from "../components/DragAndDrop/DragItem";
 import { Action } from "./actions";
 
 export type Course = {

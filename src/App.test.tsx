@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, fireEvent, screen, act } from "@testing-library/react";
 import { App } from "./App";
 import { DndProvider } from "react-dnd";
 import { AppStateProvider } from "./state/AppStateContext";
@@ -50,6 +50,10 @@ describe("App", () => {
         expect(container).toBeInTheDocument();
     })
 })
+
+
+
+
 
 
 
