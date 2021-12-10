@@ -43,7 +43,7 @@ export function MajorDropdown(): JSX.Element {
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Cybersecurity Concentration")}>Cybersecurity</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Data Science Concentration")}>Data Science</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - High Performance Computing Concentration")}>High Performance Computing</Dropdown.Item>
-                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Systems and Networks Concentration")}>Systems and Networks Concentration</Dropdown.Item>
+                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Systems and Networks Concentration")}>Systems and Networks</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Theory and Computation Concentration")}>Theory and Computation</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
