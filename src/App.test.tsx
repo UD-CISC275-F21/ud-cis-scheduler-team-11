@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, fireEvent, screen, act } from "@testing-library/react";
 import { App } from "./App";
 import { DndProvider } from "react-dnd";
 import { AppStateProvider } from "./state/AppStateContext";
@@ -39,3 +39,29 @@ test("renders dragNDrop Course Lists", () => {
     expect(fallYear1).toBeInTheDocument();
     expect(springYear1).toBeInTheDocument();
 });
+
+describe("App", () => {
+    it("renders successfully", () => {
+        const { container } = render(<DndProvider backend={Backend}>
+            <AppStateProvider>
+                <App />
+            </AppStateProvider>
+        </DndProvider>)
+        expect(container).toBeInTheDocument();
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

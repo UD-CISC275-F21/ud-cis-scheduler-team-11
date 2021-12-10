@@ -7,7 +7,7 @@ import {
     Semester,
     Course
 } from "./appStateReducer";
-import { DragItem } from "../components/DragItem";
+import { DragItem } from "../components/DragAndDrop/DragItem";
 
 const AppStateContext = createContext<AppStateContextProps>({} as AppStateContextProps);
 

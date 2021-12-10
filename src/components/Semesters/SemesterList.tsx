@@ -1,21 +1,21 @@
 import React, { useRef} from "react";
-import { SemesterContainer, SemesterTitle } from "../styles";
-import { useAppState } from "../state/AppStateContext";
-import { CourseCard } from "./CourseCard";
-import { AddNewCourse } from "./AddNewCourse";
+import { SemesterContainer, SemesterTitle } from "../../styles";
+import { useAppState } from "../../state/AppStateContext";
+import { CourseCard } from "../Courses/CourseCard";
+import { AddNewCourse } from "../Courses/AddNewCourse";
 import { EditSemesterTitle } from "./EditSemesterTitle";
-import { useItemDrag } from "../utils/useItemDrag";
+import { useItemDrag } from "../../utils/useItemDrag";
 import { useDrop } from "react-dnd";
-import { isHidden } from "../utils/isHidden";
+import { isHidden } from "../../utils/isHidden";
 import { Row, Col, Button } from "react-bootstrap";
-import { deleteSemester, editSemester, deleteAllCourses } from "../state/actions";
+import { deleteSemester, editSemester, deleteAllCourses } from "../../state/actions";
 
 import {
     addCourse,
     moveCourse,
     moveSemester,
     setDraggedItem
-} from "../state/actions";
+} from "../../state/actions";
 
 type SemesterProps = {
     text: string
@@ -74,7 +74,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                 <SemesterTitle>{text}</SemesterTitle>
                 <Row>
                     <Col>
-                        <EditSemesterTitle
+                        <EditSemesterTitle 
                             toggleButtonText="Edit Title"
                             onAdd={(text) => dispatch(editSemester(text, id))}
                             dark
@@ -97,7 +97,7 @@ export const Semester = ({ text, id, isPreview }: SemesterProps): JSX.Element =>
                         key={course.id}
                     />
                 )}
-                <AddNewCourse
+                <AddNewCourse 
                     toggleButtonText="+ Add another course"
                     onAdd={(text) => dispatch(addCourse(text, id))}
                     dark

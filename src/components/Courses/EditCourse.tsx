@@ -1,17 +1,16 @@
 import React, { useState} from "react";
-import { AddCourseButton } from "../styles";
+import { EditCourseButton } from "../../styles";
 import { NewCourseForm } from "./NewCourseForm";
 
-
-type AddNewCourseProps = {
+type EditCourseProps = {
     onAdd(text: string): void
     toggleButtonText: string
     dark?: boolean
     }
 
-export const AddNewCourse = (props: AddNewCourseProps): JSX.Element => {
+export const EditCourse = (props: EditCourseProps): JSX.Element => {
     const [showForm, setShowForm] = useState(false);
-    const { onAdd, toggleButtonText, dark } = props;
+    const { onAdd, toggleButtonText} = props;
     
     if (showForm) {
         return (
@@ -23,11 +22,10 @@ export const AddNewCourse = (props: AddNewCourseProps): JSX.Element => {
             />
         );
     }
-        
     
     return (
-        <AddCourseButton dark={dark} onClick={() => setShowForm(true)}>
+        <EditCourseButton dark={false} onClick={() => setShowForm(true)}>
             {toggleButtonText}
-        </AddCourseButton>
+        </EditCourseButton>
     );
 };
