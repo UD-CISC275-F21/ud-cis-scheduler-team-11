@@ -6,7 +6,7 @@ export function MajorDropdown(): JSX.Element {
     type concentration =
         | "Click Here To Select A Major"
         | "BS - Computer Science"
-        | "BS - Artificial Intelligence Concentration"
+        | "BS - Artificial Intelligence and Robotics Concentration"
         | "BS - Bioinformatics Concentration"
         | "BS - Cybersecurity Concentration"
         | "BS - Data Science Concentration"
@@ -15,7 +15,7 @@ export function MajorDropdown(): JSX.Element {
         | "BS - Theory and Computation Concentration"
  
     /*
-    const options =["BS - Computer Science", "BS - Artificial Intelligence Concentration", "BS - Bioinformatics Concentration","BS - Cybersecurity Concentration", "BS - Data Science Concentration", "BS - High Performance Computing Concentration", "BS - Systems and Networks Concentration", "BS - Theory and Computation Concentration"];
+    const options =["BS - Computer Science", "BS - Artificial Intelligence and Robotics Concentration", "BS - Bioinformatics Concentration","BS - Cybersecurity Concentration", "BS - Data Science Concentration", "BS - High Performance Computing Concentration", "BS - Systems and Networks Concentration", "BS - Theory and Computation Concentration"];
     const defaultOption = "Click Here To Select A Major  ";
     const downArrow = String.fromCharCode(11167);
     */
@@ -37,11 +37,11 @@ export function MajorDropdown(): JSX.Element {
                 </Dropdown.Toggle>}
                 <Dropdown.Menu style={styles.box}>
                     <Dropdown.Header>Concentration</Dropdown.Header>
-                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Computer Science")}>BS - Computer Science</Dropdown.Item>
-                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Artificial Intelligence Concentration")}>Artificial Intelligence and Robotics</Dropdown.Item>
+                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Computer Science")}>Computer Science</Dropdown.Item>
+                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Artificial Intelligence and Robotics Concentration")}>Artificial Intelligence and Robotics</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Bioinformatics Concentration")}>Bioinformatics</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Cybersecurity Concentration")}>Cybersecurity</Dropdown.Item>
-                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Data Science Concentration")}>Data Science </Dropdown.Item>
+                    <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Data Science Concentration")}>Data Science</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - High Performance Computing Concentration")}>High Performance Computing</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Systems and Networks Concentration")}>Systems and Networks Concentration</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("BS - Theory and Computation Concentration")}>Theory and Computation</Dropdown.Item>
