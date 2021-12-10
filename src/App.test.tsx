@@ -39,3 +39,25 @@ test("renders dragNDrop Course Lists", () => {
     expect(fallYear1).toBeInTheDocument();
     expect(springYear1).toBeInTheDocument();
 });
+
+describe("App", () => {
+    it("renders successfully", () => {
+        const { container } = render(<DndProvider backend={Backend}>
+            <AppStateProvider>
+                <App />
+            </AppStateProvider>
+        </DndProvider>)
+        expect(container).toBeInTheDocument();
+    })
+})
+
+
+
+
+
+
+
+
+
+
+    
