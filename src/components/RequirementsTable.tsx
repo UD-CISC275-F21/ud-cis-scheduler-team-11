@@ -17,7 +17,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>ENGL110 is required for all students and should be taken in the first year.</p>
                     </ul>
                     <ul  style={styles.Courses}>
-                        <p>The University Breadth courses include CAH, HCC, & SBS. These & a Multicultural course are required for the College & University requirements.</p>
+                        <p>The University Breadth courses including CAH, HCC, and SBS, and a Multicultural course are required for the College and University requirements.</p>
                     </ul>
                     <ul  style={styles.Courses}>
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
