@@ -23,7 +23,7 @@ export function RequirementsTable(): JSX.Element {
                         <p>An 8 credit lab sequence from any of the following: PHYS, CHEM, GEOL, or BISC is required for science courses.</p>
                     </ul>
                     <ul  style={styles.Courses}>
-                        <p>A minimum grade of C- is required for each of the following courses: CISC108, CISC181, CISC210, CISC220, and CISC260.</p>
+                        <p>A minimum grade of C- is required for the following courses: CISC108, CISC181, CISC210, CISC220, and CISC260.</p>
                     </ul>
                 </Col>
 
