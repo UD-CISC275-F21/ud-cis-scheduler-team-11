@@ -23,7 +23,7 @@ export const appData: AppState = {
         {
             id: "0",
             text: "Required Course List",
-            courses: [{id: "c1", text: "Multicultural: 3 credits"},{id: "c2", text: "CISC220: 3 credits"},{id: "c3", text: "CISC260: 3 credits"},{id: "c4", text: "CISC275: 3 credits"},{id: "c5", text: "CISC303: 3 credits"},{id: "c6", text: "CISC320: 3 credits"},{id: "c7", text: "CISC361: 3 credits"},{id: "c8", text: "CISC372: 3 credits"},{id: "c9", text: "MATH210: 3 credits"},{id: "c10", text: "MATH243: 4 credits"},{id: "c11", text: "MATH205: 4 credits"},{id: "c12", text: "MATH350: 3 credits"},{id: "c13", text: "Science and Lab 1: 4 credits"},{id: "c14", text: "Science and Lab 2: 4 credits"},{id: "c15", text: "CISC355: 3 credits"},{id: "c16", text: "ENGL312: 3 credits"},{id: "c17", text: "ENGL410: 3 credits"}]
+            courses: [{id: "c1", text: "Multicultural: 3 credits"},{id: "c2", text: "CISC220: 3 credits"},{id: "c3", text: "CISC260: 3 credits"},{id: "c4", text: "CISC275: 3 credits"},{id: "c5", text: "CISC303: 3 credits"},{id: "c6", text: "CISC320: 3 credits"},{id: "c7", text: "CISC355: 3 credits"},{id: "c8", text: "CISC361: 3 credits"},{id: "c9", text: "CISC372: 3 credits"},{id: "c10", text: "MATH210: 3 credits"},{id: "c11", text: "MATH243: 4 credits"},{id: "c12", text: "MATH205: 4 credits"},{id: "c13", text: "MATH350: 3 credits"},{id: "c14", text: "Science and Lab 1: 4 credits"},{id: "c15", text: "Science and Lab 2: 4 credits"},{id: "c16", text: "ENGL312: 3 credits"},{id: "c17", text: "ENGL410: 3 credits"}]
         },
         {
             id: "1",
