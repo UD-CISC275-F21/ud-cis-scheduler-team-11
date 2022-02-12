@@ -36,7 +36,7 @@ export function MajorDropdown(): JSX.Element {
                     {conc}
                 </Dropdown.Toggle>}
                 <Dropdown.Menu style={styles.box}>
-                    <Dropdown.Header>BS Concentration</Dropdown.Header>
+                    <Dropdown.Header>Concentration</Dropdown.Header>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("Computer Science (BS)")}>Computer Science</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("Artificial Intelligence and Robotics Concentration (BS)")}>Artificial Intelligence and Robotics</Dropdown.Item>
                     <Dropdown.Item data-testid="option" onClick={() => setConcentration("Bioinformatics Concentration (BS)")}>Bioinformatics</Dropdown.Item>
