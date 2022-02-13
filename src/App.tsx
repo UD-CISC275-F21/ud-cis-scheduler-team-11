@@ -1,19 +1,25 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/WelcomePopup.css";
+import { WelcomePopup } from "./components/WelcomePopup";
+import { Welcome } from "./components/Welcome";
+import { MajorDropdown } from "./components/MajorDropdown";
+import { SemesterContainer } from "./components/Semesters/SemesterContainer";
+import { Footer } from "./components/Footer";
+import { Space } from "./components/SpaceBetweenBodyandFooter";
+import { RequirementsTable } from "./components/RequirementsTable";
 
-function App(): JSX.Element {
+export const App = ():JSX.Element  => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                UD CIS Scheduler
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-            </header>
+        <div className = "App">
+            <WelcomePopup />
+            <Welcome />
+            <MajorDropdown />
+            <RequirementsTable />
+            <SemesterContainer />
+            <Footer />
+            <Space />
         </div>
     );
-}
-
-export default App;
+};

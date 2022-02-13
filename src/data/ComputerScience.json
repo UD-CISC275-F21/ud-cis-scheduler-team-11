@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "code": "EGGG101",
+    "name": "Introduction to Engineering",
+    "credits": 2
+  },
+  {
+    "id": 2,
+    "code": "CISC108",
+    "name": "Introduction to Computer Science I",
+    "credits": 3
+  },
+  {
+    "id": 3,
+    "code": "MATH241",
+    "name": "Analytic Geometry and Calculus A",
+    "credits": 4
+  },
+  {
+    "id": 4,
+    "code": "ENGL110",
+    "name": "Seminar in Composition",
+    "credits": 3
+  },
+  {
+    "id": 5,
+    "code": "Breadth Requirement (CAH)",
+    "name": "Creative Arts and Humanities",
+    "credits": 3
+  },
+  {
+    "id": 6,
+    "code": "CISC181",
+    "name": "Introduction to Computer Science II",
+    "credits": 3
+  },
+  {
+    "id": 7,
+    "code": "CISC210",
+    "name": "Introduction to Systems Programming",
+    "credits": 3
+  },
+  {
+    "id": 8,
+    "code": "MATH242",
+    "name": "Analytic Geometry and Calculus B",
+    "credits": 4
+  },
+  {
+    "id": 9,
+    "code": "Breadth Requirement (HCC)",
+    "name": "History and Cultural Change",
+    "credits": 3
+  },
+  {
+    "id": 10,
+    "code": "Breadth Requirement (SBS)",
+    "name": "Social and Behavioral Sciences",
+    "credits": 3
+  },
+  {
+    "id": 11,
+    "code": "CISC220",
+    "name": "Data Structures",
+    "credits": 3
+  },
+  {
+    "id": 12,
+    "code": "CISC260",
+    "name": "Machine Organization and Assembly Language",
+    "credits": 3
+  },
+  {
+    "id": 13,
+    "code": "MATH210",
+    "name": "Discrete Mathematics I",
+    "credits": 3
+  },
+  {
+    "id": 14,
+    "code": "Science Requirement 1",
+    "name": "Science and Lab 1",
+    "credits": 4
+  },
+  {
+    "id": 15,
+    "code": "MATH243",
+    "name": "Analytic Geometry and Calculus C",
+    "credits": 4
+  },
+  {
+    "id": 16,
+    "code": "CISC355",
+    "name": "Computers Ethics and Society",
+    "credits": 3
+  },
+  {
+    "id": 17,
+    "code": "CISC275",
+    "name": "Introduction to Software Engineering",
+    "credits": 3
+  },
+  {
+    "id": 18,
+    "code": "MATH205",
+    "name": "Statistical Methods",
+    "credits": 4
+  },
+  {
+    "id": 19,
+    "code": "MATH350",
+    "name": "Probability Theory and Simulation Methods",
+    "credits": 3
+  },
+  {
+    "id": 20,
+    "code": "Science Requirement 2",
+    "name": "Science and Lab 2",
+    "credits": 4
+  },
+  {
+    "id": 21,
+    "code": "Breadth Requirement (Multicultural)",
+    "name": "Multicultural",
+    "credits": 3
+  },
+  {
+    "id": 22,
+    "code": "CISC442",
+    "name": "Introduction to Computer Vision",
+    "credits": 3
+  },
+  {
+    "id": 23,
+    "code": "CISC481",
+    "name": "Artificial Intelligence",
+    "credits": 3
+  },
+  {
+    "id": 24,
+    "code": "CISC483",
+    "name": "Introduction Data Mining",
+    "credits": 3
+  },
+  {
+    "id": 25,
+    "code": "CISC484",
+    "name": "Introduction to Machine Learning",
+    "credits": 3
+  },
+  {
+    "id": 26,
+    "code": "CISC361",
+    "name": "Operating Systems",
+    "credits": 3
+  },
+  {
+    "id": 27,
+    "code": "CISC372",
+    "name": "Parallel Computing",
+    "credits": 3
+  },
+  {
+    "id": 28,
+    "code": "BISC401",
+    "name": "Molecular Biology of the Cell",
+    "credits": 3
+  },
+  {
+    "id": 29,
+    "code": "CISC436",
+    "name": "Computational Biology and Bioinformatics",
+    "credits": 3
+  },
+  {
+    "id": 30,
+    "code": "MATH349",
+    "name": "Elementary Linear Algebra",
+    "credits": 3
+  },
+  {
+    "id": 31,
+    "code": "CISC303",
+    "name": "Automata Theory",
+    "credits": 3
+  },
+  {
+    "id": 32,
+    "code": "CISC320",
+    "name": "Introduction to Algorithms",
+    "credits": 3
+  },
+  {
+    "id": 33,
+    "code": "CISC304",
+    "name": "Logic for Programming",
+    "credits": 3
+  },
+  {
+    "id": 34,
+    "code": "CISC450",
+    "name": "Computer Networks I",
+    "credits": 3
+  },
+  {
+    "id": 35,
+    "code": "CISC464",
+    "name": "Introduction to Network Security",
+    "credits": 3
+  },
+  {
+    "id": 36,
+    "code": "CPEG465",
+    "name": "Introduction to Cybersecurity",
+    "credits": 3
+  },
+  {
+    "id": 37,
+    "code": "CPEG494",
+    "name": "System Hardening and Protection",
+    "credits": 3
+  },
+  {
+    "id": 38,
+    "code": "CPEG472",
+    "name": "Applied Cryptography",
+    "credits": 3
+  },
+  {
+    "id": 39,
+    "code": "CPEG473",
+    "name": "Cloud Computing and Security",
+    "credits": 3
+  },
+  {
+    "id": 40,
+    "code": "CPEG475",
+    "name": "IoT and Embedded Systems Security",
+    "credits": 3
+  },
+  {
+    "id": 41,
+    "code": "CPEG476",
+    "name": "Secure Software Design",
+    "credits": 3
+  },
+  {
+    "id": 42,
+    "code": "CPEG495",
+    "name": "Digital Forensics",
+    "credits": 3
+  },
+  {
+    "id": 43,
+    "code": "CISC437",
+    "name": "Database Systems",
+    "credits": 3
+  },
+  {
+    "id": 44,
+    "code": "MATH426",
+    "name": "Computational Mathematics I",
+    "credits": 3
+  },
+  {
+    "id": 45,
+    "code": "CISC471",
+    "name": "Compiler Design",
+    "credits": 3
+  },
+  {
+    "id": 46,
+    "code": "CISC360",
+    "name": "Computer Architecture",
+    "credits": 3
+  },
+  {
+    "id": 47,
+    "code": "CPEG470",
+    "name": "Web Applications Security",
+    "credits": 3
+  },
+  {
+    "id": 48,
+    "code": "CPEG497",
+    "name": "Advanced Cybersecurity",
+    "credits": 3
+  },
+  {
+    "id": 49,
+    "code": "CISC453",
+    "name": "Simulation of Computer Networks",
+    "credits": 3
+  },
+  {
+    "id": 50,
+    "code": "CISC459",
+    "name": "Topics in Communications, Distributed Computing and Networks",
+    "credits": 3
+  },
+  {
+    "id": 51,
+    "code": "CISC474",
+    "name": "Advanced Web Technologies",
+    "credits": 3
+  },
+  {
+    "id": 52,
+    "code": "CISC475",
+    "name": "Advanced Software Engineering",
+    "credits": 3
+  },
+  {
+    "id": 53,
+    "code": "CISC479",
+    "name": "Topics in Architecture and Software",
+    "credits": 3
+  },
+  {
+    "id": 54,
+    "code": "CISC401",
+    "name": "Elements of the Theory of Computation",
+    "credits": 3
+  }
+]
